@@ -31,9 +31,14 @@ For browser checks, install Playwright in a development environment and run:
 
 ```sh
 BASE_URL=http://localhost:8000 node tests/check.cjs
+BROWSER=firefox BASE_URL=https://o1tean.github.io/atelier-matematic/ node tests/check.cjs
+BROWSER=firefox BROWSER_CHANNEL=moz-firefox BASE_URL=https://o1tean.github.io/atelier-matematic/ node tests/check.cjs
+BROWSER=webkit BASE_URL=https://o1tean.github.io/atelier-matematic/ node tests/check.cjs
 ```
 
-The checks cover lessons, mathematical rendering, quiz feedback/retry, flashcards, progress persistence, mobile overflow and visual experiments. Screenshots are QA artifacts and are not deployed.
+Use `npx playwright install chromium firefox webkit` to install the test browsers. WebKit exercises that rendering engine; it is not the installed Safari application. With Playwright versions supporting Firefox WebDriver BiDi, `BROWSER_CHANNEL=moz-firefox` selects the installed Firefox. Optional `BROWSER_PATH` selects a compatible executable; `CHROME_PATH` remains supported for Chromium.
+
+The checks cover lessons, mathematical rendering, quiz feedback/retry, flashcards, progress persistence, mobile overflow and visual experiments. Reports and screenshots go to `work/qa/<browser>` (or `SCREENSHOT_DIR`) and are not deployed.
 
 ## Publishing
 

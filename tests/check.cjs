@@ -1,19 +1,22 @@
 'use strict';
-// Run against a local HTTP server. Set BASE_URL, CHROME_PATH and NODE_PATH if needed.
+// Set BASE_URL and BROWSER=chromium|firefox|webkit; use BROWSER_PATH for a custom executable.
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { chromium } = require('playwright');
+const playwright = require('playwright');
+const browserName = process.env.BROWSER || 'chromium';
+assert(['chromium', 'firefox', 'webkit'].includes(browserName), `Unsupported browser: ${browserName}`);
 const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../content.json'), 'utf8'));
-const base = process.env.BASE_URL || 'http://127.0.0.1:8861';
-const screenshots = process.env.SCREENSHOT_DIR || path.resolve('work/qa');
+const base = (process.env.BASE_URL || 'http://127.0.0.1:8861').replace(/\/$/, '');
+const screenshots = process.env.SCREENSHOT_DIR || path.resolve('work/qa', browserName);
 const failures = [], diagnostics = [], browserErrors = [];
 let checks = 0;
 const check = (condition, message) => { checks++; if (!condition) failures.push(message); };
 fs.mkdirSync(screenshots, { recursive: true });
 
 (async () => {
-  const browser = await chromium.launch({ headless: true, ...(process.env.CHROME_PATH ? { executablePath: process.env.CHROME_PATH } : {}) });
+  const executablePath = process.env.BROWSER_PATH || (browserName === 'chromium' ? process.env.CHROME_PATH : undefined);
+  const browser = await playwright[browserName].launch({ headless: true, ...(executablePath ? { executablePath } : {}), ...(process.env.BROWSER_CHANNEL ? { channel: process.env.BROWSER_CHANNEL } : {}) });
   try {
     const context = await browser.newContext({ viewport: { width: 1440, height: 1000 }, reducedMotion: 'reduce' });
     const page = await context.newPage();
@@ -41,11 +44,26 @@ fs.mkdirSync(screenshots, { recursive: true });
           const limit = parent.getBoundingClientRect();
           return box.right > limit.right + 3 || box.left < limit.left - 3 ? [{ text: el.textContent.slice(0, 100), width: Math.round(box.width), available: Math.round(limit.width) }] : [];
         });
-        return { overflow: root.scrollWidth - root.clientWidth, clipped, mathErrors: window.mathErrors || [] };
+        const hiddenPrefixes = [...document.querySelectorAll('.formula')].flatMap(container => {
+          container.scrollLeft = 0;
+          const child = container.querySelector('.katex-display');
+          if (!child || container.scrollWidth <= container.clientWidth + 2) return [];
+          return child.getBoundingClientRect().left < container.getBoundingClientRect().left - 1
+            ? [{ text: child.textContent.slice(0, 120), width: Math.round(child.getBoundingClientRect().width), available: container.clientWidth }] : [];
+        });
+        const smallSelects = [...document.querySelectorAll('#main select')].flatMap(select => {
+          const height = select.getBoundingClientRect().height;
+          return height < 44 ? [{ id: select.id, height }] : [];
+        });
+        return { overflow: root.scrollWidth - root.clientWidth, clipped, hiddenPrefixes, smallSelects, mathErrors: window.mathErrors || [] };
       });
       check(issues.overflow <= 2, `${name}: document overflows horizontally by ${issues.overflow}px`);
       check(!issues.clipped.length, `${name}: ${issues.clipped.length} inline math expressions clipped`);
       if (issues.clipped.length) diagnostics.push({ name, clipped: issues.clipped });
+      check(!issues.hiddenPrefixes.length, `${name}: ${issues.hiddenPrefixes.length} formula prefixes are unreachable by scrolling`);
+      if (issues.hiddenPrefixes.length) diagnostics.push({ name, hiddenPrefixes: issues.hiddenPrefixes });
+      check(!issues.smallSelects.length, `${name}: every filter select is at least 44px high`);
+      if (issues.smallSelects.length) diagnostics.push({ name, smallSelects: issues.smallSelects });
       check(!issues.mathErrors.length, `${name}: KaTeX rejected ${issues.mathErrors.length} expressions`);
     };
     const keyboardClick = async selector => { await page.locator(selector).focus(); await page.keyboard.press('Enter'); };
@@ -84,6 +102,13 @@ fs.mkdirSync(screenshots, { recursive: true });
     }
     await page.setViewportSize({ width: 1440, height: 1000 });
     await route(`#lesson/${data.lessons[0].id}`);
+    const lessonHash = await page.evaluate(() => location.hash);
+    await keyboardClick('.skip');
+    const skipPreservesRoute = await page.evaluate(() => location.hash) === lessonHash;
+    check(skipPreservesRoute, 'Skip link preserves the current lesson route');
+    check(await page.locator('.lesson-header h1').count() === 1 && await page.locator('.lesson-header h1').textContent() === data.lessons[0].title, 'Skip link preserves the current lesson content');
+    await focusInside('#main', 'Skip link focuses the current main content');
+    if (!skipPreservesRoute) await route(lessonHash);
     await keyboardClick('#mark-done');
     check(await page.locator('#mark-done').getAttribute('aria-pressed') === 'true', 'Mark lesson as done');
     await page.reload();
@@ -94,6 +119,7 @@ fs.mkdirSync(screenshots, { recursive: true });
     await page.locator('#card-filter').selectOption(data.lessons[0].id);
     const initialCards = data.lessons[0].recall.length;
     check((await page.locator('.card-meta').textContent()).includes(`1 / ${initialCards}`), 'Card lesson filter');
+    check((await page.locator('#flip').ariaSnapshot()).includes(data.lessons[0].recall[0].q), 'Flashcard accessible name contains its question');
     await page.locator('#flip').focus();
     await page.keyboard.press('Space');
     check(await page.locator('#flip').getAttribute('aria-pressed') === 'true', 'Space flips a card');
@@ -245,7 +271,7 @@ fs.mkdirSync(screenshots, { recursive: true });
     await layout('mobile home');
     await screenshot('mobile-home');
     check(browserErrors.length === 0, `Browser errors: ${browserErrors.join('; ')}`);
-    const report = { checks, failures, diagnostics, browserErrors };
+    const report = { browser: browserName, version: browser.version(), baseURL: base, checks, failures, diagnostics, browserErrors };
     fs.writeFileSync(path.join(screenshots, 'report.json'), JSON.stringify(report, null, 2) + '\n');
     console.log(JSON.stringify(report, null, 2));
     assert.equal(failures.length, 0, `${failures.length} browser checks failed`);
