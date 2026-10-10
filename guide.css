@@ -45,7 +45,7 @@ li{padding-left:1mm;margin:0 0 1.6mm}
 .toc-end a{display:block;padding:1mm 0;font-size:10.5pt}
 .toc-end span{float:right;color:var(--muted)}
 .lesson{margin-top:16mm}
-.lesson-header{break-inside:avoid;page-break-inside:avoid;margin-bottom:5mm}
+.lesson-header{break-inside:avoid;page-break-inside:avoid;break-after:avoid;page-break-after:avoid;margin-bottom:5mm}
 .rules>h3,.examples>h3,.recall>h3,.cautions>h3{margin-top:5mm}
 .rule{break-inside:avoid;page-break-inside:avoid;margin-bottom:3mm}
 .formula{text-align:center;color:var(--green);font-size:11.2pt;line-height:1.6;margin:2mm 0 2mm;padding:.5mm 0;max-width:100%;overflow:visible}
@@ -64,10 +64,11 @@ li{padding-left:1mm;margin:0 0 1.6mm}
 .recall-item{margin-bottom:2mm;break-inside:avoid;page-break-inside:avoid}
 .recall-question{font-weight:700;font-size:10.5pt;margin-bottom:1mm}
 .recall-answer{font-size:10.5pt;color:var(--muted);line-height:1.43}
+.cautions{break-inside:avoid;page-break-inside:avoid}
 .cautions ul{margin-bottom:0}
 .cautions li{font-size:10.5pt;margin-bottom:1.5mm}
 .reference-item{break-inside:avoid;page-break-inside:avoid;margin:2mm 0 4mm}
-.reference-item h3{margin-bottom:3mm}
+.reference-item h3{margin:0 0 1.5mm}
 .reference-label{font-size:10.5pt;color:var(--muted);margin-right:2mm;display:inline}
 .reference .formula{text-align:left;margin:1.5mm 0 2mm}
 .practice-question{break-inside:avoid;page-break-inside:avoid;margin:5mm 0}
