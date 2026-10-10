@@ -38,6 +38,8 @@ BROWSER=webkit BASE_URL=https://o1tean.github.io/atelier-matematic/ node tests/c
 
 Use `npx playwright install chromium firefox webkit` to install the test browsers. WebKit exercises that rendering engine; it is not the installed Safari application. With Playwright versions supporting Firefox WebDriver BiDi, `BROWSER_CHANNEL=moz-firefox` selects the installed Firefox. Optional `BROWSER_PATH` selects a compatible executable; `CHROME_PATH` remains supported for Chromium.
 
+On macOS 27, Firefox may fail before opening a page because its shared app-data folder is protected ([upstream issue](https://github.com/microsoft/playwright/issues/42768)). Set `CFFIXED_USER_HOME` for the test process to an absolute, empty directory under `work/qa`; this isolates test data without changing the installed browser or system settings.
+
 The checks cover lessons, mathematical rendering, quiz feedback/retry, flashcards, progress persistence, mobile overflow and visual experiments. Reports and screenshots go to `work/qa/<browser>` (or `SCREENSHOT_DIR`) and are not deployed.
 
 ## Publishing
