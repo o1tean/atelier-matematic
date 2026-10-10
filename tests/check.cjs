@@ -270,6 +270,15 @@ fs.mkdirSync(screenshots, { recursive: true });
     await page.locator('.hero').waitFor();
     await layout('mobile home');
     await screenshot('mobile-home');
+    for (const width of [1440, 390]) {
+      await page.setViewportSize({ width, height: 1000 });
+      await page.goto(`${base}/ghid.html#grup-rational`);
+      await page.locator('#grup-rational').waitFor();
+      await page.evaluate(async () => { await document.fonts.ready; await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve))); });
+      const headingVisible = await page.evaluate(() => document.querySelector('#grup-rational').getBoundingClientRect().top >= document.querySelector('.screen-toolbar').getBoundingClientRect().bottom - 1);
+      check(headingVisible, `Reading guide at ${width}px: chapter jump clears the sticky toolbar`);
+      await layout(`reading guide at ${width}px`);
+    }
     check(browserErrors.length === 0, `Browser errors: ${browserErrors.join('; ')}`);
     const report = { browser: browserName, version: browser.version(), baseURL: base, checks, failures, diagnostics, browserErrors };
     fs.writeFileSync(path.join(screenshots, 'report.json'), JSON.stringify(report, null, 2) + '\n');
