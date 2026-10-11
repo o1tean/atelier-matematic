@@ -7,7 +7,7 @@ A Romanian mathematics study guide and interactive study website, organized from
 - Visual experiments for primitives, shifted multiplication, modular addition and choosing an integration method.
 - A printable guide with formula reference, memory prompts, practice questions and answer key.
 
-**Website:** https://o1tean.github.io/atelier-matematic/
+**Live website (GitHub Pages):** [Atelier matematic](https://o1tean.github.io/atelier-matematic/)
 
 **PDF:** [Ghid matematica](Ghid-matematica.pdf)
 
@@ -44,4 +44,4 @@ The checks cover lessons, mathematical rendering, quiz feedback/retry, flashcard
 
 ## Publishing
 
-GitHub Pages publishes the repository root from `main`. `.nojekyll` keeps the static files intact. Pushing updates to `main` republishes the site.
+GitHub Pages is enabled and publishes the repository root from `main`. `.nojekyll` keeps the static files intact. Pushing updates to `main` republishes the site.
