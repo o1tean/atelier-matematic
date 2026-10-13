@@ -25,7 +25,13 @@ Open http://localhost:8000. No build, account, server database or external CDN i
 
 ## Content and implementation
 
-`content.json` contains the lesson and quiz data; `data.js` exposes the same data to the browser. If editing content, regenerate `data.js` from that JSON and update the PDF/reading guide to keep the versions consistent. The website uses plain HTML, CSS and JavaScript. Mathematical notation uses vendored [KaTeX 0.16.22](https://katex.org/) under its MIT license (`vendor/katex/LICENSE`).
+`content.json` contains the lesson and quiz data; `data.js` exposes the same data to the browser. The fixed texts of the reading guide (cover, introduction, section headings, closing notes) live in `tools/guide-strings.json`. After editing either file, rebuild the derived files:
+
+```sh
+node tools/build.cjs
+```
+
+This rewrites `data.js` and `ghid.html` (keeping the current table-of-contents page numbers). Add `--pdf` to also render `Ghid-matematica.pdf` and recompute the page numbers; that step needs the `playwright` package with Chromium (see below) and `pdftotext` from poppler. The website uses plain HTML, CSS and JavaScript. Mathematical notation uses vendored [KaTeX 0.16.22](https://katex.org/) under its MIT license (`vendor/katex/LICENSE`).
 
 For browser checks, install Playwright in a development environment and run:
 
