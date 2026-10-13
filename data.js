@@ -4,65 +4,65 @@ window.STUDY = {
   "lessons": [
     {
       "id": "legi-interne",
-      "title": "Legi de compoziție și părți stabile",
+      "title": "Legi de compoziție și părți stabile: reguli de combinat două elemente",
       "sourceIds": [
         1
       ],
-      "summary": "O lege internă asociază fiecărei perechi dintr-o mulțime un rezultat în aceeași mulțime. O parte stabilă păstrează această proprietate pe o submulțime.",
+      "summary": "O lege de compoziție este o regulă care ia două elemente dintr-o mulțime și îți dă înapoi tot un element din aceeași mulțime. Mulțimea este o colecție de obiecte, de exemplu numere sau matrice (tabele de numere), cu o regulă clară despre cine face parte din ea. O parte stabilă este o bucată din acea mulțime care rămâne „închisă”: oricare două elemente din ea ai combina, rezultatul rămâne tot înăuntru. Le recunoști după o singură întrebare, „rezultatul rămâne în mulțime?”, de la care pornesc multe exerciții de algebră de la BAC (bacalaureat).",
       "rules": [
         {
           "label": "Lege de compoziție internă",
           "formula": "*:M\\times M\\to M",
-          "explanation": "Mulțimea \\(M\\) este nevidă. Pentru orice \\(x,y\\in M\\), rezultatul \\(x*y\\) trebuie să aparțină tot lui \\(M\\)."
+          "explanation": "Formula spune că legea \\(*\\) primește o pereche de elemente din \\(M\\) și dă înapoi un rezultat tot din \\(M\\). E ca o mașinărie cu două intrări și o ieșire. Steluța \\(*\\) este doar numele acestei mașinării și nu înseamnă înmulțire. Când scrii \\(x*y\\), te referi la ce iese din mașinărie când pui înăuntru \\(x\\) și \\(y\\). Mulțimea \\(M\\) este nevidă, adică are cel puțin un element. „Internă” înseamnă că pentru orice \\(x,y\\in M\\) (orice două elemente luate din \\(M\\)) rezultatul \\(x*y\\) aparține tot lui \\(M\\), deci nu iese din mulțime."
         },
         {
-          "label": "Parte stabilă",
+          "label": "Parte stabilă (o submulțime „închisă”)",
           "formula": "H\\subseteq M,\\quad \\forall x,y\\in H,\\quad x*y\\in H",
-          "explanation": "Demonstrezi închiderea pentru toate perechile din \\(H\\), nu numai pentru câteva exemple."
+          "explanation": "Formula spune că \\(H\\) este o submulțime a lui \\(M\\) (o bucată din ea) și că pentru orice \\(x,y\\in H\\) rezultatul \\(x*y\\) este tot în \\(H\\). De aici vine numele de închidere. Gândește-te la \\(H\\) ca la o cameră închisă din care nu ieși: oricare două elemente din ea ai combina, rezultatul rămâne tot înăuntru. Ca să arăți asta, faci o demonstrație, adică arăți că e adevărat pentru TOATE perechile din \\(H\\), nu doar pentru câteva încercări."
         },
         {
-          "label": "Factorizare pentru închidere",
+          "label": "Factorizare pentru închidere (scrierea ca produs)",
           "formula": "xy-2x-2y+6=(x-2)(y-2)+2",
-          "explanation": "Pe \\([2,+\\infty)\\), factorii sunt nenegativi, deci rezultatul este cel puțin \\(2\\)."
+          "explanation": "Factorizarea înseamnă să scrii expresia cu ajutorul unei înmulțiri. Ține minte că \\(xy\\) înseamnă \\(x\\) înmulțit cu \\(y\\), iar \\(2x\\) înseamnă 2 înmulțit cu \\(x\\). Expresia \\(xy-2x-2y+6\\) este același lucru cu \\((x-2)(y-2)+2\\), adică un produs plus 2. Cele două paranteze lipite una de alta se înmulțesc. Verifici desfăcând parantezele: înmulțești fiecare parte din prima paranteză cu fiecare parte din a doua și obții \\((x-2)(y-2)=xy-2x-2y+4\\). Dacă mai aduni 2, ajungi exact la \\(xy-2x-2y+6\\). Intervalul \\([2,+\\infty)\\) înseamnă toate numerele de la 2 în sus. Paranteza pătrată arată că 2 e inclus, iar \\(+\\infty\\) („plus infinit”) arată că numerele nu se opresc nicăieri în sus. Paranteza rotundă de lângă \\(+\\infty\\) arată că acest capăt nu e inclus, pentru că infinitul nu este un număr. Dacă dintr-un număr de la 2 în sus scazi 2, rămâne 0 sau mai mult. De aceea factorii \\(x-2\\) și \\(y-2\\) (numerele care se înmulțesc) sunt nenegativi, adică 0 sau mai mari. Un produs de numere nenegative este și el nenegativ. Iar dacă la un număr care e 0 sau mai mare aduni 2, rezultatul este cel puțin \\(2\\)."
         }
       ],
       "examples": [
         {
-          "question": "Pe \\(\\mathbb N\\), \\(x\\circ y=2x+3y^2\\). Calculează \\(2\\circ3\\) și \\(3\\circ2\\).",
+          "question": "Pe \\(\\mathbb N\\) (numerele naturale 0, 1, 2, …) avem legea \\(x\\circ y=2x+3y^2\\). Cercul \\(\\circ\\) este doar numele acestei legi, la fel cum steluța \\(*\\) era numele legii de mai sus. Formula din dreapta semnului „=” îți spune ce calcul faci cu \\(x\\) și \\(y\\). Calculează \\(2\\circ3\\) și \\(3\\circ2\\).",
           "steps": [
-            "\\(2\\circ3=2\\cdot2+3\\cdot3^2=4+27=31\\).",
-            "\\(3\\circ2=2\\cdot3+3\\cdot2^2=6+12=18\\).",
-            "Rezultatele diferă; operația nu este comutativă."
+            "Punem 2 în locul lui x și 3 în locul lui y. Puterea \\(3^2\\) înseamnă \\(3\\cdot3=9\\), deci \\(3\\cdot3^2=3\\cdot9=27\\). Așa obții: \\(2\\circ3=2\\cdot2+3\\cdot3^2=4+27=31\\).",
+            "Acum inversăm ordinea și punem 3 în locul lui x și 2 în locul lui y: \\(3\\circ2=2\\cdot3+3\\cdot2^2=6+12=18\\).",
+            "Rezultatele diferă, 31 față de 18, deci aici ordinea contează. O lege (numită și operație) este comutativă când ordinea nu contează, așa cum 2+3 dă același lucru ca 3+2. Deci legea \\(\\circ\\) nu este comutativă."
           ],
-          "answer": "\\(2\\circ3=31\\), \\(3\\circ2=18\\)."
+          "answer": "\\(2\\circ3=31\\), iar \\(3\\circ2=18\\). Cele două rezultate sunt diferite."
         },
         {
-          "question": "Arată că \\(H=[2,+\\infty)\\) este stabilă pentru \\(x*y=xy-2x-2y+6\\).",
+          "question": "Arată că \\(H=[2,+\\infty)\\), adică mulțimea tuturor numerelor de la 2 în sus, este stabilă pentru legea \\(x*y=xy-2x-2y+6\\). Cu alte cuvinte, arată că oricum ai combina două numere din \\(H\\), rezultatul nu coboară sub 2.",
           "steps": [
-            "Pentru \\(x,y\\in H\\), avem \\(x-2\\ge0\\) și \\(y-2\\ge0\\).",
-            "Rescriem \\(x*y=(x-2)(y-2)+2\\).",
-            "Produsul este nenegativ, deci \\(x*y\\ge2\\)."
+            "Pornim de la ce știm: \\(x\\) și \\(y\\) sunt luate din \\(H\\), deci fiecare este cel puțin 2. Dacă dintr-un număr care e cel puțin 2 scazi 2, rămâne 0 sau mai mult. Semnul \\(\\ge\\) se citește „mai mare sau egal”, așa că scriem: pentru \\(x,y\\in H\\), avem \\(x-2\\ge0\\) și \\(y-2\\ge0\\).",
+            "Folosim factorizarea din regula de mai sus, ca să apară exact parantezele \\(x-2\\) și \\(y-2\\). Rescriem \\(x*y=(x-2)(y-2)+2\\).",
+            "Înmulțim două numere care sunt 0 sau mai mari, deci produsul \\((x-2)(y-2)\\) este nenegativ. Când adunăm 2 la acest produs, rezultatul nu poate scădea sub 2, deci \\(x*y\\ge2\\)."
           ],
-          "answer": "\\(x*y\\in H\\) pentru orice \\(x,y\\in H\\); \\(H\\) este parte stabilă."
+          "answer": "\\(x*y\\in H\\) pentru orice \\(x,y\\in H\\), adică rezultatul rămâne mereu în \\(H\\). Deci \\(H\\) este parte stabilă."
         }
       ],
       "recall": [
         {
-          "q": "Ce verifici pentru ca o operație să fie internă?",
-          "a": "Să fie definită pentru orice pereche din mulțime, iar rezultatul să rămână în mulțime."
+          "q": "Ce verifici ca să arăți că o lege de compoziție este internă?",
+          "a": "Verifici că regula se poate aplica oricărei perechi din mulțime și că rezultatul rămâne tot în mulțime."
         },
         {
-          "q": "Cum demonstrezi că o submulțime este stabilă?",
-          "a": "Iei \\(x,y\\) arbitrare din submulțime și demonstrezi că \\(x*y\\) aparține submulțimii."
+          "q": "Cum arăți că o submulțime este stabilă?",
+          "a": "Iei \\(x,y\\) oarecare din submulțime, fără să alegi valori anume, și arăți că \\(x*y\\) aparține tot submulțimii."
         },
         {
-          "q": "Ajunge să testezi trei perechi pentru închidere pe un interval?",
-          "a": "Nu. Este necesară o demonstrație pentru toate perechile."
+          "q": "Ajunge să încerci trei perechi ca să arăți închiderea pe un interval?",
+          "a": "Nu. Ai nevoie de o demonstrație, adică să arăți că merge pentru toate perechile, oricât de multe ar fi."
         }
       ],
       "pitfalls": [
-        "Nu confunda formula definită pe R cu restricția ei la o mulțime mai mică.",
-        "Nu schimba ordinea argumentelor fără să fi demonstrat comutativitatea."
+        "Nu confunda formula definită pe R (numerele reale, adică toate numerele de pe axă) cu restricția ei la o mulțime mai mică (aceeași formulă, folosită doar acolo). Pe mulțimea mai mică rezultatul poate ieși din ea: x − y dă mereu un număr real, dar pe N (0, 1, 2, …) avem 2 − 3 = −1, care nu e număr natural.",
+        "Nu schimba ordinea celor două elemente pe care le combini până nu ai arătat că legea este comutativă. La multe legi ordinea contează, ca în primul exemplu, unde \\(2\\circ3\\) și \\(3\\circ2\\) dau rezultate diferite."
       ],
       "group": "Algebră",
       "notes": [],
@@ -70,66 +70,66 @@ window.STUDY = {
     },
     {
       "id": "tabla-si-rest",
-      "title": "Tabla legii și operații cu rest",
+      "title": "Tabla legii și operații cu rest: tabelul cu toate rezultatele și restul împărțirii",
       "sourceIds": [
         2
       ],
-      "summary": "Pe o mulțime finită, tabla legii arată toate rezultatele. În operațiile definite prin rest, calculezi formula întâi, apoi reduci modulo numărul dat.",
+      "summary": "O mulțime este o colecție de numere (sau obiecte) cu o regulă clară despre cine face parte din ea. Legea, numită și lege de compoziție, este o mașinărie cu două intrări și o ieșire: ia două elemente (numere din mulțime) și dă un rezultat. Dacă rezultatul rămâne mereu în aceeași mulțime, legea se numește internă. Când mulțimea este finită (are un număr limitat de elemente), tabla legii îți arată toate rezultatele într-un tabel, ca tabla înmulțirii. Operațiile cu rest le recunoști după cuvântul „mod”: calculezi întâi formula, apoi păstrezi doar restul împărțirii la numărul dat.",
       "rules": [
         {
-          "label": "Citirea tablei",
+          "label": "Cum citești tabla legii",
           "formula": "T_{ij}=x_i*x_j",
-          "explanation": "Primul operand indică linia, al doilea coloana. Dacă toate celulele sunt în \\(M\\), operația este internă."
+          "explanation": "Mulțimea se numește \\(M\\), iar numerele ei, luate la rând, sunt \\(x_1, x_2, x_3, \\ldots\\). Litera mică de jos spune doar al câtelea număr este: \\(x_i\\) este numărul de pe locul i. Semnul \\(*\\) ține locul legii, oricare ar fi ea. „Operație” și „lege” înseamnă aici același lucru. Căsuța \\(T_{ij}\\) se află pe linia lui \\(x_i\\) și pe coloana lui \\(x_j\\) și conține rezultatul \\(x_i*x_j\\). E la fel ca la tabla înmulțirii, unde pe linia lui 3 și coloana lui 4 găsești 12. Primul element din operație îți dă linia, al doilea îți dă coloana. Dacă toate căsuțele conțin numere din \\(M\\), operația este internă, adică rezultatul nu iese din mulțime."
         },
         {
-          "label": "Înmulțirea rădăcinilor unității",
+          "label": "Tabla înmulțirii rădăcinilor unității",
           "formula": "M=\\{1,-1,i,-i\\},\\quad i^2=-1,\\quad i^3=-i,\\quad i^4=1",
-          "explanation": "Tabla înmulțirii: liniile sunt \\(1,-1,i,-i\\), iar rezultatele sunt respectiv \\((1,-1,i,-i)\\), \\((-1,1,-i,i)\\), \\((i,-i,-1,1)\\), \\((-i,i,1,-1)\\)."
+          "explanation": "Rădăcinile unității (unitatea înseamnă aici numărul 1) sunt numere care, ridicate la o putere, dau 1. Aici puterea este 4: dacă înmulțești între ele patru copii ale numărului, obții 1. Numărul \\(i\\) este ales astfel încât \\(i^2=-1\\). Niciun număr obișnuit înmulțit cu el însuși nu dă \\(-1\\), așa că \\(i\\) este un număr nou, inventat special. De aici urmează \\(i^3=-i\\), pentru că \\(i^3=i^2\\cdot i=(-1)\\cdot i\\). La fel, \\(i^4=1\\), pentru că \\(i^4=i^2\\cdot i^2=(-1)\\cdot(-1)\\). Cele patru rădăcini sunt \\(1,-1,i,-i\\); ele sunt și liniile, și coloanele tablei înmulțirii. Pe linia lui \\(1\\) găsești \\((1,-1,i,-i)\\), iar pe linia lui \\(-1\\) găsești \\((-1,1,-i,i)\\). Pe linia lui \\(i\\) găsești \\((i,-i,-1,1)\\), iar pe linia lui \\(-i\\) găsești \\((-i,i,1,-1)\\). De exemplu, pe linia lui \\(i\\) și coloana lui \\(i\\) este \\(i\\cdot i=i^2=-1\\)."
         },
         {
-          "label": "Operația cu rest",
+          "label": "Operația cu rest (mod)",
           "formula": "x\\perp y=(x+2y)\\bmod 5",
-          "explanation": "Restul este unul dintre \\(0,1,2,3,4\\). Pentru o lege internă pe naturale folosim convenția \\(\\mathbb N_0=\\{0,1,2,\\ldots\\}\\)."
+          "explanation": "Legea din exemple se scrie \\(x\\perp y=(x+2y)\\bmod5\\). Semnul \\(\\perp\\) este doar numele ei. Calculezi \\(x+2y\\), apoi păstrezi doar restul împărțirii la 5. E ca un ceas cu doar cinci ore, 0, 1, 2, 3, 4: după 4 o ia iar de la 0. De exemplu, \\(14\\bmod5=4\\), pentru că \\(14=2\\cdot5+4\\). Restul este mereu mai mic decât numărul la care împarți, de aceea este mereu unul dintre \\(0,1,2,3,4\\). Rezultatul poate fi 0, de exemplu \\((1+2\\cdot2)\\bmod5=5\\bmod5=0\\). Ca legea să fie internă (rezultatul să rămână în mulțime), mulțimea trebuie să-l conțină pe 0. De aceea, pe numerele naturale folosești convenția \\(\\mathbb N_0=\\{0,1,2,\\ldots\\}\\), adică numerele naturale cu tot cu 0."
         }
       ],
       "examples": [
         {
-          "question": "Calculează \\((2\\perp3)\\perp(4\\perp5)\\).",
+          "question": "Legea este \\(x\\perp y=(x+2y)\\bmod5\\). Calculează \\((2\\perp3)\\perp(4\\perp5)\\). Începi cu cele două paranteze, pentru că ce e în paranteză se calculează întâi. Apoi combini rezultatele lor.",
           "steps": [
-            "\\(2\\perp3=(2+2\\cdot3)\\bmod5=8\\bmod5=3\\).",
-            "\\(4\\perp5=(4+2\\cdot5)\\bmod5=14\\bmod5=4\\).",
-            "\\(3\\perp4=(3+2\\cdot4)\\bmod5=11\\bmod5=1\\)."
+            "Prima paranteză: pui 2 în locul lui x și 3 în locul lui y, apoi păstrezi restul împărțirii la 5: \\(2\\perp3=(2+2\\cdot3)\\bmod5=8\\bmod5=3\\), pentru că \\(8=1\\cdot5+3\\).",
+            "A doua paranteză: pui 4 în locul lui x și 5 în locul lui y și faci la fel: \\(4\\perp5=(4+2\\cdot5)\\bmod5=14\\bmod5=4\\).",
+            "Acum combini cele două rezultate, 3 și 4, cu aceeași regulă: \\(3\\perp4=(3+2\\cdot4)\\bmod5=11\\bmod5=1\\), pentru că \\(11=2\\cdot5+1\\)."
           ],
-          "answer": "\\(1\\)."
+          "answer": "Rezultatul este \\(1\\)."
         },
         {
-          "question": "Este asociativă operația \\(x\\perp y=(x+2y)\\bmod5\\)?",
+          "question": "Este asociativă operația \\(x\\perp y=(x+2y)\\bmod5\\)? Asociativă înseamnă că parantezele nu contează când combini trei elemente.",
           "steps": [
-            "\\((2\\perp3)\\perp4=3\\perp4=1\\).",
-            "\\(3\\perp4=1\\), deci \\(2\\perp(3\\perp4)=2\\perp1=4\\).",
-            "Un contraexemplu este suficient: \\(1\\ne4\\)."
+            "Alegi trei numere, 2, 3 și 4, și le combini în două feluri. Întâi pui paranteza pe primele două. Din exemplul de mai sus știi că \\(2\\perp3=3\\). Apoi combini 3 cu 4: \\((2\\perp3)\\perp4=3\\perp4=1\\).",
+            "Acum muți paranteza pe ultimele două numere. Calculezi întâi ce e în paranteză, \\(3\\perp4=1\\), apoi combini 2 cu rezultatul. Pui 2 în locul lui x și 1 în locul lui y: \\(2\\perp1=(2+2\\cdot1)\\bmod5=4\\bmod5=4\\), pentru că 4 este deja mai mic decât 5. Deci \\(2\\perp(3\\perp4)=2\\perp1=4\\).",
+            "Cele două rezultate diferă: \\(1\\ne4\\). Un contraexemplu (un singur exemplu în care regula nu merge) este suficient ca să arăți că regula nu e adevărată mereu."
           ],
-          "answer": "Nu este asociativă; parantezele schimbă rezultatul."
+          "answer": "Nu este asociativă. Când muți parantezele, rezultatul se schimbă."
         }
       ],
       "recall": [
         {
-          "q": "Unde cauți x*y în tabla legii?",
-          "a": "La intersecția liniei x cu coloana y."
+          "q": "În ce căsuță din tabla legii găsești x*y?",
+          "a": "În căsuța unde se întâlnesc linia lui x și coloana lui y. Primul element îți dă linia, al doilea coloana."
         },
         {
           "q": "Care sunt resturile posibile la împărțirea la 5?",
-          "a": "0, 1, 2, 3, 4."
+          "a": "Doar 0, 1, 2, 3, 4, pentru că restul este mereu mai mic decât 5."
         },
         {
-          "q": "Câte contraexemple sunt necesare pentru a infirma asociativitatea?",
-          "a": "Unul singur."
+          "q": "De câte contraexemple ai nevoie ca să arăți că o operație nu este asociativă?",
+          "a": "De unul singur. Un singur caz în care parantezele schimbă rezultatul arată că regula nu e adevărată mereu."
         }
       ],
       "pitfalls": [
-        "Nu elimina parantezele: operația cu rest din exemplu nu este asociativă.",
-        "În S02, a doua compunere cerută are o grupare neclară; nu îi este atribuit un rezultat neconfirmat.",
-        "Dacă N exclude 0, o operație care poate produce 0 nu este internă pe N."
+        "Nu șterge parantezele la operația cu rest din exemplu, pentru că ea nu este asociativă și mutarea lor schimbă rezultatul.",
+        "În fotografia S02, la al doilea calcul cerut nu se vede clar unde sunt parantezele. Nu îi da un rezultat până nu știi sigur unde sunt, pentru că la această lege mutarea parantezelor schimbă rezultatul.",
+        "Unele manuale numesc naturale doar numerele 1, 2, 3, … (fără 0); atunci N nu îl conține pe 0. În acest caz, o operație care poate da 0 nu este internă pe N, pentru că rezultatul iese din mulțime."
       ],
       "group": "Algebră",
       "notes": [],
@@ -137,72 +137,72 @@ window.STUDY = {
     },
     {
       "id": "comutativitate-asociativitate",
-      "title": "Comutativitate și asociativitate",
+      "title": "Comutativitate și asociativitate: când ordinea și parantezele nu contează",
       "sourceIds": [
         4,
         6
       ],
-      "summary": "Comutativitatea permite schimbarea ordinii, asociativitatea permite schimbarea parantezelor. Sunt proprietăți distincte, demonstrate pentru toate elementele domeniului.",
+      "summary": "Lecția arată două proprietăți diferite ale unei legi de compoziție, adică ale unei mașinării cu două intrări și o ieșire. Comutativitatea înseamnă că ordinea nu contează, iar asociativitatea înseamnă că parantezele nu contează când combini trei elemente. Pe fiecare o demonstrezi, adică arăți că e adevărată pentru toate numerele din domeniu, cele cu care lucrăm (aici [4,+∞)).",
       "rules": [
         {
-          "label": "Comutativitate",
+          "label": "Comutativitate: ordinea nu contează",
           "formula": "\\forall x,y\\in M,\\quad x*y=y*x",
-          "explanation": "Schimbi ordinea a doi operanzi fără să schimbi rezultatul."
+          "explanation": "Semnul \\(\\forall\\) se citește „pentru orice”. Semnul \\(\\in\\) se citește „aparține lui”, adică „face parte din”. \\(M\\) este mulțimea în care lucrăm: o colecție de numere cu o regulă clară despre cine face parte din ea. Steluța \\(*\\) este numele legii. Ea poate face alt calcul decât înmulțirea obișnuită, iar formula legii îți spune care. Formula comutativității spune că oricare două elemente din \\(M\\) dau același rezultat prin legea \\(*\\), indiferent în ce ordine le pui. Este la fel ca la adunare, unde 2+3 dă același lucru ca 3+2."
         },
         {
-          "label": "Asociativitate",
+          "label": "Asociativitate: parantezele nu contează",
           "formula": "\\forall x,y,z\\in M,\\quad (x*y)*z=x*(y*z)",
-          "explanation": "Schimbi gruparea a trei operanzi fără să schimbi ordinea lor."
+          "explanation": "Când combini trei elemente \\(x\\), \\(y\\), \\(z\\), poți calcula întâi \\(x*y\\) sau întâi \\(y*z\\). Rezultatul din paranteză intră apoi din nou în lege, împreună cu al treilea element. Rezultatul final este același. Ordinea celor trei rămâne neschimbată, se mută doar parantezele. La adunare, (2+3)+4 dă același lucru ca 2+(3+4)."
         },
         {
-          "label": "Forma utilă din caiet",
+          "label": "Forma utilă din caiet, scrisă ca produs",
           "formula": "x*y=xy-4x-4y+20=(x-4)(y-4)+4",
-          "explanation": "Expresia este simetrică în \\(x,y\\). Pe \\([4,+\\infty)\\), rezultatul rămâne în interval."
+          "explanation": "Aici \\(xy\\) înseamnă \\(x\\) înmulțit cu \\(y\\), iar \\(4x\\) înseamnă 4 înmulțit cu \\(x\\). Forma cu paranteze este aceeași regulă. Desfaci \\((x-4)(y-4)\\), adică înmulțești fiecare bucată din prima paranteză cu fiecare din a doua, și obții \\(xy-4x-4y+16\\). Cu încă 4 ajungi la \\(xy-4x-4y+20\\). Expresia rămâne la fel dacă îi schimbi pe \\(x\\) și \\(y\\) între ei. Domeniul legii este intervalul \\([4,+\\infty)\\), adică bucata de numere de la 4 în sus, fără capăt. Paranteza pătrată arată că 4 este inclus. Pe acest interval rezultatul rămâne înăuntru. Dacă \\(x\\) și \\(y\\) sunt cel puțin 4, atunci \\(x-4\\) și \\(y-4\\) nu sunt negative, deci nici produsul \\((x-4)(y-4)\\) nu este negativ. Adaugi 4, deci \\(x*y\\) este cel puțin 4."
         },
         {
-          "label": "Compunere triplă",
+          "label": "Compunere triplă: trei elemente deodată",
           "formula": "(x*y)*z=x*(y*z)=(x-4)(y-4)(z-4)+4",
-          "explanation": "Forma factorizată demonstrează asociativitatea imediat. Dezvoltarea comună este \\(xyz-4xy-4xz-4yz+16x+16y+16z-60\\)."
+          "explanation": "Forma factorizată, adică scrisă ca produs de paranteze, arată asociativitatea imediat: oricum pui parantezele, ajungi la \\((x-4)(y-4)(z-4)+4\\). Dacă desfaci toate parantezele, ambele părți dau aceeași expresie lungă, \\(xyz-4xy-4xz-4yz+16x+16y+16z-60\\)."
         }
       ],
       "examples": [
         {
-          "question": "Demonstrează comutativitatea pentru \\(x*y=xy-4x-4y+20\\).",
+          "question": "Demonstrează comutativitatea pentru \\(x*y=xy-4x-4y+20\\), adică arată că ordinea nu contează pentru orice \\(x\\) și \\(y\\).",
           "steps": [
-            "\\(x*y=xy-4x-4y+20\\).",
-            "\\(y*x=yx-4y-4x+20\\).",
-            "Cum \\(xy=yx\\) și adunarea este comutativă, expresiile sunt egale pentru orice \\(x,y\\) din domeniu."
+            "Scriem regula așa cum este dată, cu \\(x\\) pe primul loc și \\(y\\) pe al doilea: \\(x*y=xy-4x-4y+20\\).",
+            "Schimbăm ordinea: punem \\(y\\) pe primul loc și \\(x\\) pe al doilea, apoi înlocuim în regulă: \\(y*x=yx-4y-4x+20\\).",
+            "Comparăm cele două rânduri: au aceleași bucăți, doar în altă ordine. Avem \\(xy=yx\\), pentru că la înmulțirea obișnuită ordinea nu contează (3 ori 4 dă tot 12, ca 4 ori 3). Adunarea este și ea comutativă, adică ordinea bucăților adunate nu contează. Deci expresiile sunt egale pentru orice \\(x,y\\) din domeniu."
           ],
-          "answer": "Operația este comutativă."
+          "answer": "Operația este comutativă: poți schimba ordinea celor două numere fără să se schimbe rezultatul."
         },
         {
-          "question": "Demonstrează asociativitatea aceleiași operații.",
+          "question": "Demonstrează asociativitatea aceleiași operații, adică arată că parantezele nu contează când combini trei elemente.",
           "steps": [
-            "Scriem \\(x*y=(x-4)(y-4)+4\\).",
-            "\\((x*y)*z=[(x*y)-4](z-4)+4=(x-4)(y-4)(z-4)+4\\).",
-            "\\(x*(y*z)=(x-4)[(y*z)-4]+4=(x-4)(y-4)(z-4)+4\\)."
+            "Folosim forma scrisă ca produs, pentru că scurtează mult calculul. Scriem \\(x*y=(x-4)(y-4)+4\\).",
+            "Punem parantezele în stânga: rezultatul \\(x*y\\) intră primul în regulă, iar \\(z\\) al doilea. Regula spune: scazi 4 din fiecare intrare, înmulțești și adaugi 4. Dacă scazi 4 din ambele părți ale formulei din pasul 1, obții \\((x*y)-4=(x-4)(y-4)\\). Înlocuim și avem \\((x*y)*z=[(x*y)-4](z-4)+4=(x-4)(y-4)(z-4)+4\\).",
+            "Punem parantezele în dreapta: \\(x\\) intră primul, iar rezultatul \\(y*z\\) al doilea. La fel, \\((y*z)-4=(y-4)(z-4)\\), deci \\(x*(y*z)=(x-4)[(y*z)-4]+4=(x-4)(y-4)(z-4)+4\\)."
           ],
-          "answer": "\\((x*y)*z=x*(y*z)\\)."
+          "answer": "Ambele grupări dau același rezultat, deci \\((x*y)*z=x*(y*z)\\)."
         }
       ],
       "recall": [
         {
-          "q": "Care proprietate permite schimbarea ordinii?",
-          "a": "Comutativitatea."
+          "q": "Care proprietate îți spune că poți schimba ordinea?",
+          "a": "Comutativitatea. Ordinea în care combini două elemente nu schimbă rezultatul."
         },
         {
-          "q": "Care proprietate permite schimbarea parantezelor?",
-          "a": "Asociativitatea."
+          "q": "Care proprietate îți spune că poți muta parantezele?",
+          "a": "Asociativitatea. Când combini trei elemente, poți combina întâi primele două sau întâi ultimele două, fără să schimbi ordinea lor, și rezultatul este același."
         },
         {
-          "q": "O singură pereche cu x*y=y*x demonstrează comutativitatea?",
-          "a": "Nu. Egalitatea trebuie demonstrată pentru toate perechile."
+          "q": "Dacă găsești o singură pereche cu x*y=y*x, ai demonstrat comutativitatea?",
+          "a": "Nu. Egalitatea trebuie arătată pentru toate perechile, iar o încercare reușită acoperă doar un caz."
         }
       ],
       "pitfalls": [
-        "În caiet apare \\(2*5=5*2=2\\), dar \\(2\\notin[4,+\\infty)\\); folosește demonstrația generală în domeniul corect.",
-        "Nu confunda o verificare numerică reușită cu o demonstrație generală.",
-        "Demonstrațiile funcționează și pe intervalul deschis (4,+∞), dacă acesta este domeniul ales."
+        "În caiet apare \\(2*5=5*2=2\\), dar \\(2\\notin[4,+\\infty)\\), adică 2 nu face parte din domeniu. De aceea calculul acesta nu dovedește nimic, iar comutativitatea o arăți prin demonstrația generală, în domeniul corect.",
+        "O verificare reușită cu câteva numere arată doar acele cazuri. De aceea nu ține loc de demonstrație generală.",
+        "Dacă domeniul ales este intervalul deschis (4,+∞), unde 4 este exclus, demonstrațiile merg la fel. Egalitățile din calcul sunt adevărate pentru orice numere, iar aici produsul (x-4)(y-4) este pozitiv, deci rezultatul rămâne în interval."
       ],
       "group": "Algebră",
       "notes": [],
@@ -210,316 +210,316 @@ window.STUDY = {
     },
     {
       "id": "neutru-si-simetric",
-      "title": "Element neutru și elemente simetrizabile",
+      "title": "Element neutru și elemente simetrizabile: cine nu schimbă nimic și cine are pereche",
       "sourceIds": [
         4,
         11
       ],
-      "summary": "Neutrul păstrează elementul cu care este compus. Simetricul lui \\(x\\) îl readuce la neutru. În ambele cazuri, candidatul trebuie să aparțină domeniului.",
+      "summary": "Aici cauți două elemente speciale ale unei legi de compoziție \\(*\\), adică ale unei mașinării cu două intrări și o ieșire. Elementul neutru nu schimbă nimic din ce combini cu el. Simetricul lui \\(x\\) este „perechea” lui: pui \\(x\\) și perechea în mașinărie, iar rezultatul este neutrul. În ambele cazuri, numărul găsit contează doar dacă aparține domeniului, adică numerelor pentru care formula are sens și cu care lucrezi.",
       "rules": [
         {
-          "label": "Element neutru",
+          "label": "Element neutru: cel care nu schimbă nimic",
           "formula": "e\\in M,\\quad \\forall x\\in M,\\quad x*e=e*x=x",
-          "explanation": "Neutrul este o constantă independentă de \\(x\\). Verifică ambele poziții, dacă nu ai demonstrat comutativitatea."
+          "explanation": "Elementul neutru \\(e\\) nu schimbă nimic, așa cum 0 nu schimbă nimic la adunare și 1 la înmulțire. Lucrezi pe mulțimea \\(M\\), adică o colecție de numere cu o regulă clară despre cine face parte din ea. Oricare ar fi \\(x\\) din \\(M\\), când pui \\(x\\) și \\(e\\) în mașinărie, iese tot \\(x\\), în orice ordine. Scris scurt, \\(x*e\\) și \\(e*x\\) dau tot \\(x\\). Este un număr fix, care nu depinde de \\(x\\), și trebuie să fie și el în \\(M\\). Verifici ambele poziții, dacă nu ai arătat deja comutativitatea, adică faptul că ordinea nu contează."
         },
         {
-          "label": "Element simetrizabil",
+          "label": "Element simetrizabil: are o pereche",
           "formula": "\\exists x'\\in M,\\quad x*x'=x'*x=e",
-          "explanation": "Rezolvă ecuația pentru \\(x'\\), apoi verifică apartenența la mulțime și ambele egalități."
+          "explanation": "Un element \\(x\\) este simetrizabil dacă are în \\(M\\) o „pereche” \\(x'\\), numită simetricul lui. Combinate în mașinărie, în orice ordine, \\(x\\) și \\(x'\\) dau neutrul \\(e\\), așa cum 5 și −5 dau 0 la adunare. Ca să găsești perechea, rezolvi ecuația \\(x*x'=e\\), în care necunoscuta \\(x'\\) este numărul pe care îl cauți. Apoi verifici că \\(x'\\) este în mulțime și că ambele egalități sunt adevărate."
         },
         {
           "label": "Neutrul legii cu prag 4",
           "formula": "x*y=(x-4)(y-4)+4,\\quad e=5",
-          "explanation": "Prin \\(e-4=1\\), obții \\(x*5=x\\)."
+          "explanation": "Legea cu prag 4 este \\(x*y=xy-4x-4y+20\\), care se poate scrie \\((x-4)(y-4)+4\\). Este o înmulțire obișnuită „mutată” cu 4: scazi 4 din fiecare număr, înmulțești, apoi adaugi 4 la loc. Când pui \\(e\\) în locul lui \\(y\\), apare paranteza \\(e-4\\). Ca \\(x\\) să rămână neschimbat, paranteza aceasta trebuie să dea 1, pentru că înmulțirea cu 1 nu schimbă nimic. Din \\(e-4=1\\), adaugi 4 și obții \\(e=5\\), deci \\(x*5=x\\)."
         },
         {
           "label": "Simetricul legii cu prag 5",
           "formula": "x*y=(x-5)(y-5)+5,\\quad e=6,\\quad x'=5+\\frac1{x-5}",
-          "explanation": "Pe \\(M=(5,+\\infty)\\), numitorul este pozitiv, deci \\(x'>5\\), iar simetricul este admis."
+          "explanation": "Legea cu prag 5 este \\(x*y=xy-5x-5y+30\\), adică \\((x-5)(y-5)+5\\). Aici neutrul este 6, pentru că \\(6-5=1\\). Ceri ca \\(x*x'\\) să dea 6 și scazi 5 din ambele părți, așa că simetricul \\(x'\\) vine din \\((x-5)(x'-5)=1\\). Împarți la \\(x-5\\) și adaugi 5: \\(x'=5+\\frac1{x-5}\\). Mulțimea este intervalul \\(M=(5,+\\infty)\\), adică toate numerele mai mari decât 5. Paranteza rotundă arată că 5 nu intră. Pe acest interval, numitorul \\(x-5\\), adică numărul de sub linia fracției, este pozitiv. Deci fracția este pozitivă și \\(x'>5\\). Astfel, simetricul rămâne în mulțime și este acceptat."
         }
       ],
       "examples": [
         {
-          "question": "Găsește neutrul pentru \\(x*y=xy-4x-4y+20\\), pe \\([4,+\\infty)\\).",
+          "question": "Găsește elementul neutru pentru legea \\(x*y=xy-4x-4y+20\\), pe intervalul \\([4,+\\infty)\\), adică numerele de la 4 în sus, cu 4 inclus.",
           "steps": [
-            "Impunem \\((x-4)(e-4)+4=x\\) pentru orice \\(x\\).",
-            "Este necesar \\(e-4=1\\), deci \\(e=5\\).",
-            "\\(x*5=(x-4)\\cdot1+4=x\\); la fel \\(5*x=x\\), iar \\(5\\) aparține domeniului."
+            "Legea se scrie mai simplu ca \\((x-4)(y-4)+4\\). Poți verifica: dacă desfaci parantezele, obții \\(xy-4x-4y+16+4\\), adică exact \\(xy-4x-4y+20\\). Pui \\(e\\) în locul lui \\(y\\) și ceri să obții tot \\(x\\), pentru orice \\(x\\): \\((x-4)(e-4)+4=x\\).",
+            "Scazi 4 din ambele părți: \\((x-4)(e-4)=x-4\\). Ca \\(x-4\\) să rămână neschimbat, paranteza cu \\(e\\) trebuie să fie 1, pentru că doar înmulțirea cu 1 lasă \\(x-4\\) la fel. Este necesar \\(e-4=1\\). Adaugi 4 și obții \\(e=5\\).",
+            "Verifici candidatul în ambele poziții și în domeniu: \\(x*5=(x-4)\\cdot1+4=x\\); la fel \\(5*x=x\\), iar \\(5\\) aparține domeniului."
           ],
-          "answer": "\\(e=5\\)."
+          "answer": "Elementul neutru este \\(e=5\\)."
         },
         {
-          "question": "Arată că fiecare \\(x>5\\) are un simetric pentru \\(x*y=xy-5x-5y+30\\).",
+          "question": "Pentru legea \\(x*y=xy-5x-5y+30\\), arată că fiecare număr \\(x>5\\) are un simetric, adică o „pereche” cu care dă neutrul.",
           "steps": [
-            "Forma factorizată este \\((x-5)(y-5)+5\\), cu neutru \\(6\\).",
-            "\\(x*x'=6\\) devine \\((x-5)(x'-5)=1\\).",
-            "\\(x'=5+1/(x-5)>5\\), deci aparține domeniului.",
-            "Formula este comutativă, astfel verificarea în ambele poziții dă \\(6\\)."
+            "Mai întâi scrii legea ca înmulțire de paranteze, ca să se vadă înmulțirea obișnuită ascunsă în ea. Această formă, numită forma factorizată, este \\((x-5)(y-5)+5\\). Dacă desfaci parantezele, obții \\(xy-5x-5y+25+5\\), adică exact legea dată. Neutrul este \\(6\\), pentru că paranteza lui dă \\(6-5=1\\), iar înmulțirea cu 1 nu schimbă nimic.",
+            "Ceri ca \\(x\\) combinat cu perechea lui să dea neutrul, apoi scazi 5 din ambele părți: \\(x*x'=6\\) devine \\((x-5)(x'-5)=1\\).",
+            "Împarți la \\(x-5\\), care nu este zero, pentru că \\(x>5\\). Apoi adaugi 5: \\(x'=5+1/(x-5)>5\\). Numărul \\(x-5\\) este pozitiv, deci și fracția este pozitivă. Adunată la 5, fracția dă un număr mai mare decât 5, deci \\(x'\\) aparține domeniului.",
+            "Legea este comutativă, adică ordinea nu contează. Se vede din forma \\((x-5)(y-5)+5\\): dacă schimbi \\(x\\) cu \\(y\\) între ele, obții același rezultat, pentru că la înmulțire ordinea nu contează. De aceea, verificarea în ambele poziții dă \\(6\\)."
           ],
-          "answer": "Toate elementele sunt simetrizabile, cu \\(x'=5+\\frac1{x-5}\\)."
+          "answer": "Toate elementele sunt simetrizabile, adică fiecare are o pereche în mulțime: \\(x'=5+\\frac1{x-5}\\)."
         }
       ],
       "recall": [
         {
           "q": "Ce verifici după ce ai găsit un candidat pentru neutru?",
-          "a": "Că aparține domeniului și că funcționează pentru orice x, în ambele poziții."
+          "a": "Verifici că numărul aparține domeniului și că lasă neschimbat orice x, pus atât în stânga, cât și în dreapta."
         },
         {
-          "q": "Simetricul față de o lege oarecare este mereu −x sau 1/x?",
-          "a": "Nu. Îl determini din ecuația x*x′=e pentru legea respectivă."
+          "q": "Este simetricul mereu −x sau 1/x, oricare ar fi legea?",
+          "a": "Nu. Îl afli din ecuația x*x′=e scrisă pentru legea respectivă, pentru că fiecare lege are perechile ei."
         },
         {
           "q": "De ce x′=5+1/(x−5) aparține lui (5,+∞)?",
-          "a": "Pentru că x−5>0, deci termenul reciproc este pozitiv."
+          "a": "Pentru că x−5>0, deci fracția 1/(x−5) este pozitivă. Adunată la 5, dă un număr mai mare decât 5."
         }
       ],
       "pitfalls": [
-        "Neutrul trebuie să fie același pentru toate elementele.",
-        "În S04, încercarea cu e=0 este corectată; 0 nici nu aparține domeniului.",
-        "O soluție algebrică pentru simetric nu este validă dacă iese din mulțime."
+        "Neutrul trebuie să fie același pentru toate elementele, deci nu are voie să depindă de x, altfel nu mai este un singur număr fix.",
+        "Mulți încearcă e=0, pentru că așa merge la adunare. În sursă, această încercare este corectată: 0 nici măcar nu aparține domeniului, deci nu poate fi neutru.",
+        "Un simetric găsit prin calcul nu este bun dacă iese din mulțime, pentru că perechea x′ trebuie să fie tot în M."
       ],
       "group": "Algebră",
       "notes": [],
-      "shortTitle": "Element neutru și elemente simetrizabile"
+      "shortTitle": "Element neutru și element simetric"
     },
     {
       "id": "factorizare-si-absorbant",
-      "title": "Factorizare, radicali și element absorbant",
+      "title": "Factorizare, radicali și element absorbant: când un singur număr decide rezultatul",
       "sourceIds": [
         5,
         7
       ],
-      "summary": "Forma factorizată dezvăluie semnul rezultatului și elementele speciale ale unei operații. Un absorbant poate scurta o compunere foarte lungă la un singur pas.",
+      "summary": "O lege de compoziție este ca o mașinărie: primește două numere dintr-o mulțime (o colecție de numere) și scoate unul tot de acolo. Forma factorizată, adică legea scrisă aici ca o înmulțire de bucăți mai mici plus 3, îți arată repede semnul rezultatului și elementele speciale. Unul dintre ele, elementul absorbant, „înghite” tot și scurtează la un singur pas o compunere lungă, adică multe numere combinate pe rând.",
       "rules": [
         {
           "label": "Închiderea unei legi cu radical",
           "formula": "G=[3,+\\infty),\\quad x*y=\\sqrt{x^2+y^2-9}\\ge3",
-          "explanation": "Din \\(x,y\\ge3\\), rezultă \\(x^2+y^2-9\\ge9\\); radicalul este definit și rezultatul este în \\(G\\)."
+          "explanation": "Legea este \\(x*y=\\sqrt{x^2+y^2-9}\\), pe \\(G=[3,+\\infty)\\), adică pe numerele de la 3 în sus. Paranteza pătrată arată că 3 e inclus, iar \\(+\\infty\\) arată că nu există capăt în sus. Închiderea înseamnă că \\(G\\) e ca o cameră închisă: oricare două numere din el ai combina, rezultatul rămâne tot înăuntru. Pornești de la \\(x,y\\ge3\\) (semnul \\(\\ge\\) înseamnă „cel puțin”). Un număr de cel puțin 3 înmulțit cu el însuși (\\(x^2\\) înseamnă \\(x\\cdot x\\)) dă cel puțin 9. Aduni două astfel de numere și scazi 9: \\(x^2+y^2-9\\ge9\\). Sub radical (rădăcina pătrată) ai deci un număr pozitiv. Din numere negative nu se scoate rădăcina pătrată, deci aici radicalul are sens. Rădăcina unui număr de cel puțin 9 este cel puțin 3, deci rezultatul este în \\(G\\)."
         },
         {
-          "label": "Forma factorizată",
+          "label": "Forma factorizată a legii",
           "formula": "2xy-6x-6y+21=2(x-3)(y-3)+3",
-          "explanation": "Pe \\((3,+\\infty)\\), ambii factori sunt pozitivi; rezultatul este strict mai mare decât \\(3\\)."
+          "explanation": "A doua lege din lecție este \\(x*y=2xy-6x-6y+21\\). Ea se poate scrie ca o înmulțire plus 3: \\(x*y=2(x-3)(y-3)+3\\). Bucățile înmulțite, \\(x-3\\) și \\(y-3\\), se numesc factori, iar rezultatul înmulțirii se numește produs. Pe \\((3,+\\infty)\\), adică pentru numere mai mari decât 3, fără 3 (paranteza rotundă îl exclude), ambii factori sunt pozitivi. Produsul lor este pozitiv, deci și \\(2(x-3)(y-3)\\) e pozitiv. Când aduni 3 la un număr pozitiv, rezultatul este strict mai mare decât \\(3\\), adică mai mare și niciodată egal cu 3."
         },
         {
-          "label": "Absorbantul",
+          "label": "Elementul absorbant 3",
           "formula": "x*3=3*x=3",
-          "explanation": "Pentru această lege pe \\(\\mathbb R\\), numărul \\(3\\) impune rezultatul oricărei compuneri în care apare."
+          "explanation": "Pentru legea \\(x*y=2(x-3)(y-3)+3\\) pe \\(\\mathbb R\\), adică pe toate numerele de pe axă, \\(3\\) este element absorbant. Asta înseamnă că orice combini cu 3, rezultatul este 3, așa cum orice număr înmulțit cu 0 dă 0. Se vede din forma factorizată: dacă pui 3 în locul lui \\(y\\), factorul \\(y-3\\) devine \\(3-3=0\\). Tot produsul devine 0 și rămâne doar \\(3\\). De aceea, numărul \\(3\\) decide rezultatul oricărei compuneri în care apare."
         },
         {
           "label": "Asociativitatea înainte de compuneri repetate",
           "formula": "(x*y)*z=x*(y*z)=4(x-3)(y-3)(z-3)+3",
-          "explanation": "Această egalitate justifică scrierea unei compuneri lungi fără paranteze."
+          "explanation": "Asociativitatea înseamnă că parantezele nu contează când combini trei elemente, ca la adunare: \\((2+3)+4\\) dă același lucru ca \\(2+(3+4)\\). Pentru legea \\(x*y=2(x-3)(y-3)+3\\), ambele grupări, \\((x*y)*z\\) și \\(x*(y*z)\\), dau aceeași formulă. Această egalitate îți dă voie să scrii o compunere lungă fără paranteze, pentru că oricum ai grupa, rezultatul e același."
         }
       ],
       "examples": [
         {
-          "question": "Arată că \\([3,+\\infty)\\) este stabilă pentru \\(x*y=\\sqrt{x^2+y^2-9}\\).",
+          "question": "Arată că mulțimea \\([3,+\\infty)\\) este stabilă pentru \\(x*y=\\sqrt{x^2+y^2-9}\\). Adică arată că, dacă \\(x\\) și \\(y\\) sunt cel puțin 3, și rezultatul este cel puțin 3.",
           "steps": [
-            "\\(x,y\\ge3\\) implică \\(x^2,y^2\\ge9\\).",
-            "\\(x^2+y^2-9\\ge9\\).",
-            "Radicalul principal este cel puțin \\(3\\)."
+            "Pornești de la ce știi: ambele numere sunt cel puțin 3. Un astfel de număr, înmulțit cu el însuși, dă cel puțin 9: \\(x,y\\ge3\\) implică \\(x^2,y^2\\ge9\\).",
+            "Aduni cele două pătrate (\\(x^2\\) și \\(y^2\\), adică numerele înmulțite cu ele însele). Fiecare e cel puțin 9, deci suma e cel puțin 9+9=18. Apoi scazi 9: \\(x^2+y^2-9\\ge9\\).",
+            "Sub radical ai cel puțin 9, iar rădăcina pătrată a lui 9 este 3, pentru că 3·3=9. Un număr mai mare are și rădăcina mai mare. Deci radicalul principal (rădăcina pozitivă) este cel puțin \\(3\\)."
           ],
-          "answer": "\\(x*y\\in[3,+\\infty)\\)."
+          "answer": "Rezultatul rămâne în interval, deci mulțimea este stabilă: \\(x*y\\in[3,+\\infty)\\)."
         },
         {
-          "question": "Pentru \\(x*y=2xy-6x-6y+21\\) pe \\(\\mathbb R\\), calculează \\(1*\\sqrt2*\\sqrt3*\\cdots*\\sqrt{2012}\\).",
+          "question": "Pentru \\(x*y=2xy-6x-6y+21\\) pe \\(\\mathbb R\\), calculează \\(1*\\sqrt2*\\sqrt3*\\cdots*\\sqrt{2012}\\). Aici combini pe rând radicalii numerelor de la 1 la 2012 (primul, \\(1\\), este \\(\\sqrt1\\)).",
           "steps": [
-            "Rescriem \\(x*y=2(x-3)(y-3)+3\\).",
-            "Observăm \\(x*3=3*x=3\\).",
-            "În șir apare \\(\\sqrt9=3\\). Asociativitatea permite gruparea compunerilor; după apariția lui \\(3\\), rezultatul rămâne \\(3\\)."
+            "Scrii legea în forma factorizată, ca să vezi ce rol are numărul 3. Obții \\(x*y=2(x-3)(y-3)+3\\). Poți verifica: înmulțești parantezele și ajungi la \\(2(xy-3x-3y+9)+3=2xy-6x-6y+21\\). Asta este exact legea din enunț (\\(2xy\\) înseamnă 2 ori x ori y).",
+            "Pui 3 în locul unuia dintre numere: factorul lui devine 0, tot produsul devine 0 și rămâne doar 3. Observi că \\(x*3=3*x=3\\), deci 3 este absorbant.",
+            "Cauți 3 în șir (rândul de numere din compunere) și îl găsești: în șir apare \\(\\sqrt9=3\\). Asociativitatea îți permite să grupezi compunerile cum vrei. Combini întâi tot ce e înainte de \\(\\sqrt9\\) și obții un singur număr. Nu trebuie să afli cât e, pentru că orice combini cu 3 dă 3. Apoi 3 combinat cu \\(\\sqrt{10}\\) dă tot 3, și tot așa până la \\(\\sqrt{2012}\\). Deci, după apariția lui \\(3\\), rezultatul rămâne \\(3\\)."
           ],
-          "answer": "\\(3\\)."
+          "answer": "Rezultatul este \\(3\\)."
         }
       ],
       "recall": [
         {
-          "q": "Ce deosebește neutrul de absorbant?",
-          "a": "Neutrul păstrează celălalt element; absorbantul impune propriul rezultat."
+          "q": "Prin ce diferă elementul neutru de elementul absorbant?",
+          "a": "Neutrul lasă celălalt element neschimbat, așa cum 0 nu schimbă nimic la adunare. Absorbantul „înghite” tot: orice combini cu el, rezultatul este el, așa cum orice număr înmulțit cu 0 dă 0."
         },
         {
           "q": "De ce compunerea cu radicali până la √2012 are rezultatul 3?",
-          "a": "Conține √9=3, care este absorbant pentru această lege."
+          "a": "Printre numere apare √9=3, care este absorbant pentru această lege. Odată ce apare, rezultatul rămâne 3."
         },
         {
           "q": "Ce proprietate verifici înainte să elimini parantezele unei compuneri lungi?",
-          "a": "Asociativitatea."
+          "a": "Asociativitatea, adică faptul că parantezele nu contează când combini trei elemente."
         }
       ],
       "pitfalls": [
-        "Compunerea cu \\(1,\\sqrt2,\\ldots\\) se face pe \\(\\mathbb R\\). Aceste valori nu aparțin submulțimii \\((3,+\\infty)\\) studiate separat.",
-        "Nu confunda cele două legi din lecție: una conține radical, cealaltă un produs factorizat.",
-        "Un absorbant nu este un element neutru."
+        "Compunerea cu \\(1,\\sqrt2,\\ldots\\) o faci pe \\(\\mathbb R\\), adică pe toate numerele de pe axă, pentru că \\(1\\) și \\(\\sqrt2\\) sunt mai mici decât 3. Ele nu intră în submulțimea \\((3,+\\infty)\\) (bucata cu numerele mai mari decât 3, din regula despre forma factorizată), unde nici absorbantul \\(3\\) nu se află.",
+        "Nu confunda cele două legi din lecție: \\(x*y=\\sqrt{x^2+y^2-9}\\) și \\(x*y=2(x-3)(y-3)+3\\). Fiecare se calculează altfel și are alte proprietăți, de exemplu 3 este absorbant doar pentru a doua.",
+        "Un element absorbant nu este un element neutru, pentru că neutrul lasă celălalt număr neschimbat, iar cu absorbantul rezultatul este mereu chiar el."
       ],
       "group": "Algebră",
       "notes": [],
-      "shortTitle": "Factorizare, radicali și element absorbant"
+      "shortTitle": "Factorizare, radicali și absorbant"
     },
     {
       "id": "matrice-parametrice",
-      "title": "Matrice parametrice și legea parametrilor",
+      "title": "Matrice parametrice și legea parametrilor: tabele reglate de un număr",
       "sourceIds": [
         3,
         5,
         10
       ],
-      "summary": "Într-o familie de matrice, calculează produsul și recunoaște parametrul rezultat. Apartenența cere atât forma corectă, cât și respectarea restricțiilor parametrului.",
+      "summary": "Lecția este despre familii de matrice, adică tabele de numere cu 2 rânduri și 2 coloane. Toate matricele dintr-o familie au aceeași formă și se schimbă după un singur număr x, numit parametru. Când înmulțești două matrice din familie, recunoști parametrul rezultatului și verifici că el evită valorile interzise.",
       "rules": [
         {
-          "label": "Prima familie",
+          "label": "Prima familie de matrice, A(x)",
           "formula": "A(x)=\\begin{pmatrix}1-2x&-3x\\\\6x&1+9x\\end{pmatrix},\\quad x\\in\\mathbb R\\setminus\\{-1/7\\}",
-          "explanation": "Familia este studiată cu înmulțirea obișnuită a matricelor."
+          "explanation": "Pentru fiecare număr x înlocuiești x în formulele din cele patru căsuțe: \\(1-2x\\), \\(-3x\\), \\(6x\\), \\(1+9x\\). Așa obții o matrice cu 2 rânduri și 2 coloane. De exemplu, pentru \\(x=1\\) căsuțele devin \\(-1\\), \\(-3\\), \\(6\\), \\(10\\). Numărul x se numește parametru și poate fi orice număr real (orice număr de pe axă), mai puțin \\(-1/7\\). Pentru această familie folosești înmulțirea obișnuită a matricelor, rând înmulțit cu coloană (o vezi pas cu pas în primul exemplu)."
         },
         {
-          "label": "Legea parametrilor",
+          "label": "Legea parametrilor: ce parametru are produsul",
           "formula": "A(x)A(y)=A(x+y+7xy)",
-          "explanation": "Intrările produsului se reunesc în același parametru \\(t=x+y+7xy\\)."
+          "explanation": "Când înmulțești \\(A(x)\\) cu \\(A(y)\\), fiecare dintre cele patru căsuțe ale rezultatului (ele se numesc intrări) arată exact ca în \\(A(t)\\). Peste tot, în locul lui t stă același număr \\(t=x+y+7xy\\). De aceea produsul are forma lui \\(A(t)\\), cu parametrul t. Ca să fie în familie, mai verifici că \\(t\\ne-1/7\\) (regula următoare). Ține minte regula: aduni cei doi parametri și adaugi de 7 ori produsul lor."
         },
         {
-          "label": "Restricția pentru închidere",
+          "label": "Restricția pentru închidere: produsul rămâne în familie",
           "formula": "1+7(x+y+7xy)=(1+7x)(1+7y)\\ne0",
-          "explanation": "Cum \\(x,y\\ne-1/7\\), parametrul produsului nu poate fi \\(-1/7\\). Această verificare completează demonstrația din caiet."
+          "explanation": "Închiderea înseamnă că rezultatul rămâne tot înăuntru, oricare două matrice din familie ai înmulți. Așadar parametrul \\(t=x+y+7xy\\) nu are voie să fie \\(-1/7\\). Dacă înmulțești parantezele între ele, vezi că \\((1+7x)(1+7y)\\) este egal cu \\(1+7t\\). Pentru \\(x=-1/7\\), paranteza \\(1+7x\\) devine \\(1-1=0\\). Cum \\(x,y\\ne-1/7\\), numerele \\(1+7x\\) și \\(1+7y\\) nu sunt 0, deci nici produsul lor, adică \\(1+7t\\), nu este 0. Iar t ar fi \\(-1/7\\) doar dacă \\(1+7t\\) ar fi 0, deci parametrul produsului nu poate fi \\(-1/7\\). Această verificare completează demonstrația din caiet, prin care arăți că regula e adevărată pentru toate cazurile."
         },
         {
-          "label": "Neutru și proprietăți",
+          "label": "Elementul neutru și proprietățile familiei",
           "formula": "A(0)=I_2,\\quad A(x)A(y)=A(y)A(x)",
-          "explanation": "Comutativitatea este valabilă în această familie. Asociativitatea este moștenită de la înmulțirea matricelor; ambele grupări au parametrul \\(x+y+z+7xy+7xz+7yz+49xyz\\)."
+          "explanation": "Dacă pui 0 în locul lui x, căsuțele devin 1, 0, 0, 1. Obții \\(A(0)=I_2\\), matricea cu 1 pe diagonala de la stânga sus la dreapta jos și 0 în rest. Ea este elementul neutru: elementul care nu schimbă nimic, așa cum 0 nu schimbă nimic la adunare și 1 la înmulțire. În această familie are loc și comutativitatea, adică ordinea nu contează: \\(A(x)A(y)\\) dă același rezultat ca \\(A(y)A(x)\\). Motivul este că formula \\(x+y+7xy\\) rămâne la fel dacă schimbi x cu y între ele. Asociativitatea (parantezele nu contează când combini trei elemente) vine de la înmulțirea matricelor, unde parantezele nu contează niciodată. Poți verifica și pe parametri: ambele feluri de a pune parantezele, \\((A(x)A(y))A(z)\\) și \\(A(x)(A(y)A(z))\\), dau parametrul \\(x+y+z+7xy+7xz+7yz+49xyz\\)."
         },
         {
-          "label": "A doua familie",
+          "label": "A doua familie de matrice, B(x)",
           "formula": "B(x)=\\begin{pmatrix}1+6x&4x\\\\-9x&1-6x\\end{pmatrix},\\quad B(x)B(y)=B(x+y)",
-          "explanation": "Parametrul rezultat este \\(x+y\\in\\mathbb R\\), deci înmulțirea este internă pe această familie."
+          "explanation": "Aici căsuțele sunt \\(1+6x\\), \\(4x\\), \\(-9x\\), \\(1-6x\\), iar la înmulțire parametrii se adună simplu: \\(B(x)B(y)=B(x+y)\\). La această familie x poate fi orice număr real, așa că nu există valori interzise. Parametrul rezultat este \\(x+y\\in\\mathbb R\\) (semnul \\(\\in\\) se citește „aparține”), adică tot un număr real, deci este permis. Așadar înmulțirea este internă pe această familie. „Internă” înseamnă că rezultatul nu iese din mulțime. O mulțime este o colecție de numere (sau obiecte) cu o regulă clară despre cine face parte din ea. Aici, mulțimea este chiar familia B."
         }
       ],
       "examples": [
         {
-          "question": "Demonstrează \\(A(x)A(y)=A(x+y+7xy)\\).",
+          "question": "Demonstrează, adică arată pentru orice x și y permise, că \\(A(x)A(y)=A(x+y+7xy)\\).",
           "steps": [
-            "Intrarea \\((1,1)\\) este \\((1-2x)(1-2y)-18xy=1-2x-2y-14xy\\).",
-            "Intrarea \\((1,2)\\) este \\((1-2x)(-3y)-3x(1+9y)=-3x-3y-21xy\\).",
-            "Intrarea \\((2,1)\\) este \\(6x(1-2y)+6y(1+9x)=6x+6y+42xy\\).",
-            "Intrarea \\((2,2)\\) este \\(-18xy+(1+9x)(1+9y)=1+9x+9y+63xy\\).",
-            "Fiecare intrare are forma corespunzătoare lui \\(A(t)\\), cu \\(t=x+y+7xy\\)."
+            "Pentru căsuța din rândul 1, coloana 1, iei rândul 1 din \\(A(x)\\) și coloana 1 din \\(A(y)\\). Înmulțești primul număr cu primul, al doilea cu al doilea, apoi aduni. Aici \\(-18xy\\) vine din \\(-3x\\) înmulțit cu \\(6y\\). Desfaci parantezele (înmulțești fiecare termen din prima cu fiecare termen din a doua) și aduni termenii cu xy: \\(4xy-18xy=-14xy\\). Intrarea \\((1,1)\\) este \\((1-2x)(1-2y)-18xy=1-2x-2y-14xy\\).",
+            "La fel, înmulțești rândul 1 cu coloana 2. Intrarea \\((1,2)\\) este \\((1-2x)(-3y)-3x(1+9y)=-3x-3y-21xy\\).",
+            "Acum înmulțești rândul 2 cu coloana 1. Intrarea \\((2,1)\\) este \\(6x(1-2y)+6y(1+9x)=6x+6y+42xy\\).",
+            "La final, înmulțești rândul 2 cu coloana 2. Intrarea \\((2,2)\\) este \\(-18xy+(1+9x)(1+9y)=1+9x+9y+63xy\\).",
+            "Compari fiecare căsuță cu forma lui \\(A(t)\\), adică \\(1-2t\\), \\(-3t\\), \\(6t\\), \\(1+9t\\). Pentru asta scoți în față numărul care se repetă: \\(1-2x-2y-14xy=1-2(x+y+7xy)\\) și \\(-3x-3y-21xy=-3(x+y+7xy)\\). La fel, \\(6x+6y+42xy=6(x+y+7xy)\\) și \\(1+9x+9y+63xy=1+9(x+y+7xy)\\). Fiecare intrare are forma corespunzătoare lui \\(A(t)\\), cu \\(t=x+y+7xy\\)."
           ],
-          "answer": "\\(A(x)A(y)=A(x+y+7xy)\\)."
+          "answer": "Produsul are forma lui \\(A(t)\\): \\(A(x)A(y)=A(x+y+7xy)\\)."
         },
         {
-          "question": "Verifică neutrul familiei \\(A(x)\\).",
+          "question": "Verifică elementul neutru al familiei \\(A(x)\\), adică matricea care nu schimbă nimic la înmulțire.",
           "steps": [
-            "Candidatul este \\(A(0)=I_2\\).",
-            "\\(A(x)A(0)=A(x+0+7x\\cdot0)=A(x)\\).",
-            "La fel \\(A(0)A(x)=A(x)\\), iar \\(0\\ne-1/7\\)."
+            "Încerci parametrul 0, pentru că în legea parametrilor, \\(x+y+7xy\\), un 0 nu adaugă nimic. Candidatul este \\(A(0)=I_2\\).",
+            "Înmulțești \\(A(x)\\) cu \\(A(0)\\) și folosești legea parametrilor cu \\(y=0\\): \\(A(x)A(0)=A(x+0+7x\\cdot0)=A(x)\\).",
+            "Verifici și ordinea inversă, apoi verifici dacă 0 este un parametru permis. La fel, \\(A(0)A(x)=A(x)\\), iar \\(0\\ne-1/7\\)."
           ],
-          "answer": "\\(A(0)=I_2\\)."
+          "answer": "Elementul neutru este \\(A(0)=I_2\\)."
         },
         {
-          "question": "Arată că \\(B(x)B(y)\\) rămâne în familia \\(B\\).",
+          "question": "Arată că produsul \\(B(x)B(y)\\) rămâne în familia \\(B\\), adică nu iese din ea.",
           "steps": [
-            "Înmulțirea directă dă intrările \\(1+6(x+y)\\), \\(4(x+y)\\), \\(-9(x+y)\\), \\(1-6(x+y)\\).",
-            "Recunoaștem \\(B(x+y)\\).",
-            "Cum \\(x+y\\in\\mathbb R\\), parametrul este admis."
+            "Înmulțești cele două matrice rând cu coloană, ca la prima familie. De exemplu, pentru căsuța din stânga sus: \\((1+6x)(1+6y)+4x(-9y)=1+6x+6y+36xy-36xy=1+6(x+y)\\). Termenii cu xy se anulează între ei, de aceea aici parametrii se adună simplu. Înmulțirea directă dă intrările \\(1+6(x+y)\\), \\(4(x+y)\\), \\(-9(x+y)\\), \\(1-6(x+y)\\).",
+            "Compari cu forma lui B și vezi că în locul lui x apare peste tot \\(x+y\\). Recunoști \\(B(x+y)\\).",
+            "Verifici că noul parametru este permis. Cum \\(x+y\\in\\mathbb R\\) (suma a două numere reale e tot un număr real), parametrul este admis."
           ],
-          "answer": "\\(B(x)B(y)=B(x+y)\\), deci legea este internă."
+          "answer": "\\(B(x)B(y)=B(x+y)\\), deci înmulțirea este internă pe familia B: rezultatul rămâne în familie."
         }
       ],
       "recall": [
         {
-          "q": "Ce verifici după ce ai recunoscut produsul A(t)?",
-          "a": "Că parametrul t respectă toate restricțiile din definiția familiei."
+          "q": "Ce mai verifici după ce ai recunoscut că produsul are forma A(t)?",
+          "a": "Verifici că parametrul t respectă toate restricțiile din definiția familiei. La familia A(x), asta înseamnă t ≠ −1/7."
         },
         {
-          "q": "Care este neutrul înmulțirii în prima familie?",
-          "a": "\\(A(0)=I_2\\)."
+          "q": "Care este elementul neutru la înmulțire în prima familie?",
+          "a": "\\(A(0)=I_2\\), matricea cu 1 pe diagonală și 0 în rest, care nu schimbă nimic la înmulțire."
         },
         {
-          "q": "Înseamnă comutativitatea familiei A(x) că toate matricele comută?",
-          "a": "Nu. În general, înmulțirea matricelor nu este comutativă."
+          "q": "Dacă în familia A(x) ordinea la înmulțire nu contează, înseamnă că nu contează la nicio matrice?",
+          "a": "Nu. În general, la înmulțirea matricelor ordinea contează, adică înmulțirea matricelor nu este comutativă."
         }
       ],
       "pitfalls": [
-        "Forma \\(A(t)\\) nu este suficientă fără \\(t\\ne-1/7\\).",
-        "Comutativitatea primei familii nu se generalizează la toate matricele.",
-        "În S05, un rând din \\(B(y)\\) conține o eroare de copiere: dreapta sus este \\(4y\\), nu \\(4x\\)."
+        "Forma \\(A(t)\\) nu ajunge singură, pentru că fără \\(t\\ne-1/7\\) rezultatul ar putea fi tocmai matricea exclusă din familie.",
+        "Matricele din prima familie comută (dau același rezultat în orice ordine), dar asta nu e valabil pentru toate matricele. În general, la înmulțirea matricelor ordinea contează, așa că nu schimbi ordinea fără să verifici.",
+        "În fotografia S05, o căsuță din \\(B(y)\\) este copiată greșit: în dreapta sus trebuie să fie \\(4y\\), nu \\(4x\\), pentru că în \\(B(y)\\) fiecare căsuță depinde de y."
       ],
       "group": "Algebră",
       "notes": [],
-      "shortTitle": "Matrice parametrice și legea parametrilor"
+      "shortTitle": "Matrice parametrice și legea lor"
     },
     {
       "id": "monoizi-grupuri",
-      "title": "Monoid, grup și grup abelian",
+      "title": "Monoid, grup și grup abelian: trei trepte pentru o regulă de calcul",
       "sourceIds": [
         15,
         19
       ],
-      "summary": "Verifică proprietățile în ordine: lege internă, asociativitate, neutru, inverse, comutativitate. Primele trei dau un monoid; inversele dau un grup; comutativitatea dă un grup abelian.",
+      "summary": "Lecția îți arată cum verifici, pas cu pas, ce fel de „mașinărie” este o regulă care combină două elemente dintr-o mulțime. O mulțime este o colecție de numere sau obiecte cu o regulă clară despre cine face parte din ea. Mergi mereu în aceeași ordine: lege internă, asociativitate, element neutru, inverse, comutativitate. Primele trei proprietăți dau un monoid, inversele fac din el un grup, iar comutativitatea dă un grup abelian.",
       "rules": [
         {
-          "label": "Lege internă",
+          "label": "Lege de compoziție internă",
           "formula": "*:M\\times M\\to M",
-          "explanation": "M este nevidă și rezultatul operației rămâne în M."
+          "explanation": "O lege de compoziție internă este o regulă care ia două elemente din mulțimea M și dă înapoi un element tot din M. Seamănă cu o mașinărie cu două intrări și o ieșire. Mulțimea M trebuie să fie nevidă, adică să aibă cel puțin un element. „Internă” înseamnă că rezultatul nu iese din M."
         },
         {
           "label": "Asociativitate",
           "formula": "(x*y)*z=x*(y*z)",
-          "explanation": "Se verifică pentru orice x, y, z din M."
+          "explanation": "Asociativitatea înseamnă că parantezele nu contează când combini trei elemente. De exemplu, (2+3)+4 dă același lucru ca 2+(3+4). Cu litere: combini întâi x cu y sau întâi y cu z, iar rezultatul este același. Literele x, y, z țin locul oricăror trei elemente din M. De aceea ai nevoie de o demonstrație, adică arăți că e adevărat pentru toate cazurile, nu doar pentru câteva încercări."
         },
         {
           "label": "Element neutru",
           "formula": "x*e=e*x=x",
-          "explanation": "Același e din M trebuie să funcționeze pentru toate elementele și în ambele ordini."
+          "explanation": "Elementul neutru, notat cu litera e, este elementul care nu schimbă nimic, așa cum 0 nu schimbă nimic la adunare și 1 la înmulțire. Același e din M trebuie să meargă pentru toate elementele și în orice ordine. Fie că pui litera e înaintea lui x, fie după x, rezultatul este tot x. O mulțime cu o lege asociativă și cu element neutru se numește monoid."
         },
         {
-          "label": "Element inversabil",
+          "label": "Element inversabil (are invers)",
           "formula": "x*x'=x'*x=e",
-          "explanation": "Inversul x′ trebuie să aparțină tot lui M. Mulțimea elementelor inversabile se notează U(M)."
+          "explanation": "Inversul lui x se notează x′ (se citește „x prim”) și este „perechea” lui x. Combinate, în orice ordine, cele două dau neutrul e (5 și −5 la adunare; 2 și 1/2 la înmulțire). Un element x este inversabil dacă perechea lui, x′, se află tot în M. Mulțimea acestor elemente se notează U(M), iar ele se mai numesc „unități”. Un monoid în care fiecare element are invers se numește grup."
         },
         {
           "label": "Comutativitate",
           "formula": "x*y=y*x",
-          "explanation": "Un grup care îndeplinește această proprietate este abelian."
+          "explanation": "Comutativitatea înseamnă că ordinea nu contează, așa cum 2+3 dă același lucru ca 3+2. Un grup care are și această proprietate se numește grup abelian."
         }
       ],
       "examples": [
         {
-          "question": "Care sunt elementele inversabile în monoizii (ℕ,+) și (ℕ,·)?",
+          "question": "Care sunt elementele inversabile (cele care au invers) în monoizii (ℕ,+) și (ℕ,·)? Aici ℕ înseamnă numerele naturale (0, 1, 2, …). Scrierea (ℕ,+) înseamnă mulțimea ℕ împreună cu adunarea, iar (ℕ,·) înseamnă ℕ împreună cu înmulțirea.",
           "steps": [
-            "Pentru adunare, neutrul este 0 și ecuația x+x′=0 are în ℕ doar soluția x=x′=0.",
-            "Pentru înmulțire, neutrul este 1 și ecuația xx′=1 are în ℕ doar soluția x=x′=1."
+            "Începi cu adunarea. Pentru un număr x cauți o pereche x′ care, adunată cu x, să dea neutrul. Două numere naturale nu sunt niciodată negative, deci suma lor dă 0 doar dacă amândouă sunt 0. Pentru adunare, neutrul este 0 și ecuația x+x′=0 are în ℕ doar soluția x=x′=0.",
+            "Treci la înmulțire. Acum cauți un x′ care, înmulțit cu x, să dea neutrul. Dacă unul dintre numere este 0, produsul este 0. Dacă niciunul nu este 0, dar unul este 2 sau mai mare, produsul este cel puțin 2. De exemplu, perechea lui 2 ar fi 1/2, dar 1/2 nu este număr natural. Pentru înmulțire, neutrul este 1 și ecuația xx′=1 (xx′ înseamnă x înmulțit cu x′) are în ℕ doar soluția x=x′=1."
           ],
-          "answer": "U(ℕ,+)={0}; U(ℕ,·)={1}, cu convenția 0∈ℕ."
+          "answer": "U(ℕ,+)={0}; U(ℕ,·)={1}, cu convenția 0∈ℕ (adică socotești 0 printre numerele naturale). La adunare doar 0 are pereche, iar la înmulțire doar 1."
         },
         {
-          "question": "Este (ℝ,·) un grup?",
+          "question": "Este (ℝ,·) un grup? Aici ℝ înseamnă numerele reale, adică toate numerele de pe axă, iar legea este înmulțirea obișnuită.",
           "steps": [
-            "Înmulțirea este internă și asociativă; 1 este elementul neutru.",
-            "Pentru 0 nu există x′ cu 0·x′=1."
+            "Bifezi întâi proprietățile de monoid. Produsul a două numere reale este tot un număr real. Înmulțirea este internă și asociativă; 1 este elementul neutru.",
+            "Cauți acum un invers pentru fiecare număr. Zero înmulțit cu orice număr dă 0, deci nu poate da niciodată 1. Pentru 0 nu există x′ cu 0·x′=1."
           ],
-          "answer": "Este monoid, dar nu grup."
+          "answer": "Este monoid, dar nu grup. Un singur element fără invers, aici 0, este de ajuns ca să nu fie grup."
         }
       ],
       "recall": [
         {
           "q": "Ce proprietăți definesc un monoid?",
-          "a": "O lege internă asociativă și un element neutru."
+          "a": "O lege internă asociativă (parantezele nu contează) și un element neutru (un element care nu schimbă nimic)."
         },
         {
-          "q": "Ce adaugi unui monoid pentru a obține un grup?",
-          "a": "Fiecare element trebuie să aibă invers în aceeași mulțime."
+          "q": "Ce mai trebuie să aibă un monoid ca să devină grup?",
+          "a": "Fiecare element trebuie să aibă invers, adică o „pereche” care împreună cu el dă neutrul. Perechea trebuie să fie în aceeași mulțime."
         },
         {
           "q": "Ce înseamnă grup abelian?",
-          "a": "Un grup a cărui lege este și comutativă."
+          "a": "Un grup a cărui lege este și comutativă, adică ordinea în care combini două elemente nu contează."
         },
         {
           "q": "Ce reprezintă U(M)?",
-          "a": "Mulțimea elementelor inversabile ale monoidului M."
+          "a": "Mulțimea elementelor monoidului M care au invers (elementele inversabile). Aceste elemente se mai numesc „unități”."
         }
       ],
       "pitfalls": [
-        "Comutativitatea nu este obligatorie pentru un monoid sau pentru un grup.",
-        "Verifică apartenența neutrului și a inverselor la domeniu.",
-        "Exemplul (ℕ,+) presupune convenția 0∈ℕ; fără 0, mulțimea nu conține neutrul adunării."
+        "Comutativitatea nu este obligatorie pentru un monoid sau pentru un grup, așa că o verifici doar când vrei să afli dacă grupul este abelian.",
+        "Verifică dacă neutrul și inversele fac parte din domeniu (mulțimea M cu care lucrezi), pentru că un candidat găsit în afara mulțimii nu este bun. De exemplu, la (ℕ,·) perechea lui 2 ar fi 1/2, dar 1/2 nu este în ℕ.",
+        "Exemplul (ℕ,+) presupune convenția 0∈ℕ (socotești 0 printre numerele naturale), pentru că fără 0 mulțimea nu conține neutrul adunării."
       ],
       "group": "Algebră",
       "notes": [],
@@ -527,182 +527,182 @@ window.STUDY = {
     },
     {
       "id": "grup-interval-minus-trei",
-      "title": "Grup pe (−3,∞): schimbarea x ↦ x+3",
+      "title": "Grup pe (−3,∞): mutarea x ↦ x+3 scoate la iveală o înmulțire",
       "sourceIds": [
         13,
         19,
         20,
         23
       ],
-      "summary": "Legea x*y=xy+3x+3y+6 devine înmulțirea obișnuită după translația x↦x+3. Această formă face toate verificările scurte.",
+      "summary": "Lecția lucrează cu o lege de compoziție, adică o regulă care ia două elemente dintr-o mulțime și dă înapoi un element din aceeași mulțime: x*y=xy+3x+3y+6. Legea devine înmulțirea obișnuită după translația x↦x+3, adică după ce muți fiecare număr cu 3. Scrisă ca înmulțire, legea face scurte toate verificările pentru grup. Un grup este o mulțime cu o lege care respectă trei lucruri: parantezele nu contează, există un neutru (un element care nu schimbă nimic) și fiecare element are un invers (o pereche).",
       "rules": [
         {
-          "label": "Forma utilă",
+          "label": "Forma utilă a legii",
           "formula": "x*y=(x+3)(y+3)-3",
-          "explanation": "Domeniul M=(−3,∞) devine mulțimea numerelor pozitive prin t=x+3."
+          "explanation": "Dacă desfaci parantezele, adică înmulțești fiecare bucată din prima paranteză cu fiecare din a doua, obții (x+3)(y+3)=xy+3x+3y+9. Scazi 3 și ajungi înapoi la xy+3x+3y+6, deci e aceeași lege: aduni 3 la fiecare număr, le înmulțești, apoi scazi 3. Domeniul M=(−3,∞) înseamnă numerele pentru care lucrăm. Este un interval, adică o bucată de numere: toate cele mai mari decât −3. Paranteza rotundă arată că −3 nu face parte din M, iar ∞ („infinit”) arată că numerele nu au capăt în sus. O mulțime este o colecție de numere cu o regulă clară despre cine face parte din ea. Notezi cu t numărul mutat: t=x+3. Când x este mai mare decât −3, t este mai mare decât 0, deci M devine mulțimea numerelor pozitive. Aceasta este translația: mutăm toate numerele cu același pas, aici 3, ca să se vadă înmulțirea obișnuită ascunsă în formulă."
         },
         {
-          "label": "Închidere",
+          "label": "Închidere (rezultatul rămâne în M)",
           "formula": "(x*y)+3=(x+3)(y+3)>0",
-          "explanation": "Rezultă x*y>−3, deci x*y∈M."
+          "explanation": "Închiderea înseamnă că M este o parte stabilă, ca o cameră închisă: oricare două elemente din ea ai combina, rezultatul rămâne tot înăuntru. Dacă x și y sunt mai mari decât −3, ambele paranteze, x+3 și y+3, sunt pozitive. Produsul a două numere pozitive este pozitiv, deci (x*y)+3 este mai mare decât 0. Un număr care, adunat cu 3, trece de 0 este mai mare decât −3. Rezultă x*y>−3, deci x*y∈M (semnul ∈ se citește „aparține lui”)."
         },
         {
-          "label": "Asociativitate",
+          "label": "Asociativitate (parantezele nu contează)",
           "formula": "(x*y)*z=x*(y*z)=(x+3)(y+3)(z+3)-3",
-          "explanation": "Cele două parantezări dau exact aceeași expresie."
+          "explanation": "Asociativitatea înseamnă că parantezele nu contează când combini trei elemente, așa cum (2+3)+4 dă același lucru ca 2+(3+4). Ai două feluri de a pune parantezele: (x*y)*z și x*(y*z). Din forma utilă, x*y plus 3 este (x+3)(y+3), așa că (x*y)*z=(x+3)(y+3)(z+3)−3. La fel iese și x*(y*z), pentru că la înmulțirea obișnuită nu contează ce înmulțești întâi. În ambele cazuri aduni 3 la fiecare număr, înmulțești cele trei rezultate, apoi scazi 3."
         },
         {
-          "label": "Neutru",
+          "label": "Elementul neutru",
           "formula": "e=-2",
-          "explanation": "e+3=1, deoarece 1 este neutrul înmulțirii din coordonata translatată."
+          "explanation": "Elementul neutru este elementul care nu schimbă nimic, așa cum 0 nu schimbă nimic la adunare și 1 la înmulțire. După mutarea cu 3, e devine e+3 și ai o înmulțire obișnuită. Acolo neutrul este 1, deci e+3=1. De aici iese e=−2, care este mai mare decât −3, deci se află în M."
         },
         {
-          "label": "Invers",
+          "label": "Elementul invers (simetric)",
           "formula": "x'=-3+\\frac{1}{x+3}",
-          "explanation": "(x+3)(x′+3)=1. Reciprocul este pozitiv, deci x′ rămâne în (−3,∞)."
+          "explanation": "Inversul x′ (se citește „x prim”) este „perechea” lui x: combinate, dau neutrul −2. Cu forma utilă, asta înseamnă (x+3)(x′+3)−3=−2. Aduni 3 de ambele părți și obții (x+3)(x′+3)=1. Deci x′+3 este 1 împărțit la x+3, iar pe x′ îl afli scăzând 3. Numărul 1 împărțit la x+3 este pozitiv, pentru că în M numărul x+3 este pozitiv. Așa că x′ este −3 plus un număr pozitiv și rămâne în (−3,∞)."
         },
         {
-          "label": "Comutativitate",
+          "label": "Comutativitate (ordinea nu contează)",
           "formula": "(x+3)(y+3)=(y+3)(x+3)",
-          "explanation": "Structura este grup abelian."
+          "explanation": "Comutativitatea înseamnă că ordinea nu contează, așa cum 2+3 dă același lucru ca 3+2. La înmulțirea obișnuită poți schimba factorii între ei, deci și x*y=y*x. Împreună cu proprietățile de mai sus, structura este grup abelian, adică un grup în care și ordinea nu contează."
         }
       ],
       "examples": [
         {
-          "question": "Demonstrează că M=(−3,∞), cu x*y=xy+3x+3y+6, este grup abelian.",
+          "question": "Demonstrează că M=(−3,∞), cu x*y=xy+3x+3y+6, este grup abelian. A demonstra înseamnă să arăți că e adevărat pentru toate cazurile, nu doar pentru câteva încercări.",
           "steps": [
-            "Rescrie legea: x*y=(x+3)(y+3)−3.",
-            "x,y>−3 ⇒ (x+3)(y+3)>0 ⇒ x*y>−3.",
-            "Ambele parantezări ale produsului de trei elemente dau (x+3)(y+3)(z+3)−3.",
-            "Din x*e=x rezultă (x+3)(e+3)=x+3 și e=−2∈M.",
-            "Din x*x′=−2 rezultă x′=−3+1/(x+3)>−3.",
-            "Comutativitatea urmează din comutativitatea produsului obișnuit."
+            "Începi cu forma utilă, ca toate calculele de după să fie scurte. Rescrii legea: x*y=(x+3)(y+3)−3.",
+            "Verifici închiderea, adică faptul că rezultatul rămâne în M. Dacă x și y sunt mai mari decât −3, ambele paranteze sunt pozitive, deci și produsul lor. Din acest produs pozitiv scazi 3, deci rezultatul este mai mare decât −3 (semnul ⇒ se citește „deci”): x,y>−3 ⇒ (x+3)(y+3)>0 ⇒ x*y>−3.",
+            "Verifici asociativitatea, combinând trei elemente în cele două feluri posibile: (x*y)*z și x*(y*z). Ambele feluri dau (x+3)(y+3)(z+3)−3. Motivul: x*y plus 3 este (x+3)(y+3) și y*z plus 3 este (y+3)(z+3), așa că la al doilea pas mai înmulțești cu paranteza care lipsește și scazi 3.",
+            "Cauți elementul neutru e, cel care lasă orice x neschimbat. Scrii x*e=x cu forma utilă și aduni 3 de ambele părți. Din x*e=x rezultă (x+3)(e+3)=x+3. Acum împarți la x+3, ceea ce poți face pentru că în M acesta nu este niciodată 0. Rămâne e+3=1, deci e=−2∈M.",
+            "Cauți inversul x′, numărul care, combinat cu x, dă neutrul −2. Scrii x*x′=−2 cu forma utilă și aduni 3: (x+3)(x′+3)=1. Împarți la x+3, apoi scazi 3. Din x*x′=−2 rezultă x′=−3+1/(x+3)>−3, pentru că 1/(x+3) este pozitiv. Deci x′ este tot în M.",
+            "La final verifici că ordinea nu contează. Comutativitatea rezultă din comutativitatea produsului obișnuit, adică din faptul că (x+3)(y+3)=(y+3)(x+3)."
           ],
-          "answer": "Toate proprietățile sunt verificate: (M,*) este grup abelian."
+          "answer": "Ai verificat toate proprietățile, deci (M,*) este grup abelian."
         },
         {
-          "question": "Pentru aceeași lege pe ℤ, află U(ℤ,*).",
+          "question": "Folosești aceeași lege, dar acum pe ℤ, adică pe numerele întregi (…, −1, 0, 1, …). Află U(ℤ,*), lista elementelor care au invers tot în ℤ (se mai numesc „unități”).",
           "steps": [
-            "Neutrul este −2. Inversul formal este x′=−3+1/(x+3).",
-            "Ca x′ să fie întreg, întregul x+3 trebuie să dividă 1.",
-            "x+3∈{−1,1} ⇒ x∈{−4,−2}.",
-            "Ambele valori sunt propriile inverse."
+            "Pornești de la ce știi deja din primul exemplu. Neutrul este −2. Inversul formal, adică cel dat de formulă înainte să verifici dacă e întreg, este x′=−3+1/(x+3).",
+            "Acum pui condiția să rămâi în ℤ. În x′=−3+1/(x+3), numărul −3 este deja întreg, deci totul depinde de 1/(x+3). Ca x′ să fie întreg, întregul x+3 trebuie să dividă 1, adică 1 să se împartă exact la el.",
+            "Singurii întregi la care 1 se împarte exact sunt −1 și 1. De exemplu, la 2 iese o fracție (1/2). Acoladele { } strâng numerele într-o listă. Aici lista spune că x+3 este −1 sau 1. Afli x scăzând 3: x+3∈{−1,1} ⇒ x∈{−4,−2}.",
+            "Verifici ce pereche are fiecare. Fiecare valoare este propriul ei invers: combinată cu ea însăși, dă neutrul −2. Cu forma utilă, pentru −4: (−4)*(−4)=(−1)(−1)−3=1−3=−2. Pentru −2: (−2)*(−2)=1·1−3=−2."
           ],
-          "answer": "U(ℤ,*)={−4,−2}."
+          "answer": "U(ℤ,*)={−4,−2}, deci pe ℤ doar −4 și −2 au invers."
         }
       ],
       "recall": [
         {
-          "q": "Ce translație simplifică legea xy+3x+3y+6?",
-          "a": "t=x+3; atunci (x*y)+3=(x+3)(y+3)."
+          "q": "Cu ce translație (mutare a tuturor numerelor) devine simplă legea xy+3x+3y+6?",
+          "a": "Muți fiecare număr cu 3: t=x+3. Atunci (x*y)+3=(x+3)(y+3), adică legea devine o înmulțire obișnuită."
         },
         {
           "q": "Care sunt neutrul și inversul în grupul de pe (−3,∞)?",
-          "a": "e=−2; x′=−3+1/(x+3)."
+          "a": "Neutrul, cel care nu schimbă nimic, este e=−2. Perechea lui x, inversul, este x′=−3+1/(x+3)."
         },
         {
           "q": "De ce inversul rămâne mai mare decât −3?",
-          "a": "x+3>0, deci 1/(x+3)>0."
+          "a": "Pentru că în M ai x+3>0, deci 1/(x+3)>0. Așa că x′ este −3 plus un număr pozitiv."
         },
         {
-          "q": "De ce pe ℤ există numai două elemente inversabile?",
-          "a": "Un întreg are reciprocul întreg numai când este 1 sau −1."
+          "q": "De ce pe ℤ există numai două elemente inversabile, adică cu pereche?",
+          "a": "Numărul 1 împărțit la un întreg dă tot un întreg numai când întregul este 1 sau −1. Așa că x+3 poate fi doar 1 sau −1, deci rămân două valori."
         }
       ],
       "pitfalls": [
-        "Domeniul schimbă rezultatul: −4 este unitate pe ℤ, dar nu aparține intervalului (−3,∞).",
-        "Neutrul acestei legi este −2, nu 0 sau 1.",
-        "Nu împărți la x+3 fără să verifici că x≠−3."
+        "Domeniul schimbă rezultatul: −4 este unitate (are invers) pe ℤ, dar nu aparține mulțimii (−3,∞), pentru că este mai mic decât −3.",
+        "Află neutrul din x*e=x în loc să scrii din obișnuință 0 sau 1, neutrii adunării și înmulțirii obișnuite. La această lege neutrul este −2.",
+        "Înainte să împarți la x+3, verifică dacă x≠−3, pentru că la x=−3 ai împărți la 0, ceea ce nu are sens."
       ],
       "group": "Algebră",
       "notes": [],
-      "shortTitle": "Grup pe (−3,∞)"
+      "shortTitle": "Grup pe (−3,∞) prin mutarea x ↦ x+3"
     },
     {
       "id": "grup-matrice-pell",
-      "title": "Grupul matricelor cu a²−2b²=1",
+      "title": "Grupul matricelor cu a²−2b²=1: tabele de numere care rămân în aceeași familie la înmulțire",
       "sourceIds": [
         13,
         15,
         18
       ],
-      "summary": "Parametrii întregi satisfac a²−2b²=1. Înmulțirea păstrează forma matricei și această relație; inversul se obține schimbând semnul lui b.",
+      "summary": "Lucrezi cu matrice (tabele de numere cu 2 rânduri și 2 coloane) făcute din două numere întregi a și b, cu a²−2b²=1. Contează pentru că înmulțirea a două astfel de matrice dă tot o matrice de aceeași formă, care respectă aceeași relație. Fiecare matrice are o „pereche”, numită invers, pe care o găsești schimbând semnul lui b.",
       "rules": [
         {
-          "label": "Mulțimea",
+          "label": "Mulțimea G și regula de intrare",
           "formula": "G=\\left\\{A(a,b)=\\begin{pmatrix}a&2b\\\\b&a\\end{pmatrix}:a,b\\in\\mathbb Z,\\ a^2-2b^2=1\\right\\}",
-          "explanation": "Operația este înmulțirea obișnuită a matricelor."
+          "explanation": "G este o mulțime de matrice cu 2 rânduri și 2 coloane. O mulțime este o colecție de numere (sau obiecte) cu o regulă clară despre cine face parte din ea. Fiecare matrice se notează A(a,b): pe rândul de sus are a și 2b, pe rândul de jos are b și a. Semnul ∈ din formulă se citește „aparține lui”, adică „face parte din”. Intră doar matricele făcute din doi întregi a și b (din ℤ, adică …, −1, 0, 1, …) care respectă a²−2b²=1. Le combini cu înmulțirea obișnuită a matricelor, făcută rând cu coloană. Aceasta este legea de compoziție, adică regula care ia două elemente din mulțime și dă înapoi un element din aceeași mulțime. Rând cu coloană înseamnă că fiecare număr din rezultat vine dintr-un rând al primei matrice și o coloană a celei de-a doua: înmulțești primul număr cu primul, al doilea cu al doilea, apoi aduni cele două rezultate."
         },
         {
-          "label": "Produs",
+          "label": "Produsul a două matrice din G",
           "formula": "A(a,b)A(c,d)=A(ac+2bd,ad+bc)",
-          "explanation": "Noii parametri sunt întregi."
+          "explanation": "Parametrii sunt cele două numere din care construiești matricea, aici a și b. Când înmulțești A(a,b) cu A(c,d), obții tot o matrice de aceeași formă, cu parametrii ac+2bd și ad+bc. Fiindcă a, b, c, d sunt întregi, și noii parametri sunt întregi."
         },
         {
-          "label": "Relația se păstrează",
+          "label": "Relația a²−2b²=1 se păstrează la înmulțire",
           "formula": "(ac+2bd)^2-2(ad+bc)^2=(a^2-2b^2)(c^2-2d^2)=1",
-          "explanation": "Această identitate verifică apartenența produsului la G."
+          "explanation": "Prima egalitate este o identitate (o egalitate adevărată pentru orice numere a, b, c, d). Parantezele din mijloc sunt a²−2b² și c²−2d². Fiecare este egală cu 1, pentru că A(a,b) și A(c,d) fac parte din G. Deci rezultatul este 1·1=1, adică noii parametri respectă și ei relația. Așa verifici că produsul aparține lui G: înmulțirea nu te scoate din familie."
         },
         {
-          "label": "Neutru",
+          "label": "Elementul neutru",
           "formula": "A(1,0)=I_2",
-          "explanation": "Parametrii 1 și 0 îndeplinesc relația cerută."
+          "explanation": "Element neutru înseamnă elementul care nu schimbă nimic, așa cum 0 nu schimbă nimic la adunare și 1 la înmulțire. Aici el este A(1,0)=I₂, matricea cu 1 pe diagonală (stânga sus și dreapta jos) și 0 în rest. Parametrii 1 și 0 îndeplinesc relația cerută, pentru că 1²−2·0²=1."
         },
         {
-          "label": "Invers",
+          "label": "Inversul se obține schimbând semnul lui b",
           "formula": "A(a,b)^{-1}=A(a,-b)",
-          "explanation": "Produsul este (a²−2b²)I₂=I₂, iar noua pereche rămâne în G."
+          "explanation": "Inversul este „perechea” unui element: înmulțite, cele două dau neutrul. Inversul lui A(a,b) se scrie A(a,b)⁻¹ (se citește „A de a, b la minus unu”). Aici îl obții schimbând semnul lui b. Produsul A(a,b)·A(a,−b) este (a²−2b²)I₂, adică I₂ cu fiecare număr înmulțit cu a²−2b². Acest număr este 1, pentru că A(a,b) face parte din G. Deci (a²−2b²)I₂=I₂. Matricea A(a,−b) rămâne în G, fiindcă −b este tot întreg și (−b)² este egal cu b²."
         },
         {
-          "label": "Grup abelian",
+          "label": "G este grup abelian",
           "formula": "A(a,b)A(c,d)=A(c,d)A(a,b)",
-          "explanation": "Asociativitatea vine de la înmulțirea matricelor; comutativitatea vine de la formula simetrică a produsului."
+          "explanation": "Un grup este o mulțime cu o lege de compoziție (aici înmulțirea matricelor) care respectă trei condiții. Legea este asociativă, adică parantezele nu contează când combini trei elemente. Există element neutru, iar fiecare element are invers. Grupul este abelian când și ordinea nu contează, adică legea este comutativă. Asociativitatea vine de la înmulțirea matricelor, care este mereu asociativă. Comutativitatea vine din formula produsului. Dacă schimbi între ele perechile de parametri (a,b) și (c,d), obții ca+2db și cb+da. Acestea sunt exact ac+2bd și ad+bc, pentru că la numere 3·5 dă același lucru ca 5·3."
         }
       ],
       "examples": [
         {
-          "question": "Verifică direct inversul lui A(a,b).",
+          "question": "Verifică direct, prin înmulțire, inversul lui A(a,b).",
           "steps": [
-            "A(a,−b) are parametri întregi și a²−2(−b)²=1.",
-            "În produs, elementele diagonale sunt a²−2b²=1.",
-            "Elementele din afara diagonalei sunt −2ab+2ab=0 și ab−ab=0.",
-            "Rezultă A(a,b)A(a,−b)=I₂; verificarea este valabilă și pentru b=0."
+            "Întâi verifici că A(a,−b) face parte din G. A(a,−b) are parametri întregi și a²−2(−b)²=1, pentru că (−b)² este tot b².",
+            "Înmulțești A(a,b) cu A(a,−b), rând cu coloană. Pentru stânga sus iei primul rând al lui A(a,b) (a și 2b) și prima coloană a lui A(a,−b) (a și −b): a·a+2b·(−b)=a²−2b². Dreapta jos iese la fel, deci elementele de pe diagonală sunt a²−2b²=1. Ultimul „=1” vine din regula de intrare în G.",
+            "Pe celelalte două locuri, termenii se anulează, pentru că vin cu semne opuse. Elementele din afara diagonalei sunt −2ab+2ab=0 și ab−ab=0.",
+            "Ai obținut 1 pe diagonală și 0 în rest, deci rezultă A(a,b)A(a,−b)=I₂. Calculul nu împarte la nimic. De aceea verificarea merge și pentru b=0, unde o metodă care împarte la b s-ar bloca, fiindcă la 0 nu se poate împărți."
           ],
-          "answer": "A(a,b)⁻¹=A(a,−b)."
+          "answer": "A(a,b)⁻¹=A(a,−b), adică inversul se obține schimbând semnul lui b."
         },
         {
-          "question": "Exemplu dedus: calculează pătratul și inversul lui A(3,2).",
+          "question": "Exemplu dedus: calculează pătratul lui A(3,2) (adică A(3,2) înmulțită cu ea însăși) și inversul ei.",
           "steps": [
-            "3²−2·2²=1, deci A(3,2)∈G.",
-            "Formula produsului dă A(3,2)²=A(9+8,6+6)=A(17,12).",
-            "17²−2·12²=289−288=1.",
-            "Inversul este A(3,−2)."
+            "Întâi verifici că matricea face parte din G, punând a=3 și b=2 în relație: 3²−2·2²=1 (adică 9−8=1), deci A(3,2)∈G. Semnul ∈ se citește „aparține lui”, adică A(3,2) face parte din G.",
+            "Înmulțești A(3,2) cu ea însăși, deci și a doua matrice are parametrii 3 și 2. În formula produsului pui a=c=3 și b=d=2, deci ac+2bd=9+8 și ad+bc=6+6. Așa obții A(3,2)²=A(9+8,6+6)=A(17,12).",
+            "Verifici că rezultatul respectă relația, așa cum promite identitatea de mai sus: 17²−2·12²=289−288=1.",
+            "Pentru invers schimbi semnul lui b, adică al lui 2. Inversul este A(3,−2)."
           ],
-          "answer": "A(3,2)²=A(17,12); A(3,2)⁻¹=A(3,−2)."
+          "answer": "Pătratul este A(3,2)²=A(17,12), iar inversul este A(3,2)⁻¹=A(3,−2)."
         }
       ],
       "recall": [
         {
-          "q": "Cum înmulțești parametrii (a,b) și (c,d)?",
-          "a": "Obții (ac+2bd, ad+bc)."
+          "q": "Ce parametri are produsul matricelor A(a,b) și A(c,d)?",
+          "a": "Obții (ac+2bd, ad+bc), adică produsul este tot o matrice din familie, cu acești parametri."
         },
         {
-          "q": "Cum găsești inversul fără să rezolvi un sistem?",
-          "a": "Schimbi semnul lui b: A(a,b)⁻¹=A(a,−b)."
+          "q": "Cum găsești inversul repede, fără să rezolvi un sistem de ecuații?",
+          "a": "Schimbi semnul lui b: A(a,b)⁻¹=A(a,−b). Înmulțite, cele două matrice dau I₂, care nu schimbă nimic."
         },
         {
-          "q": "Care este matricea neutră?",
-          "a": "A(1,0)=I₂."
+          "q": "Care este elementul neutru, matricea care nu schimbă nimic la înmulțire?",
+          "a": "A(1,0)=I₂, adică matricea cu 1 pe diagonală și 0 în rest."
         },
         {
-          "q": "De ce această familie este comutativă, deși matricele în general nu sunt?",
-          "a": "Formula parametrilor produsului este simetrică în cele două perechi."
+          "q": "De ce aici ordinea înmulțirii nu contează, deși la matrice de obicei contează?",
+          "a": "Pentru că formula produsului dă același rezultat dacă schimbi între ele perechile de parametri (a,b) și (c,d): ca+2db este tot ac+2bd, iar cb+da este tot ad+bc."
         }
       ],
       "pitfalls": [
-        "Parametrii din sursă sunt întregi; nu înlocui domeniul cu ℝ fără să spui acest lucru.",
-        "Deducerea din caiet împarte la b; verificarea directă a inversului acoperă și b=0.",
-        "Asociativitatea înmulțirii matricelor nu implică automat comutativitate."
+        "Aici a și b sunt întregi, deci nu schimba domeniul (numerele pentru care lucrezi) în ℝ fără să spui. ℝ înseamnă toate numerele de pe axă, și cele cu virgulă, așa că în G ar intra alte matrice decât cele din problemă.",
+        "Calculul din caiet care găsește inversul împarte la b, iar la 0 nu se poate împărți, deci nu merge pentru b=0. Verificarea directă prin înmulțire nu împarte la nimic, așa că acoperă și acest caz.",
+        "Asociativitatea înmulțirii matricelor (parantezele nu contează) nu aduce automat comutativitatea (ordinea nu contează). Fiindcă la matrice ordinea contează de obicei, comutativitatea o arăți separat, aici din formula produsului."
       ],
       "group": "Algebră",
       "notes": [],
@@ -710,78 +710,78 @@ window.STUDY = {
     },
     {
       "id": "grup-rational",
-      "title": "Un grup pe intervalul (−1, 1)",
+      "title": "Un grup pe intervalul (−1, 1): o regulă care păstrează rezultatul între −1 și 1",
       "sourceIds": [
         9,
         11,
         12
       ],
-      "summary": "Operația \\(x*y=(x+y)/(1+xy)\\) formează un grup abelian pe \\((-1,1)\\). Domeniul face numitorii pozitivi și păstrează rezultatul în interval.",
+      "summary": "Lecția îți arată regula \\(x*y=(x+y)/(1+xy)\\), care combină două numere dintre −1 și 1 și face din \\((-1,1)\\) un grup abelian. Grup abelian înseamnă aici că rezultatul rămâne în interval, ordinea și parantezele nu contează, există un element neutru (elementul care nu schimbă nimic, aici 0) și fiecare număr are o pereche. Domeniul (numerele pentru care formula are sens și pentru care lucrăm, aici cele dintre −1 și 1, fără capete) ține pozitiv numitorul (partea de jos a fracției) și păstrează rezultatul în interval.",
       "rules": [
         {
-          "label": "Definirea operației",
+          "label": "Definirea operației și de ce are sens",
           "formula": "G=(-1,1),\\quad x*y=\\frac{x+y}{1+xy}",
-          "explanation": "Pentru \\(x,y\\in G\\), \\(|xy|<1\\), deci \\(1+xy>0\\)."
+          "explanation": "Notăm cu G intervalul \\((-1,1)\\), adică toate numerele dintre −1 și 1, fără capete. Operația este o lege de compoziție: o regulă care ia două elemente dintr-o mulțime și dă înapoi un element din aceeași mulțime. E ca o mașinărie cu două intrări și o ieșire. Aici ia x și y din G, le adună și împarte suma la 1 plus produsul lor. Semnul \\(\\in\\) înseamnă „face parte din”. Pentru \\(x,y\\in G\\), \\(|xy|<1\\), adică produsul lor, luat fără semn, este mai mic decât 1. Asta pentru că înmulțești două numere care, fără semn, sunt amândouă sub 1. Deci xy e mai mare decât −1, iar de aceea \\(1+xy>0\\). Așa numitorul (partea de jos a fracției) nu devine niciodată 0."
         },
         {
-          "label": "Închiderea",
+          "label": "Închiderea: rezultatul rămâne în interval",
           "formula": "1+x*y=\\frac{(1+x)(1+y)}{1+xy}>0,\\quad 1-x*y=\\frac{(1-x)(1-y)}{1+xy}>0",
-          "explanation": "Prima inegalitate dă \\(x*y>-1\\), a doua \\(x*y<1\\)."
+          "explanation": "Închiderea înseamnă că intervalul e o parte stabilă: oricare două numere din el ai combina, rezultatul rămâne tot înăuntru. Ca să vezi asta, aduni 1 la rezultat, apoi scazi rezultatul din 1. Obții două fracții: \\(1+x*y=(1+x)(1+y)/(1+xy)\\) și \\(1-x*y=(1-x)(1-y)/(1+xy)\\). Ambele fracții sunt pozitive. Motivul: 1+x, 1+y, 1−x, 1−y și 1+xy sunt toate pozitive când x și y sunt între −1 și 1. Prima fracție pozitivă dă \\(x*y>-1\\), a doua \\(x*y<1\\)."
         },
         {
-          "label": "Asociativitatea",
+          "label": "Asociativitatea: parantezele nu contează",
           "formula": "(x*y)*z=x*(y*z)=\\frac{x+y+z+xyz}{1+xy+xz+yz}",
-          "explanation": "Ambele grupări produc aceeași fracție. Numitorul este pozitiv deoarece este \\((1+xy)(1+(x*y)z)\\)."
+          "explanation": "Asociativitatea înseamnă că parantezele nu contează când combini trei numere, așa cum (2+3)+4 dă același lucru ca 2+(3+4). Ambele grupări, (x*y)*z și x*(y*z), produc aceeași fracție: \\((x+y+z+xyz)/(1+xy+xz+yz)\\). Numitorul ei este pozitiv deoarece este \\((1+xy)(1+(x*y)z)\\), un produs de două numere pozitive. Aici \\((x*y)z\\) înseamnă rezultatul lui x*y înmulțit obișnuit cu z. Prima paranteză e pozitivă din prima regulă. A doua e pozitivă din același motiv, pentru că x*y rămâne în interval. Ai nevoie de un numitor pozitiv ca să nu împarți niciodată la 0."
         },
         {
-          "label": "Neutru și inverse",
+          "label": "Elementul neutru și simetricul",
           "formula": "e=0,\\quad x'=-x,\\quad x*(-x)=\\frac{0}{1-x^2}=0",
-          "explanation": "\\(-x\\in G\\) și \\(1-x^2>0\\), deci fiecare element are un simetric."
+          "explanation": "Elementul neutru (elementul care nu schimbă nimic, așa cum 0 nu schimbă nimic la adunare și 1 la înmulțire) este aici chiar 0. Simetricul lui x este perechea lui: numărul care, combinat cu x, dă neutrul. Aici simetricul este −x, pentru că la numărător (partea de sus a fracției) x și −x se anulează. Când combini x cu −x, la numitor apare \\(1+x\\cdot(-x)\\), adică \\(1-x^2\\). Cum \\(-x\\in G\\) (−x e tot în interval) și \\(1-x^2>0\\) (pentru că \\(x^2\\) e sub 1), fiecare element are un simetric."
         },
         {
-          "label": "Comutativitate",
+          "label": "Comutativitatea: ordinea nu contează",
           "formula": "\\frac{x+y}{1+xy}=\\frac{y+x}{1+yx}",
-          "explanation": "Formula este simetrică în cei doi operanzi. Grupul este abelian."
+          "explanation": "Comutativitatea înseamnă că ordinea nu contează. Dacă schimbi x cu y, suma și produsul rămân aceleași, deci fracția nu se schimbă. De aceea grupul este abelian."
         }
       ],
       "examples": [
         {
-          "question": "Demonstrează că \\(x*y\\in(-1,1)\\).",
+          "question": "Demonstrează, adică arată pentru orice x și y din interval, că \\(x*y\\in(-1,1)\\).",
           "steps": [
-            "Din \\(|x|,|y|<1\\), avem \\(1+xy>0\\).",
-            "\\(1+x*y=(1+x)(1+y)/(1+xy)>0\\), deci \\(x*y>-1\\).",
-            "\\(1-x*y=(1-x)(1-y)/(1+xy)>0\\), deci \\(x*y<1\\)."
+            "Mai întâi te asiguri că numitorul este pozitiv, ca să poți lucra liniștit cu inegalitățile. Din \\(|x|,|y|<1\\), obții \\(1+xy>0\\).",
+            "Ca să arăți că rezultatul e peste −1, aduni 1 la el și aduci totul la o singură fracție. În partea de sus a fracției apare produsul a două paranteze, 1+x și 1+y. Ele sunt pozitive pentru că x și y sunt peste −1, iar 1+xy e pozitiv din pasul 1: \\(1+x*y=(1+x)(1+y)/(1+xy)>0\\). Dacă 1 plus un număr dă ceva pozitiv, numărul e peste −1, deci \\(x*y>-1\\).",
+            "Ca să arăți că rezultatul e sub 1, îl scazi din 1 și procedezi la fel: \\(1-x*y=(1-x)(1-y)/(1+xy)>0\\). Dacă 1 minus un număr e pozitiv, numărul e sub 1, deci \\(x*y<1\\)."
           ],
-          "answer": "\\(-1<x*y<1\\); operația este internă."
+          "answer": "\\(-1<x*y<1\\); operația este internă, adică rezultatul nu iese din interval."
         },
         {
-          "question": "Determină neutrul și simetricul unui element \\(x\\).",
+          "question": "Află elementul neutru și simetricul (perechea) unui element \\(x\\).",
           "steps": [
-            "\\(x*0=(x+0)/(1+x\\cdot0)=x\\), iar \\(0*x=x\\).",
-            "\\(x*x'=0\\) impune \\(x+x'=0\\), deci \\(x'=-x\\).",
-            "Verificăm \\(-x\\in(-1,1)\\) și numitorul \\(1-x^2>0\\)."
+            "Încerci 0 ca element neutru, pentru că sus avem o adunare, iar la adunare 0 nu schimbă nimic. Îl pui pe rând în dreapta și în stânga lui x, ca să fii sigur că merge în ambele ordini: \\(x*0=(x+0)/(1+x\\cdot0)=x\\), iar \\(0*x=x\\).",
+            "Cauți perechea x′, adică numărul care, combinat cu x, dă neutrul 0. O fracție e 0 doar când partea de sus e 0, așa că \\(x*x'=0\\) cere \\(x+x'=0\\), deci \\(x'=-x\\).",
+            "La final verifici că perechea găsită este bună și că fracția are sens. Dacă x e între −1 și 1, atunci și −x este, deci \\(-x\\in(-1,1)\\). Când combini x cu −x, la numitor apare \\(1+x\\cdot(-x)\\), adică \\(1-x^2\\). Cum \\(x^2\\) e sub 1, numitorul \\(1-x^2>0\\)."
           ],
-          "answer": "\\(e=0\\), \\(x'=-x\\)."
+          "answer": "Elementul neutru este \\(e=0\\), iar simetricul lui x este \\(x'=-x\\)."
         }
       ],
       "recall": [
         {
-          "q": "De ce numitorul 1+xy nu se anulează?",
-          "a": "Pentru că \\(|xy|<1\\), deci \\(1+xy>0\\)."
+          "q": "De ce numitorul 1+xy nu devine niciodată 0?",
+          "a": "Pentru că \\(|xy|<1\\), adică produsul, fără semn, e sub 1. Deci \\(1+xy>0\\)."
         },
         {
-          "q": "Care sunt neutrul și simetricul în acest grup?",
-          "a": "Neutrul este \\(0\\), iar simetricul lui \\(x\\) este \\(-x\\)."
+          "q": "Care sunt elementul neutru și simetricul în acest grup?",
+          "a": "Neutrul este \\(0\\), iar simetricul (perechea) lui \\(x\\) este \\(-x\\), pentru că x și −x se anulează la numărător."
         },
         {
-          "q": "În ce ordine poți verifica structura de grup abelian?",
-          "a": "Operație definită și internă, asociativitate, neutru, inverse, apoi comutativitate."
+          "q": "În ce ordine verifici că ai un grup abelian?",
+          "a": "Arăți întâi că operația are sens și e internă (rezultatul rămâne în interval). Apoi asociativitatea (parantezele nu contează), neutrul (0 nu schimbă nimic) și simetricele (fiecare x are perechea −x), iar la final comutativitatea (ordinea nu contează)."
         }
       ],
       "pitfalls": [
-        "Verifică semnul numitorului înainte să împarți o inegalitate.",
-        "Capetele −1 și 1 sunt excluse.",
-        "Nu aplica formula pe toată \\(\\mathbb R\\): poate avea numitor nul și poate ieși din interval."
+        "Verifică semnul numitorului înainte să împarți o inegalitate, pentru că împărțirea la un număr negativ întoarce sensul inegalității.",
+        "Capetele −1 și 1 sunt excluse, iar parantezele rotunde ale intervalului arată asta. Le scoți pentru că, de exemplu, pentru 1 și −1 numitorul devine \\(1+1\\cdot(-1)=0\\).",
+        "Nu aplica formula pe toată mulțimea \\(\\mathbb R\\) (toate numerele de pe axă), pentru că acolo numitorul poate fi 0, iar rezultatul poate ieși din interval."
       ],
       "group": "Algebră",
       "notes": [],
@@ -789,313 +789,313 @@ window.STUDY = {
     },
     {
       "id": "bac-lege-doua-treimi",
-      "title": "Exerciții BAC: legea ⅔(x−3)(y−3)+3",
+      "title": "Exerciții BAC cu legea de compoziție ⅔(x−3)(y−3)+3: o înmulțire ascunsă",
       "sourceIds": [
         8,
         14,
         16,
         17
       ],
-      "summary": "Păstrează forma factorizată. Produsul repetat devine un produs obișnuit al termenilor x−3, cu o putere a lui 2/3 în față.",
+      "summary": "Aici lucrezi cu o lege de compoziție, o mașinărie cu două intrări și o ieșire: intră două numere și iese tot un număr. Dacă păstrezi forma factorizată (scrisă ca înmulțire de paranteze), legea aplicată de mai multe ori scade 3 din fiecare număr și înmulțește rezultatele. În față apare o putere a lui 2/3, adică 2/3 înmulțit cu el însuși de mai multe ori, iar la final rămâne +3.",
       "rules": [
         {
-          "label": "Legea",
+          "label": "Legea pentru două numere",
           "formula": "x*y=\\frac23(x-3)(y-3)+3",
-          "explanation": "O lege de compoziție pe ℝ."
+          "explanation": "Este o lege de compoziție pe ℝ, mulțimea numerelor reale (toate numerele de pe axă): primește două numere reale și dă înapoi tot un număr real. Ca să calculezi x*y, scazi 3 din fiecare număr, înmulțești rezultatele între ele și cu 2/3, apoi aduni 3. Steluța * este doar numele acestei legi."
         },
         {
-          "label": "Trei termeni",
+          "label": "Trei numere combinate",
           "formula": "x*y*z=\\frac49(x-3)(y-3)(z-3)+3",
-          "explanation": "Înlocuiește mai întâi x*y, apoi observă anularea lui +3−3."
+          "explanation": "Înlocuiești mai întâi x*y cu formula lui, apoi combini rezultatul cu z. Rezultatul x*y intră în mașinărie ca prim număr, iar z ca al doilea. Legea scade 3 din fiecare număr care intră, deci și din x*y. Atunci +3 de la finalul lui x*y se anulează cu −3 (+3−3=0) și rămâne doar înmulțirea parantezelor. Cele două fracții 2/3 se înmulțesc între ele și dau 4/9."
         },
         {
-          "label": "n termeni",
+          "label": "n numere combinate",
           "formula": "x_1*\\cdots*x_n=\\left(\\frac23\\right)^{n-1}\\prod_{k=1}^n(x_k-3)+3",
-          "explanation": "Fiecare operație suplimentară aduce un factor 2/3."
+          "explanation": "Scazi 3 din fiecare dintre cele n numere și înmulțești toate rezultatele între ele (semnul mare ∏ înseamnă „înmulțește-le pe toate”). În față pui 2/3 la puterea n−1, adică n−1 fracții 2/3 înmulțite între ele. Puterea este n−1 pentru că, ca să combini n numere, folosești legea de n−1 ori (pentru 3 numere, de 2 ori). Fiecare folosire aduce câte o fracție 2/3. La final aduni 3."
         }
       ],
       "examples": [
         {
-          "question": "Arată că 0*2=5.",
+          "question": "Arată că 0*2=5, adică verifică prin calcul că legea dă 5 pentru numerele 0 și 2.",
           "steps": [
-            "0*2=(2/3)(0−3)(2−3)+3.",
-            "(2/3)(−3)(−1)+3=2+3."
+            "Pui 0 în locul lui x și 2 în locul lui y în formula legii: 0*2=(2/3)(0−3)(2−3)+3.",
+            "Faci scăderile din paranteze și înmulțești. Minus ori minus dă plus, iar 2/3 din 3 înseamnă 2: (2/3)(−3)(−1)+3=2+3."
           ],
           "answer": "0*2=5."
         },
         {
-          "question": "Rezolvă x*(3x/2)=5x, x∈ℝ.",
+          "question": "Rezolvă x*(3x/2)=5x, x∈ℝ. Adică găsește toate numerele reale x pentru care egalitatea este adevărată.",
           "steps": [
-            "x*(3x/2)=(2/3)(x−3)(3x/2−3)+3=x²−5x+9.",
-            "Egalitatea devine x²−5x+9=5x.",
-            "x²−10x+9=(x−1)(x−9)=0."
+            "Aplici legea cu primul număr x și al doilea număr 3x/2. A doua paranteză se poate scrie 3x/2−3=(3/2)(x−2), pentru că 3/2 ori x dă 3x/2 și 3/2 ori 2 dă 3. Apoi 2/3 ori 3/2 dă 1, deci rămâne (x−3)(x−2)+3. Desfaci parantezele: înmulțești fiecare număr din prima paranteză cu fiecare din a doua (x² înseamnă x înmulțit cu x): x*(3x/2)=(2/3)(x−3)(3x/2−3)+3=x²−5x+9.",
+            "Pui rezultatul în locul părții din stânga. Egalitatea devine x²−5x+9=5x.",
+            "Scazi 5x din ambele părți: x²−10x+9=0. Ca să scrii expresia ca înmulțire de paranteze, cauți două numere care înmulțite dau 9 și adunate dau 10: acestea sunt 1 și 9. Obții x²−10x+9=(x−1)(x−9)=0. Un produs este 0 doar când unul dintre factori (numerele înmulțite) este 0, deci x−1=0 sau x−9=0."
           ],
-          "answer": "x∈{1,9}."
+          "answer": "x∈{1,9}, adică soluțiile sunt 1 și 9."
         },
         {
-          "question": "Calculează √1*√2*⋯*√2026.",
+          "question": "Calculează √1*√2*⋯*√2026, adică legea aplicată pe rând radicalilor (rădăcinilor pătrate) numerelor de la 1 la 2026.",
           "steps": [
-            "Aplică formula cu 2026 termeni.",
-            "Produsul obișnuit conține factorul √9−3=0.",
-            "Toată partea multiplicativă se anulează și rămâne +3."
+            "Folosești formula pentru n numere, aici cu n=2026, pentru că ai 2026 de numere: √1, √2, …, √2026. Din fiecare număr scazi 3 și înmulțești rezultatele între ele.",
+            "Te uiți la parantezele care se înmulțesc. Pentru că √9 este 3, produsul obișnuit conține factorul √9−3=0.",
+            "Orice înmulțire cu 0 dă 0. Toată partea multiplicativă (partea cu înmulțiri) se anulează și rămâne +3."
           ],
           "answer": "3."
         },
         {
-          "question": "Află perechile naturale (m,n) cu m*m*n=−1.",
+          "question": "Află perechile de numere naturale (m,n) cu m*m*n=−1. Numerele naturale sunt 0, 1, 2, … (unele manuale încep de la 1).",
           "steps": [
-            "(4/9)(m−3)²(n−3)+3=−1 ⇒ (m−3)²(n−3)=−9.",
-            "Pătratul întreg pozitiv (m−3)² divide 9; poate fi 1 sau 9.",
-            "Dacă este 9, m=0 sau 6 și n−3=−1, deci n=2.",
-            "Dacă este 1, m=2 sau 4 și n=−6, care nu este natural.",
-            "Verifică: 6*6=9, 0*0=9, iar 9*2=−1."
+            "Folosești formula pentru trei numere, cu m de două ori. (m−3)(m−3) se scrie (m−3)², adică m−3 înmulțit cu el însuși. Scazi 3 din ambele părți și rămâne (4/9)(m−3)²(n−3)=−4. Apoi împarți la 4/9, adică înmulțești cu 9/4, iar −4 devine −9 (semnul ⇒ înseamnă „de aici rezultă”): (4/9)(m−3)²(n−3)+3=−1 ⇒ (m−3)²(n−3)=−9.",
+            "(m−3)² nu poate fi 0, pentru că atunci produsul ar fi 0, nu −9. m și n sunt numere naturale, deci (m−3)² și n−3 sunt numere întregi care, înmulțite, dau −9. De aceea pătratul întreg pozitiv (m−3)² divide 9, adică 9 se împarte exact la el. Dintre divizorii 1, 3 și 9, doar 1 și 9 sunt pătrate (1=1·1, 9=3·3), deci (m−3)² poate fi 1 sau 9.",
+            "Primul caz: (m−3)²=9, adică m−3 este 3 sau −3. Atunci m=0 sau m=6. Din 9·(n−3)=−9 rezultă n−3=−1, deci n=2.",
+            "Al doilea caz: (m−3)²=1, adică m−3 este 1 sau −1. Atunci m=2 sau m=4. Din 1·(n−3)=−9 rezultă n−3=−9, deci n=−6, care nu este natural.",
+            "Verifici calculând pas cu pas, întâi m*m și apoi rezultatul cu n=2: 6*6=9, 0*0=9, iar 9*2=−1."
           ],
-          "answer": "(0,2) și (6,2), dacă 0∈ℕ; numai (6,2), dacă ℕ începe cu 1."
+          "answer": "(0,2) și (6,2), dacă 0∈ℕ, adică dacă socotești 0 număr natural; numai (6,2), dacă ℕ începe cu 1."
         }
       ],
       "recall": [
         {
-          "q": "Ce putere apare în produsul de n elemente?",
-          "a": "(2/3)ⁿ⁻¹, fiindcă sunt n−1 operații."
+          "q": "Ce putere a lui 2/3 apare când combini n elemente cu această lege?",
+          "a": "(2/3)ⁿ⁻¹, adică n−1 fracții 2/3 înmulțite între ele. Între n numere faci n−1 operații."
         },
         {
-          "q": "De ce produsul radicalilor până la √2026 este 3?",
-          "a": "Conține termenul √9=3, care produce factorul zero în produsul transformat."
+          "q": "De ce rezultatul legii pentru radicalii de la √1 până la √2026 este 3?",
+          "a": "Printre ei se află √9=3, care dă factorul zero (√9−3=0) în produsul obișnuit. Orice înmulțire cu 0 dă 0, deci rămâne doar +3."
         },
         {
-          "q": "Care este ecuația obișnuită echivalentă cu m*m*n=−1?",
-          "a": "(m−3)²(n−3)=−9."
+          "q": "La ce ecuație obișnuită, fără legea *, ajungi din m*m*n=−1?",
+          "a": "La (m−3)²(n−3)=−9, după ce scazi 3 și împarți la 4/9."
         },
         {
           "q": "Care sunt soluțiile lui x*(3x/2)=5x?",
-          "a": "1 și 9."
+          "a": "Numerele 1 și 9, pentru că ecuația devine (x−1)(x−9)=0."
         }
       ],
       "pitfalls": [
-        "Nu confunda legea * cu înmulțirea obișnuită.",
-        "În fotografii, literele m și n seamănă; enunțul și verificarea folosesc m*m*n.",
-        "Precizează convenția pentru ℕ când apare soluția m=0.",
-        "Păstrează +3 la finalul formulei produsului repetat."
+        "Nu confunda legea * cu înmulțirea obișnuită, pentru că steluța are propria regulă de calcul și, de exemplu, 0*2 dă 5.",
+        "Pe fotografiile subiectului, literele m și n seamănă, dar enunțul și verificarea folosesc m*m*n. Deci m apare de două ori, iar de aici vine pătratul (m−3)², adică (m−3)(m−3).",
+        "Precizează convenția pentru ℕ, adică dacă numerele naturale încep de la 0 sau de la 1, când apare soluția m=0. De ea depinde dacă perechea (0,2) este acceptată.",
+        "Păstrează +3 la finalul formulei produsului repetat, pentru că fără el fiecare rezultat iese cu 3 mai mic."
       ],
       "group": "Algebră",
       "notes": [],
-      "shortTitle": "Exerciții BAC"
+      "shortTitle": "Exerciții BAC cu legea ⅔(x−3)(y−3)+3"
     },
     {
       "id": "primitive-definitie",
-      "title": "Primitiva: integrarea inversează derivarea",
+      "title": "Primitiva: drumul invers față de derivare",
       "sourceIds": [
         24,
         25
       ],
-      "summary": "O primitivă F a lui f satisface F′=f pe un interval. Integrala nedefinită descrie întreaga familie F+C, nu o singură funcție.",
+      "summary": "Primitiva este drumul invers față de derivare (derivata e viteza de schimbare a unei funcții): dacă f e viteza, F e poziția (locul unde ai ajuns). Scrii F′=f pe un interval, adică derivata lui F este f pe o bucată de numere „de la… până la…”. La integrala nedefinită (∫ … dx) primești toată familia de primitive F+C, unde C este „punctul de pornire” pe care nu îl știm.",
       "rules": [
         {
-          "label": "Definiție",
+          "label": "Definiția primitivei",
           "formula": "F'(x)=f(x),\\qquad x\\in I",
-          "explanation": "F este derivabilă pe intervalul I și derivata ei este f."
+          "explanation": "F este primitiva lui f dacă F este derivabilă pe intervalul I și derivata ei este f. Derivabilă înseamnă că îi poți calcula derivata în fiecare punct din I. Egalitatea trebuie să fie adevărată pentru fiecare x din I."
         },
         {
-          "label": "Familia primitivelor",
+          "label": "Familia primitivelor și constanta C",
           "formula": "\\int f(x)\\,dx=F(x)+C,\\quad C\\in\\mathbb R",
-          "explanation": "Pe același interval, două primitive diferă printr-o constantă."
+          "explanation": "Integrala nedefinită este toată familia de primitive. De aceea scrii „+C”, unde C poate fi orice număr real (orice număr de pe axă). În scrierea ∫ … dx, semnul ∫ se citește „integrală”, iar dx arată doar că variabila este x. Pe același interval, două primitive diferă printr-o constantă, adică printr-un număr fix. Adunarea lui C nu schimbă derivata, pentru că derivata oricărui număr fix este 0, deci F+C este tot o primitivă. Invers, dacă F și G sunt primitive pe același interval, atunci (F−G)′=0 pe tot intervalul. O funcție cu derivata 0 pe un interval este constantă. De aceea F și G diferă doar printr-un număr fix."
         },
         {
-          "label": "Liniaritate",
+          "label": "Liniaritate: sumele se împart, numerele ies în față",
           "formula": "\\int(af+bg)\\,dx=a\\int f\\,dx+b\\int g\\,dx",
-          "explanation": "a și b sunt constante; la final este suficientă o singură constantă arbitrară."
+          "explanation": "Integrala unei sume se calculează bucată cu bucată, iar numerele a și b ies în fața integralei. Aici a și b sunt constante, adică numere care nu depind de x. La final este suficientă o singură constantă arbitrară C, pentru că mai multe numere necunoscute adunate dau tot un număr necunoscut."
         },
         {
-          "label": "Verificare",
+          "label": "Verificare prin derivare",
           "formula": "\\left(F(x)+C\\right)'=f(x)",
-          "explanation": "Derivă rezultatul pentru a controla semnele și coeficienții."
+          "explanation": "Ca să fii sigur de rezultat, îl derivezi și trebuie să obții exact f. Așa prinzi greșelile de semn și de coeficienți, adică de numere care înmulțesc fiecare termen. C dispare la derivare, pentru că derivata unui număr fix este 0."
         }
       ],
       "examples": [
         {
-          "question": "Găsește toate primitivele lui f(x)=2x+3.",
+          "question": "Găsește toate primitivele lui f(x)=2x+3, adică toate funcțiile care, derivate, dau 2x+3.",
           "steps": [
-            "Derivata lui x² este 2x; derivata lui 3x este 3.",
-            "Adăugarea unei constante nu schimbă derivata.",
-            "x²+3x−7 și x²+3x+2 sunt membri ai aceleiași familii."
+            "Cauți ce funcție, derivată, dă fiecare termen. Folosești regula puterilor de la derivate. Exponentul (numărul mic de sus) coboară în față și scade cu 1, deci derivata lui x² este 2x. Derivata lui 3x este 3, pentru că x derivat dă 1. Pui bucățile împreună: x²+3x, derivată, dă 2x+3.",
+            "Apoi ții cont că poți adăuga orice număr fix. Adăugarea unei constante nu schimbă derivata, pentru că derivata unui număr fix este 0.",
+            "De aceea există multe răspunsuri bune, care diferă doar prin numărul de la final: x²+3x−7 și x²+3x+2 sunt membri ai aceleiași familii."
           ],
-          "answer": "∫(2x+3) dx=x²+3x+C."
+          "answer": "∫(2x+3) dx=x²+3x+C, unde C poate fi orice număr."
         },
         {
-          "question": "Dacă F(x)=x²+3x+2 este o primitivă, care este f?",
+          "question": "Dacă F(x)=x²+3x+2 este o primitivă, care este f, funcția de la care ai pornit?",
           "steps": [
-            "Aplică definiția: f=F′.",
-            "Derivează termenii: (x²)′=2x, (3x)′=3, 2′=0."
+            "Folosești definiția, care spune că f este derivata lui F: f=F′.",
+            "Derivezi fiecare termen pe rând. Numărul fix 2 dispare, pentru că derivata lui este 0: (x²)′=2x, (3x)′=3, 2′=0."
           ],
-          "answer": "f(x)=2x+3."
+          "answer": "f(x)=2x+3. Este aceeași funcție ca în primul exemplu."
         },
         {
-          "question": "Exercițiul deschis din caiet: calculează ∫(2x+3)/x² dx.",
+          "question": "Exercițiul deschis din caiet: calculează ∫(2x+3)/x² dx, adică găsește toate primitivele lui (2x+3)/x².",
           "steps": [
-            "Pentru x≠0, descompune integrandul în 2/x+3/x².",
-            "Integrează: 2∫dx/x=2 ln|x| și 3∫x⁻² dx=−3/x.",
-            "Verifică prin derivare: 2/x+3/x²=(2x+3)/x²."
+            "Întâi spargi fracția în două fracții mai mici, mai ușor de integrat (adică mai ușor de găsit primitivele lor). Integrandul (funcția de sub semnul ∫) are sens doar pentru x≠0. În 0, partea de jos x² ar fi 0, iar la 0 nu se poate împărți. Pentru x≠0, împarți fiecare bucată de sus la x²: (2x+3)/x²=2x/x²+3/x². Apoi simplifici un x sus și jos: 2x/x²=2/x. Așa descompui integrandul în 2/x+3/x².",
+            "Integrezi fiecare bucată, iar numerele 2 și 3 ies în față. Aici apare ln, logaritmul natural (funcția inversă a lui eˣ). Apare și |x|, modulul (numărul fără semn). Funcția ln merge doar pentru numere pozitive, de aceea pui |x|: așa ln|x| merge și pentru x negativ. Scrierea ∫dx/x înseamnă ∫(1/x) dx, iar x⁻² înseamnă 1/x². Folosești două primitive cunoscute. Primitiva lui 1/x este ln|x|. Primitiva lui 1/x² este −1/x, pentru că derivata lui −1/x este 1/x². Înmulțești cu numerele din față: 2∫dx/x=2 ln|x| și 3∫x⁻² dx=3·(−1/x)=−3/x.",
+            "La final verifici prin derivare. Folosești aceleași două derivate ca la pasul anterior: derivata lui 2 ln|x|−3/x este 2/x+3/x². Apoi aduci cele două fracții la același numitor (aceeași parte de jos): x². Pentru asta înmulțești sus și jos fracția 2/x cu x și obții 2x/x². Așa ajungi la fracția de la început: 2/x+3/x²=(2x+3)/x²."
           ],
-          "answer": "2 ln|x|−3/x+C, pe fiecare interval care nu conține 0."
+          "answer": "2 ln|x|−3/x+C, pe fiecare interval care nu conține 0, pentru că în 0 fracția nu are sens."
         }
       ],
       "recall": [
         {
           "q": "Cum verifici că F este primitivă a lui f?",
-          "a": "Derivezi F și verifici F′=f pe intervalul cerut."
+          "a": "Derivezi F și te uiți dacă obții f, adică verifici F′=f pe intervalul cerut."
         },
         {
-          "q": "De ce apare +C?",
-          "a": "Derivata oricărei constante este zero, deci există o întreagă familie de primitive."
+          "q": "De ce scrii +C la final?",
+          "a": "Pentru că derivata oricărei constante (a oricărui număr fix) este zero. Deci poți aduna orice număr și obții tot o primitivă, așa că rezultatul este o familie întreagă de primitive."
         },
         {
-          "q": "Pot două primitive diferi prin mai mult decât o constantă?",
-          "a": "Pe același interval, nu. Pe componente separate ale domeniului pot exista constante diferite."
+          "q": "Pot două primitive ale aceleiași funcții să difere prin mai mult decât o constantă, adică un număr fix?",
+          "a": "Pe același interval, nu. Dacă domeniul (numerele pentru care formula are sens) e rupt în bucăți separate, pe fiecare bucată poate exista altă constantă."
         }
       ],
       "pitfalls": [
-        "Nu uita constanta C la integrale nedefinite.",
-        "Afirmația despre diferența constantă se aplică pe un interval conex.",
-        "Când integrandul nu este definit în 0, formulele se folosesc separat pe intervalele din domeniu."
+        "Nu uita constanta C la integralele nedefinite, pentru că fără ea ai scris o singură primitivă în loc de toată familia.",
+        "Regula „două primitive diferă printr-o constantă” se aplică pe un interval conex, adică dintr-o singură bucată. Dacă domeniul are un gol, constanta se poate schimba de o parte și de alta a golului.",
+        "Când integrandul (funcția de sub ∫) nu are sens în 0, punctul 0 rupe domeniul în două bucăți. De aceea folosești formulele separat pe fiecare bucată, adică pe fiecare interval din domeniu."
       ],
       "group": "Analiză",
       "notes": [],
-      "shortTitle": "Primitiva"
+      "shortTitle": "Primitiva și integrala nedefinită"
     },
     {
       "id": "primitive-puteri",
-      "title": "Primitive ale puterilor și radicalilor",
+      "title": "Primitive ale puterilor și radicalilor: cum mergi înapoi de la derivată",
       "sourceIds": [
         21,
         22
       ],
-      "summary": "Transformă fracțiile și radicalii în puteri. Crește exponentul cu 1 și împarte la noul exponent; exponentul −1 este excepția logaritmică.",
+      "summary": "Primitiva este drumul invers față de derivare: dacă derivata e „viteza de schimbare”, primitiva e distanța parcursă. Aici o afli pentru puteri ale lui x și pentru radicali (rădăcini pătrate, √). Scrii fracțiile și radicalii ca puteri, crești exponentul (numărul mic scris sus) cu 1 și împarți la noul exponent. Singura excepție este exponentul −1, pentru care primitiva este un logaritm natural (ln, funcția inversă a lui e^x).",
       "rules": [
         {
-          "label": "Constante",
+          "label": "Constante (numere fixe)",
           "formula": "\\int 1\\,dx=x+C,\\qquad\\int c\\,dx=cx+C",
-          "explanation": "c este o constantă reală."
+          "explanation": "Semnul ∫ … dx, numit integrală nedefinită, cere toate primitivele expresiei dinăuntru, adică toată „familia” lor. Pentru 1 obții x, iar pentru o constantă reală c (un număr fix) obții cx, pentru că derivata lui cx este c. Adaugi +C, „punctul de pornire” pe care nu îl știm. Derivata oricărui număr fix este 0, deci orice număr adunat la rezultat dă tot o primitivă."
         },
         {
-          "label": "Regula puterii",
+          "label": "Regula puterii (crești exponentul cu 1)",
           "formula": "\\int x^m\\,dx=\\frac{x^{m+1}}{m+1}+C,\\quad m\\ne-1",
-          "explanation": "Se aplică pe intervale pe care puterile sunt reale; pentru un exponent real general se poate lucra pe x>0."
+          "explanation": "Aici m este exponentul de la început, numărul mic scris sus la x. Crești exponentul cu 1 și împarți la noul exponent; dacă derivezi rezultatul, te întorci la puterea de la început. Condiția m≠−1 apare pentru că la m=−1 noul exponent ar fi −1+1=0, iar la 0 nu se împarte. Regula se aplică pe intervale (bucăți de numere „de la… până la…”) pe care puterile dau numere reale (toate numerele de pe axă). Pentru un exponent real oarecare, de exemplu o fracție, poți lucra pe x>0, adică doar cu numere pozitive."
         },
         {
-          "label": "Rădăcina pătrată",
+          "label": "Rădăcina pătrată scrisă ca putere",
           "formula": "\\int\\sqrt{x}\\,dx=\\frac23x\\sqrt{x}+C",
-          "explanation": "√x=x¹ᐟ²; regula puterii dă exponentul 3/2."
+          "explanation": "Rădăcina pătrată se poate scrie ca putere: √x=x¹ᐟ². Regula puterii crește exponentul cu 1: 1/2+1=3/2, pentru că o doime plus două doimi fac trei doimi. Împărțirea la 3/2 înseamnă înmulțire cu 2/3, pentru că la o fracție împarți înmulțind cu fracția răsturnată. La final, x³ᐟ² se scrie mai simplu x√x, pentru că 3/2=1+1/2, deci x³ᐟ² este x înmulțit cu x¹ᐟ², adică x înmulțit cu √x."
         },
         {
-          "label": "Puteri negative",
+          "label": "Puteri negative (x la numitor)",
           "formula": "\\int\\frac{dx}{x^2}=-\\frac1x+C,\\qquad\\int\\frac{dx}{x^3}=-\\frac1{2x^2}+C",
-          "explanation": "x≠0; semnele minus vin din noii exponenți −1 și −2."
+          "explanation": "Când x stă la numitor (sub linia de fracție), îl scrii ca putere negativă: 1/x² este x⁻², iar 1/x³ este x⁻³. Minusul din exponent înseamnă „1 împărțit la”. Crești fiecare exponent cu 1: −2+1=−1 și −3+1=−2, deci noii exponenți sunt −1 și −2. Împarți la acești exponenți negativi, de aceea rezultatele au semnul minus în față. Lucrezi doar cu x≠0, pentru că la 0 nu se împarte."
         },
         {
-          "label": "Derivata radicalului",
+          "label": "Derivata radicalului, citită invers",
           "formula": "\\int\\frac{dx}{2\\sqrt{x}}=\\sqrt{x}+C",
-          "explanation": "Pe x>0, (√x)′=1/(2√x)."
+          "explanation": "Pe x>0, adică doar pentru numere pozitive, derivata lui √x este (√x)′=1/(2√x). Semnul ′ de după paranteză înseamnă „derivata lui”. Citită invers, regula spune că primitiva lui 1/(2√x) este chiar √x. Când vezi 2√x la numitor, recunoști direct rezultatul."
         }
       ],
       "examples": [
         {
-          "question": "Calculează ∫3/x³ dx.",
+          "question": "Calculează ∫3/x³ dx, adică găsește primitivele lui 3/x³.",
           "steps": [
-            "Scrie integrandul ca 3x⁻³.",
-            "Crește exponentul: −3+1=−2.",
-            "3·x⁻²/(−2)=−3/(2x²).",
-            "Derivata lui −3/(2x²) este 3/x³."
+            "Scrii integrandul (expresia dintre ∫ și dx) ca putere negativă, ca să poți folosi regula puterii: integrandul devine 3x⁻³.",
+            "Aplici regula puterii și crești exponentul cu 1: −3+1=−2.",
+            "Împarți la noul exponent, −2, și păstrezi 3 în față: 3·x⁻²/(−2). Apoi scrii x⁻² înapoi ca 1/x² și muți minusul în față, pentru că împărțirea la un număr negativ dă un rezultat negativ: 3·x⁻²/(−2)=−3/(2x²).",
+            "Verifici prin derivare, adică faci drumul înapoi. Scrii −3/(2x²) ca (−3/2)·x⁻². La derivare, exponentul −2 coboară în față și scade cu 1: (−3/2)·(−2)·x⁻³=3x⁻³=3/x³. Ai ajuns înapoi la 3/x³, deci rezultatul este bun."
           ],
-          "answer": "−3/(2x²)+C, x≠0."
+          "answer": "−3/(2x²)+C, x≠0 (la 0 nu se împarte)."
         },
         {
-          "question": "Calculează ∫√x dx.",
+          "question": "Calculează ∫√x dx, adică găsește primitivele rădăcinii pătrate.",
           "steps": [
-            "√x=x¹ᐟ².",
-            "Noul exponent este 3/2; împărțirea la 3/2 înseamnă înmulțire cu 2/3.",
-            "(2/3)x³ᐟ²=(2/3)x√x."
+            "Scrii radicalul ca putere, ca să poți folosi regula puterii: √x=x¹ᐟ².",
+            "Crești exponentul cu 1: 1/2+1=3/2, pentru că o doime plus două doimi fac trei doimi. Împărțirea la 3/2 înseamnă înmulțire cu 2/3, pentru că la o fracție împarți înmulțind cu fracția răsturnată.",
+            "Scrii rezultatul mai simplu. Cum 3/2=1+1/2, x³ᐟ² înseamnă x înmulțit cu x¹ᐟ², adică x înmulțit cu √x: (2/3)x³ᐟ²=(2/3)x√x."
           ],
           "answer": "2x√x/3+C."
         }
       ],
       "recall": [
         {
-          "q": "Care este excepția regulii puterii?",
-          "a": "m=−1; ∫dx/x=ln|x|+C."
+          "q": "Pentru ce exponent nu merge regula puterii?",
+          "a": "Pentru exponentul m=−1, adică pentru 1/x: noul exponent ar fi −1+1=0, iar la 0 nu se împarte. În locul regulii puterii folosești ∫dx/x=ln|x|+C (ln este logaritmul natural, iar |x| este x fără semn)."
         },
         {
           "q": "Care este primitiva lui 1/x²?",
-          "a": "−1/x+C."
+          "a": "−1/x+C. Scrii 1/x² ca x⁻², crești exponentul la −1 și împarți la −1."
         },
         {
           "q": "Cum scrii √x ca putere?",
-          "a": "x¹ᐟ²."
+          "a": "Ca x¹ᐟ², adică x la puterea o doime."
         }
       ],
       "pitfalls": [
-        "Nu aplica formula xᵐ⁺¹/(m+1) pentru m=−1.",
-        "Verifică semnul primitivelor puterilor negative.",
-        "Puterile fracționare și radicalii cer atenție la domeniul real.",
-        "Semnul final al exemplului 3/x³ din fotografie este neclar; minusul este confirmat prin derivare."
+        "Nu folosi formula xᵐ⁺¹/(m+1) pentru m=−1, pentru că numitorul m+1 ar fi 0, iar la 0 nu se împarte.",
+        "La puterile negative verifică semnul primitivei, pentru că noul exponent este negativ și aduce un minus ușor de pierdut.",
+        "La puterile cu fracție și la radicali fii atent la domeniu (numerele pentru care formula are sens și pentru care lucrăm). Rădăcina pătrată a unui număr negativ nu este un număr real, adică nu se află printre numerele de pe axă.",
+        "În fotografia după care e scrisă lecția, semnul din fața rezultatului de la exemplul cu 3/x³ nu se vede clar. Verificarea prin derivare arată că este minus."
       ],
       "group": "Analiză",
       "notes": [],
-      "shortTitle": "Primitive ale puterilor și radicalilor"
+      "shortTitle": "Primitive pentru puteri și radicali"
     },
     {
       "id": "primitive-exponentiale-logaritmi",
-      "title": "Exponențiale și logaritmi",
+      "title": "Exponențiale și logaritmi: primitivele lui aˣ, eˣ și 1/x",
       "sourceIds": [
         21,
         22,
         24
       ],
-      "summary": "Exponențiala aˣ aduce factorul 1/ln a. Un numitor liniar ax+b aduce factorul 1/a și logaritmul modulului.",
+      "summary": "Aici cauți primitiva, adică drumul invers față de derivare (derivata este viteza de schimbare a unei funcții). Lucrezi cu exponențiale (puteri cu x sus, în exponent, ca aˣ) și cu fracții care au jos, la numitor, ax+b. Exponențiala aˣ aduce factorul 1/ln a, unde ln este logaritmul natural, funcția inversă a lui eˣ. Un numitor liniar ax+b (x înmulțit cu un număr, plus un număr) aduce factorul 1/a și logaritmul modulului, adică ln din numărul fără semn.",
       "rules": [
         {
-          "label": "Exponențiala generală",
+          "label": "Exponențiala generală aˣ",
           "formula": "\\int a^x\\,dx=\\frac{a^x}{\\ln a}+C,\\quad a>0,\\ a\\ne1",
-          "explanation": "Derivata lui aˣ este aˣ ln a, deci compensăm cu 1/ln a."
+          "explanation": "Semnul ∫ … dx înseamnă integrala nedefinită, adică toată familia de primitive. De aceea apare +C, o constantă oarecare. Dacă adaugi orice număr fix la o primitivă, obții tot o primitivă, pentru că derivata unui număr fix este 0. Derivata lui aˣ (viteza ei de schimbare) este aˣ ln a. Apare deci un ln a în plus, iar tu împarți la ln a ca să îl compensezi. Formula cere a>0 și a≠1, pentru că altfel ln a nu există sau este 0, iar la 0 nu poți împărți."
         },
         {
-          "label": "Exponențiala naturală",
+          "label": "Exponențiala naturală eˣ",
           "formula": "\\int e^x\\,dx=e^x+C",
-          "explanation": "ln e=1."
+          "explanation": "Aici numărul de jos al puterii este e, aproximativ 2,718. ln îți spune la ce putere ridici e ca să obții un număr. Ca să obții chiar e, ridici e la puterea 1, deci ln e=1. Atunci factorul 1/ln a devine 1 și dispare. De aceea primitiva lui eˣ este tot eˣ, plus C."
         },
         {
-          "label": "Reciprocul",
+          "label": "Inversul lui x, 1/x",
           "formula": "\\int\\frac{dx}{x}=\\ln|x|+C,\\quad x\\ne0",
-          "explanation": "Modulul permite aceeași formulă pe intervalele pozitive și negative."
+          "explanation": "Inversul lui x este 1/x, numărul care, înmulțit cu x, dă 1. Primitiva lui 1/x este ln|x|, adică ln din x fără semn. ln se calculează doar pentru numere pozitive, dar 1/x are sens și pentru x negativ. Modulul face din orice x diferit de 0 un număr pozitiv. Așa, aceeași formulă merge pe ambele intervale (bucăți de numere): cel cu x pozitiv și cel cu x negativ. Condiția x≠0 rămâne, pentru că la 0 nu poți împărți."
         },
         {
-          "label": "Numitor liniar",
+          "label": "Numitor liniar ax+b",
           "formula": "\\int\\frac{dx}{ax+b}=\\frac1a\\ln|ax+b|+C,\\quad a\\ne0",
-          "explanation": "Derivata expresiei interioare ax+b este a. Integrandul cere și ax+b≠0."
+          "explanation": "Expresia ax+b stă înăuntrul lui ln, iar la derivare înmulțești cu derivata ei, care este a (regula lanțului). Derivata lui ax+b este a, pentru că ax+b se schimbă cu exact a ori de câte ori x crește cu 1. Numărul fix b nu se schimbă, deci nu contează. De aceea pui 1/a în față, ca să compensezi acest a în plus. Pe lângă a≠0, ca să poți împărți la a, fracția cere și ax+b≠0, ca să nu împarți la 0."
         }
       ],
       "examples": [
         {
-          "question": "Calculează ∫dx/(2x+3).",
+          "question": "Calculează ∫dx/(2x+3), adică primitiva lui 1/(2x+3).",
           "steps": [
-            "Coeficientul lui x este 2, deci factorul compensator este 1/2.",
-            "Derivata lui (1/2)ln|2x+3| este (1/2)·2/(2x+3)."
+            "Te uiți la numărul care înmulțește x, numit coeficientul lui x. Coeficientul lui x este 2, deci factorul care compensează este 1/2. Aplici formula pentru numitorul ax+b, cu a=2 și b=3. Pui 1/2 în față și scrii ln din 2x+3 fără semn: (1/2)ln|2x+3|+C.",
+            "Verifici prin derivare că te întorci la fracția de la început. Derivata lui ln|2x+3| este 1/(2x+3), înmulțit cu 2, care este derivata lui 2x+3 (regula lanțului). Cu 1/2 în față, derivata lui (1/2)ln|2x+3| este (1/2)·2/(2x+3). Simplifici 1/2 cu 2, pentru că (1/2)·2=1, și rămâne 1/(2x+3)."
           ],
-          "answer": "(1/2)ln|2x+3|+C, x≠−3/2."
+          "answer": "(1/2)ln|2x+3|+C, x≠−3/2. Condiția x≠−3/2 vine din faptul că 2x+3 nu are voie să fie 0. Pentru x=−3/2 ai 2·(−3/2)+3=−3+3=0."
         },
         {
           "question": "Calculează ∫2 dx/(2x+3).",
           "steps": [
-            "Scoate constanta 2 în fața integralei.",
-            "2·(1/2)ln|2x+3|=ln|2x+3|.",
-            "Derivează pentru control: 2/(2x+3)."
+            "Numărul 2 de sus este o constantă, adică un număr fix. Scoți constanta 2 în fața integralei și lucrezi doar cu ∫dx/(2x+3). Ai voie să faci asta, pentru că 2 doar înmulțește tot rezultatul, deci poți înmulți cu el la final.",
+            "Folosești rezultatul din exemplul anterior și înmulțești cu 2. Factorii 2 și 1/2 se simplifică, pentru că 2·(1/2)=1. Înmulțirea cu 1 nu schimbă nimic: 2·(1/2)ln|2x+3|=ln|2x+3|.",
+            "Derivezi rezultatul pentru control. Derivata lui ln|2x+3| este 1/(2x+3), înmulțit cu 2, care este derivata lui 2x+3. Obții fracția de la început: 2/(2x+3)."
           ],
-          "answer": "ln|2x+3|+C. Acesta corectează rezultatul inconsistent scris în fotografia 24."
+          "answer": "ln|2x+3|+C. Acest rezultat îl corectează pe cel scris în fotografia 24, care nu se potrivea cu restul calculului."
         },
         {
           "question": "Calculează ∫dx/(3+4x).",
           "steps": [
-            "Rescrie numitorul ca 4x+3.",
-            "Coeficientul interior este 4, deci împărțim la 4."
+            "Aduci numitorul la forma ax+b. Ordinea la adunare nu contează, așa că rescrii numitorul ca 4x+3.",
+            "Acum a este coeficientul lui x, adică numărul care înmulțește x, deci a=4. De aceea împarți la 4: pui 1/4 în față și scrii ln din 4x+3 fără semn."
           ],
           "answer": "(1/4)ln|4x+3|+C."
         }
@@ -1103,22 +1103,22 @@ window.STUDY = {
       "recall": [
         {
           "q": "De ce apare 1/a în ∫dx/(ax+b)?",
-          "a": "Pentru a compensa derivata interioară (ax+b)′=a."
+          "a": "Pentru că, la derivare, expresia dinăuntru aduce un a în plus: (ax+b)′=a, adică derivata lui ax+b este a. Factorul 1/a îl compensează, pentru că (1/a)·a=1."
         },
         {
-          "q": "Care sunt condițiile pentru formula ∫aˣ dx?",
-          "a": "a>0 și a≠1; pentru a=1, integrandul este constant 1."
+          "q": "Ce condiții trebuie să îndeplinească a în formula ∫aˣ dx?",
+          "a": "a>0 și a≠1, pentru că formula împarte la ln a, iar ln a nu există pentru a≤0. Pentru a=1, ln a=0 și la 0 nu poți împărți; în plus, funcția de sub integrală este constantă, egală cu 1."
         },
         {
-          "q": "De ce scrii ln|x|?",
-          "a": "Integrandul 1/x este definit și pentru x<0; ln|x| are derivata 1/x pe ambele intervale."
+          "q": "De ce scrii ln|x|, cu modul?",
+          "a": "Pentru că 1/x are sens și pentru x<0, iar ln se calculează doar pentru numere pozitive. Cu modul, ln|x| are derivata 1/x pe ambele intervale, la stânga și la dreapta lui 0."
         }
       ],
       "pitfalls": [
-        "Nu uita factorul 1/a sau 1/ln a.",
-        "Păstrează exact ax+b în logaritm; nu schimba semnul lui b.",
-        "Exemplul cu numeratorul 2 din fotografia 24 are o eroare de coeficient și de semn în rezultatul scris; formula a fost verificată prin derivare.",
-        "Modulul și constanta C sunt omise în unele rânduri ale caietului; aici sunt incluse."
+        "Nu uita factorul 1/a sau 1/ln a, pentru că fără el derivata rezultatului nu mai dă funcția de la început.",
+        "Păstrează exact ax+b în logaritm și nu schimba semnul lui b, pentru că un semn schimbat dă primitiva altei fracții.",
+        "În fotografia 24, exemplul cu 2 la numărător (partea de sus a fracției) are în rezultatul scris o greșeală de coeficient și de semn. De aceea formula de aici a fost verificată prin derivare.",
+        "În unele rânduri din caiet lipsesc modulul și constanta C, iar aici sunt scrise peste tot, pentru că fără ele rezultatul nu este complet."
       ],
       "group": "Analiză",
       "notes": [],
@@ -1126,1167 +1126,1170 @@ window.STUDY = {
     },
     {
       "id": "primitive-trigonometrice",
-      "title": "Formule trigonometrice de memorat",
+      "title": "Primitive trigonometrice: formulele de bază de ținut minte",
       "sourceIds": [
         22
       ],
-      "summary": "Grupează formulele în perechi: sin/cos, tan/cot și funcții trigonometrice inverse. Verifică atent cele trei semne minus.",
+      "summary": "Aici ai primitivele de bază pentru funcțiile trigonometrice (sin, cos, tan și cot, adică funcțiile care leagă un unghi de laturile unui triunghi dreptunghic). O primitivă este drumul invers față de derivare, iar derivata este „viteza de schimbare” a unei funcții: F este primitiva lui f dacă derivata lui F este f. Le ții minte mai ușor în perechi: sin cu cos, tan cu cot, apoi arcsin și arctan, funcțiile care îți dau înapoi unghiul. La final verifici atent cele trei semne minus.",
       "rules": [
         {
           "label": "Sinus și cosinus",
           "formula": "\\int\\sin x\\,dx=-\\cos x+C,\\qquad\\int\\cos x\\,dx=\\sin x+C",
-          "explanation": "Derivata cosinusului este −sinus; derivata sinusului este cosinus."
+          "explanation": "Integrala nedefinită (∫ … dx) este toată familia de primitive. De aceea apare +C: o constantă oarecare, pentru că două primitive ale aceleiași funcții diferă doar printr-un număr adunat, iar graficul se mută în sus sau în jos. Derivata oricărui număr fix este 0, deci orice număr adunat la o primitivă dă tot o primitivă. Derivata este viteza de schimbare a unei funcții. Derivata lui cos x este −sin x, de aceea primitiva lui sin x este −cos x, cu minus. Derivata lui sin x este cos x, deci primitiva lui cos x este sin x, cu plus."
         },
         {
-          "label": "Tangenta",
+          "label": "Formula care dă tangenta",
           "formula": "\\int\\frac{dx}{\\cos^2x}=\\tan x+C",
-          "explanation": "Pe intervale cu cos x≠0."
+          "explanation": "Derivata lui tan x este 1/cos²x, deci drumul înapoi duce la tan x. Aici cos²x înseamnă cos x înmulțit cu el însuși, adică (cos x)². Formula merge pe intervale (bucăți de numere „de la… până la…”) cu cos x≠0, pentru că nu poți împărți la 0."
         },
         {
-          "label": "Cotangenta",
+          "label": "Formula care dă cotangenta",
           "formula": "\\int\\frac{dx}{\\sin^2x}=-\\cot x+C",
-          "explanation": "Pe intervale cu sin x≠0; păstrează minusul."
+          "explanation": "Derivata lui cot x este −1/sin²x, unde sin²x înseamnă (sin x)². De aceea primitiva lui 1/sin²x are minus în față. Formula merge pe intervale cu sin x≠0. Păstrează minusul, altfel derivata rezultatului nu mai iese 1/sin²x."
         },
         {
-          "label": "Arcsinus",
+          "label": "Formula care dă arcsinus",
           "formula": "\\int\\frac{dx}{\\sqrt{1-x^2}}=\\arcsin x+C",
-          "explanation": "Pentru −1<x<1."
+          "explanation": "arcsin este funcția inversă a lui sin, adică răspunde la întrebarea „ce unghi are acest sinus?”. Formula merge doar pentru −1<x<1. Acolo numărul de sub radical (rădăcina pătrată), 1−x², este mai mare decât 0. Asta contează: nu poți scoate rădăcina pătrată dintr-un număr negativ, iar radicalul stă sub linia de fracție, deci nu are voie să fie 0."
         },
         {
-          "label": "Arctangentă",
+          "label": "Formula care dă arctangenta",
           "formula": "\\int\\frac{dx}{1+x^2}=\\arctan x+C",
-          "explanation": "Valabil pentru toate numerele reale."
+          "explanation": "arctan este funcția inversă a lui tan, adică răspunde la întrebarea „ce unghi are această tangentă?”. Formula este valabilă pentru toate numerele reale (toate numerele de pe axă), pentru că 1+x² nu ajunge niciodată la 0. x² este un număr înmulțit cu el însuși, deci nu este niciodată negativ. Așa, 1+x² este cel puțin 1 și nu ajungi niciodată să împarți la 0."
         },
         {
           "label": "Integrala tangentei",
           "formula": "\\int\\tan x\\,dx=-\\ln|\\cos x|+C",
-          "explanation": "Pe intervale pe care cos x≠0."
+          "explanation": "Aici tan x stă sub semnul ∫, deci cauți funcția a cărei derivată este tan x. Rezultatul folosește ln, logaritmul natural (funcția inversă a lui e^x). ln primește doar numere mai mari decât 0. De aceea pui modulul |cos x| (numărul fără semn), ca formula să meargă și când cos x este negativ. Lucrezi doar pe intervale pe care cos x≠0."
         },
         {
           "label": "Integrala cotangentei",
           "formula": "\\int\\cot x\\,dx=\\ln|\\sin x|+C",
-          "explanation": "Pe intervale pe care sin x≠0."
+          "explanation": "Seamănă cu integrala tangentei de mai sus (∫tan x dx=−ln|cos x|+C), însă aici rezultatul are semnul plus. Modulul |sin x| face ca ln să aibă sens și când sin x este negativ. Lucrezi doar pe intervale pe care sin x≠0."
         }
       ],
       "examples": [
         {
           "question": "Cum verifici primitiva lui tan x?",
           "steps": [
-            "Derivează −ln|cos x|.",
-            "Obții −(−sin x)/(cos x)=tan x, unde cos x≠0."
+            "Ca să verifici o primitivă, o derivezi și vezi dacă ajungi înapoi la funcția de la care ai plecat. Derivează −ln|cos x|.",
+            "Derivata lui ln|x| este 1/x. Cu regula lanțului (la derivare înmulțești cu derivata funcției dinăuntru), derivata lui ln|cos x| este derivata lui cos x, adică −sin x, împărțită la cos x. Minusul din față și minusul lui −sin x dau împreună plus, deci obții −(−sin x)/(cos x)=tan x, unde cos x≠0. Ultimul pas folosește faptul că tan x înseamnă sin x împărțit la cos x."
           ],
-          "answer": "∫tan x dx=−ln|cos x|+C."
+          "answer": "Derivata te-a dus înapoi la tan x, deci formula este corectă: ∫tan x dx=−ln|cos x|+C."
         },
         {
           "question": "Cum verifici primitiva lui 1/sin²x?",
           "steps": [
-            "Derivata lui cot x este −1/sin²x.",
-            "Prin urmare, derivata lui −cot x este 1/sin²x."
+            "Pornești de la o derivată pe care o știi: derivata lui cot x este −1/sin²x.",
+            "Un minus pus în față schimbă semnul derivatei. Prin urmare, derivata lui −cot x este 1/sin²x."
           ],
-          "answer": "∫dx/sin²x=−cot x+C."
+          "answer": "Așadar −cot x este o primitivă a lui 1/sin²x: ∫dx/sin²x=−cot x+C."
         }
       ],
       "recall": [
         {
-          "q": "Ce trei formule din grupul trigonometriei au minus?",
-          "a": "∫sin x=−cos x+C; ∫dx/sin²x=−cot x+C; ∫tan x=−ln|cos x|+C."
+          "q": "Care sunt cele trei formule din grupul trigonometric care au minus?",
+          "a": "Primitivele lui sin x, 1/sin²x și tan x: ∫sin x=−cos x+C; ∫dx/sin²x=−cot x+C; ∫tan x=−ln|cos x|+C."
         },
         {
-          "q": "Ce integrand conduce la arctan x?",
-          "a": "1/(1+x²)."
+          "q": "Ce expresie pui sub semnul ∫ ca să obții arctan x?",
+          "a": "1/(1+x²). Formula merge pentru orice număr real, adică orice număr de pe axă."
         },
         {
-          "q": "Ce integrand conduce la arcsin x?",
-          "a": "1/√(1−x²), pentru |x|<1."
+          "q": "Ce expresie pui sub semnul ∫ ca să obții arcsin x?",
+          "a": "1/√(1−x²), pentru |x|<1, adică pentru x strict între −1 și 1."
         }
       ],
       "pitfalls": [
-        "Respectă punctele unde sin x sau cos x se anulează.",
-        "Nu confunda arcsin x cu sin x și arctan x cu tan x.",
-        "Rândul 11 tăiat din fotografie a fost înlocuit de formula lizibilă corectată pentru cos x."
+        "Ține cont de punctele unde sin x sau cos x se anulează (devin 0), pentru că acolo ar apărea o împărțire la 0 și formula nu mai are sens.",
+        "Nu confunda arcsin x cu sin x și arctan x cu tan x, pentru că arcsin și arctan merg în sens opus: pornesc de la o valoare și îți dau unghiul."
       ],
       "group": "Analiză",
-      "notes": [],
-      "shortTitle": "Formule trigonometrice de memorat"
+      "notes": [
+        "Rândul 11 din fotografia cu foaia de formule este tăiat și nu se poate citi. De aceea, în locul lui apare aici formula cu cos x, corectată și ușor de citit."
+      ],
+      "shortTitle": "Primitive trigonometrice de memorat"
     },
     {
       "id": "primitive-numitori-patratici",
-      "title": "Numitori pătratici și fracții simple",
+      "title": "Numitori pătratici și fracții simple: integrale cu x² sub linia fracției",
       "sourceIds": [
         22,
         26
       ],
-      "summary": "Semnul din numitor hotărăște formula: x²+a² duce la arctangentă; x²−a² se descompune în fracții simple și duce la logaritm.",
+      "summary": "Lecția te învață să găsești primitiva unor fracții care au în partea de jos (numitorul) x² plus sau minus pătratul unui număr a. Primitiva este drumul invers față de derivare (dacă derivata e viteza, primitiva e distanța parcursă), iar căutarea ei se numește integrare. Semnul din numitor alege formula: x²+a² duce la arctangentă, iar x²−a² se sparge în fracții mai mici (fracții simple) și duce la logaritm.",
       "rules": [
         {
-          "label": "Sumă de pătrate",
+          "label": "Sumă de pătrate la numitor",
           "formula": "\\int\\frac{dx}{x^2+a^2}=\\frac1a\\arctan\\frac xa+C",
-          "explanation": "Presupunem a>0."
+          "explanation": "Când jos ai x² plus pătratul lui a, rezultatul folosește arctan, funcția inversă a lui tan (răspunde la întrebarea „ce unghi are această tangentă?”). Presupui că a>0. Integrala nedefinită ∫ … dx înseamnă toată familia de primitive. De aceea apare +C, unde C este o constantă oarecare (orice număr fix): derivata unui număr fix este 0, deci orice număr adunat la primitivă dă tot o primitivă."
         },
         {
-          "label": "Diferență de pătrate",
+          "label": "Diferență de pătrate la numitor",
           "formula": "\\int\\frac{dx}{x^2-a^2}=\\frac1{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C",
-          "explanation": "a>0 și x≠±a; formula se aplică pe fiecare interval din domeniu."
+          "explanation": "Când jos ai x² minus pătratul lui a, apare ln, logaritmul natural (funcția inversă a lui e^x). Logaritmul se ia din modulul raportului (x−a)/(x+a), adică din valoarea acestei fracții fără semn. Pui modulul pentru că logaritmul primește doar numere pozitive. Condițiile sunt a>0 și x≠±a, pentru că în x=a și în x=−a numitorul devine 0. Punctele −a și a taie axa numerelor în trei bucăți (intervale): înainte de −a, între −a și a, și după a. Formula se aplică pe fiecare bucată în parte, adică pe fiecare interval din domeniu."
         },
         {
-          "label": "Descompunere",
+          "label": "Descompunerea în fracții simple",
           "formula": "\\frac1{x^2-a^2}=\\frac1{2a}\\left(\\frac1{x-a}-\\frac1{x+a}\\right)",
-          "explanation": "Factorizează x²−a²=(x−a)(x+a), apoi identifică coeficienții."
+          "explanation": "Spargi fracția mare în două fracții simple, mai ușor de integrat. Mai întâi scrii x²−a² ca produs, adică ca o înmulțire de două paranteze: x²−a²=(x−a)(x+a). Poți verifica înmulțind fiecare termen cu fiecare: x·x+x·a−a·x−a·a=x²−a², pentru că x·a și −a·x se anulează. Apoi afli coeficienții, adică numerele din fața fiecărei fracții mici, comparând cele două părți ale egalității."
         },
         {
-          "label": "Radical cu diferență",
+          "label": "Radical cu diferență la numitor",
           "formula": "\\int\\frac{dx}{\\sqrt{a^2-x^2}}=\\arcsin\\frac xa+C",
-          "explanation": "a>0 și |x|<a."
+          "explanation": "Când jos ai radicalul (rădăcina pătrată) din a² minus x², primitiva este arcsin. Arcsin este funcția inversă a lui sin și răspunde la întrebarea „ce unghi are acest sinus?”. Condițiile sunt a>0 și |x|<a, adică x luat fără semn este mai mic decât a. Așa, sub radical rămâne un număr pozitiv, din care poți scoate rădăcina pătrată, iar numitorul nu devine 0."
         },
         {
-          "label": "Radical cu sumă",
+          "label": "Radical cu sumă la numitor",
           "formula": "\\int\\frac{dx}{\\sqrt{x^2+a^2}}=\\ln\\left(x+\\sqrt{x^2+a^2}\\right)+C",
-          "explanation": "a>0; expresia din logaritm este pozitivă pentru orice x real."
+          "explanation": "Când jos ai radicalul din x² plus a², primitiva este tot un logaritm natural. Presupui că a>0. Aici nu ai nevoie de modul, pentru că expresia din logaritm este pozitivă pentru orice x real, adică pentru orice număr de pe axă."
         }
       ],
       "examples": [
         {
-          "question": "Dedu formula pentru ∫dx/(x²−a²), a>0.",
+          "question": "Dedu, adică găsește singur pas cu pas, formula pentru ∫dx/(x²−a²), a>0.",
           "steps": [
-            "Scrie 1/(x²−a²)=A/(x−a)+B/(x+a).",
-            "Aducerea la același numitor dă numărătorul x(A+B)+a(A−B).",
-            "Identifică: A+B=0 și a(A−B)=1.",
-            "A=1/(2a), B=−1/(2a).",
-            "Integrează termenii: (1/(2a))(ln|x−a|−ln|x+a|)+C.",
-            "Combină logaritmii."
+            "Folosești x²−a²=(x−a)(x+a): fiecare paranteză devine partea de jos a unei fracții mai mici. Presupui că fracția se sparge în două astfel de fracții, cu numerele necunoscute A și B deasupra: 1/(x²−a²)=A/(x−a)+B/(x+a).",
+            "Aduci cele două fracții la același numitor, (x−a)(x+a), ca să le poți aduna, așa cum aduni 1/2+1/3 scriindu-le pe amândouă în șesimi. Sus, la numărător, A se înmulțește cu (x+a), iar B cu (x−a): A(x+a)+B(x−a)=Ax+Aa+Bx−Ba. Strângi la un loc termenii cu x și la alt loc termenii cu a: x(A+B)+a(A−B).",
+            "Cele două părți ale egalității au acum același numitor, deci și numărătorii trebuie să fie egali. În stânga, sus este 1, iar 1 nu conține x. Deci partea cu x trebuie să dispară, iar restul trebuie să dea 1. Compari bucată cu bucată și obții: A+B=0 și a(A−B)=1.",
+            "Din prima egalitate, B=−A. Pui −A în locul lui B: A−(−A)=2A, pentru că minus cu minus dă plus. A doua egalitate devine a·2A=1. Împarți la 2a și rezultă A=1/(2a). Din B=−A rezultă B=−1/(2a).",
+            "Integrezi fiecare fracție mică separat, adică îi cauți primitiva. Numerele A și B rămân în față, pentru că sunt numere fixe. La fel cum primitiva lui 1/x este ln|x|, primitiva lui 1/(x−a) este ln|x−a|, iar a lui 1/(x+a) este ln|x+a|. Scoți 1/(2a) în față, iar minusul din B=−1/(2a) ajunge între logaritmi: (1/(2a))(ln|x−a|−ln|x+a|)+C.",
+            "Combini cei doi logaritmi într-unul singur. Folosești regula „ln minus ln dă ln din împărțire”: ln|x−a|−ln|x+a|=ln|(x−a)/(x+a)|."
           ],
-          "answer": "(1/(2a))ln|(x−a)/(x+a)|+C."
+          "answer": "Formula este (1/(2a))ln|(x−a)/(x+a)|+C."
         },
         {
-          "question": "Calculează ∫dx/(x²−9).",
+          "question": "Calculează ∫dx/(x²−9), adică găsește primitiva lui 1/(x²−9).",
           "steps": [
-            "9=3², deci a=3.",
-            "Factorul din față este 1/(2·3)=1/6.",
-            "Raportul din logaritm este (x−3)/(x+3)."
+            "Te uiți la semnul din numitor: în x²−9 este minus, deci folosești formula pentru diferență de pătrate găsită mai sus, (1/(2a))ln|(x−a)/(x+a)|+C. Apoi scrii 9 ca pătratul unui număr, ca să vezi cine este a: 9=3², deci a=3.",
+            "Pui a=3 în numărul din fața logaritmului, 1/(2a). Factorul din față este 1/(2·3)=1/6.",
+            "Pui tot a=3 în fracția din interiorul logaritmului. Raportul din logaritm este (x−3)/(x+3)."
           ],
-          "answer": "(1/6)ln|(x−3)/(x+3)|+C, x≠±3."
+          "answer": "Rezultatul este (1/6)ln|(x−3)/(x+3)|+C, cu x≠±3, pentru că acolo numitorul x²−9 devine 0."
         }
       ],
       "recall": [
         {
-          "q": "Ce primitivă alegi pentru 1/(x²+a²)?",
-          "a": "(1/a)arctan(x/a)+C, a>0."
+          "q": "Ce primitivă alegi pentru 1/(x²+a²), când jos ai o sumă de pătrate?",
+          "a": "Alegi (1/a)arctan(x/a)+C, cu a>0. Suma x²+a² la numitor, fără radical, te trimite la arctangentă."
         },
         {
-          "q": "Ce primitivă alegi pentru 1/(x²−a²)?",
-          "a": "(1/(2a))ln|(x−a)/(x+a)|+C."
+          "q": "Ce primitivă alegi pentru 1/(x²−a²), când jos ai o diferență de pătrate?",
+          "a": "Alegi (1/(2a))ln|(x−a)/(x+a)|+C. Diferența x²−a² la numitor, fără radical, te trimite la logaritm."
         },
         {
-          "q": "Care sunt coeficienții fracțiilor simple?",
-          "a": "A=1/(2a) în fața lui 1/(x−a), B=−1/(2a) în fața lui 1/(x+a)."
+          "q": "În descompunerea lui 1/(x²−a²), care sunt coeficienții, adică numerele din fața fracțiilor simple?",
+          "a": "A=1/(2a) stă în fața lui 1/(x−a), iar B=−1/(2a) în fața lui 1/(x+a). Diferă doar prin semn."
         },
         {
-          "q": "Care este condiția pentru integrandul 1/√(a²−x²)?",
-          "a": "a>0 și |x|<a."
+          "q": "Ce condiții pui pentru integrandul 1/√(a²−x²), adică pentru funcția de sub semnul ∫?",
+          "a": "a>0 și |x|<a, adică x fără semn este mai mic decât a. Așa, sub radical rămâne un număr pozitiv, din care poți scoate rădăcina pătrată."
         }
       ],
       "pitfalls": [
-        "Nu confunda x²−a² cu a²−x².",
-        "Nu schimba ordinea raportului din logaritm fără să schimbi și semnul din față.",
-        "Parametrul a=0 cere o formulă separată; formulele de mai sus presupun a>0.",
-        "Ultima formulă radicală din fotografia 22 este tăiată și neclară; nu a fost folosită."
+        "Nu confunda x²−a² cu a²−x², pentru că ordinea schimbă semnul și te duce la altă formulă.",
+        "Nu schimba ordinea raportului din logaritm fără să schimbi și semnul din față, pentru că logaritmul fracției răsturnate are semnul opus.",
+        "Pentru a=0 ai nevoie de o formulă separată, pentru că formulele de mai sus presupun a>0, iar în 1/a sau 1/(2a) ai împărți la 0."
       ],
       "group": "Analiză",
-      "notes": [],
+      "notes": [
+        "În fotografia 22, ultima formulă cu radical este tăiată și nu se citește, de aceea nu am folosit-o în lecție."
+      ],
       "shortTitle": "Numitori pătratici și fracții simple"
     },
     {
       "id": "primitive-compuse",
-      "title": "Funcții compuse: caută derivata din interior",
+      "title": "Funcții compuse: cum integrezi o funcție ascunsă în alta",
       "sourceIds": [
         27
       ],
-      "summary": "Integrarea compunerilor este regula lanțului citită invers. Recunoaște funcția interioară u și păstrează factorul u′.",
+      "summary": "Aici cauți primitiva unei funcții compuse, adică a unei funcții așezate „înăuntrul” alteia, ca 2x+3 în (2x+3)². Primitiva este drumul invers față de derivare (derivata e „viteza de schimbare” a unei funcții), iar căutarea ei se numește integrare. Integrarea funcțiilor compuse este regula lanțului citită invers: la derivare înmulțești cu derivata funcției dinăuntru u, notată u′, deci la integrare cauți și păstrezi factorul u′.",
       "rules": [
         {
-          "label": "Regula compunerii",
+          "label": "Regula compunerii (regula lanțului citită invers)",
           "formula": "\\int f(g(x))g'(x)\\,dx=F(g(x))+C,\\qquad F'=f",
-          "explanation": "g este derivabilă și valorile ei se află în intervalul unde F este primitivă a lui f."
+          "explanation": "Dacă sub integrală (sub semnul ∫) ai f(g(x)) înmulțit cu g′(x), rezultatul este F(g(x))+C. Aici g′(x) este derivata funcției dinăuntru (semnul ′ înseamnă „derivata lui”), iar F este o primitivă a lui f (F′=f). C este o constantă oarecare: orice număr fix adunat dă tot o primitivă, pentru că derivata unui număr fix este 0. Merge pentru că, dacă derivezi F(g(x)) cu regula lanțului, obții exact f(g(x))·g′(x). Condiția este ca g să fie derivabilă (să aibă derivată). Valorile lui g trebuie să stea în intervalul unde F este primitivă a lui f. Un interval este o bucată de numere „de la… până la…”."
         },
         {
-          "label": "Putere compusă",
+          "label": "Putere compusă (o expresie ridicată la putere)",
           "formula": "\\int u^m u'\\,dx=\\frac{u^{m+1}}{m+1}+C,\\quad m\\ne-1",
-          "explanation": "Pentru u=u(x), derivata interioară u′ trebuie să apară în integrand sau să fie compensată."
+          "explanation": "Fie u o expresie care depinde de x, de exemplu 2x+3 (asta înseamnă u=u(x)). Când integrezi u ridicată la puterea m și înmulțită cu derivata ei u′, mărești exponentul (puterea m) cu 1 și împarți la m+1. Derivata funcției interioare, u′, trebuie să apară în integrand (expresia de sub semnul ∫). Dacă din u′ lipsește doar un număr, înmulțești cu el înăuntru și împarți la el în fața integralei, ca valoarea să rămână aceeași (așa apare 1/2 în exemplu). Formula cere m≠−1, pentru că altfel ai împărți la 0."
         },
         {
-          "label": "Interior liniar",
+          "label": "Funcție interioară liniară (ax+b ridicat la putere)",
           "formula": "\\int(ax+b)^m\\,dx=\\frac{(ax+b)^{m+1}}{a(m+1)}+C",
-          "explanation": "a≠0 și m≠−1, pe un interval unde puterile sunt reale."
+          "explanation": "Când în paranteză stă o expresie liniară ax+b (un număr înmulțit cu x, plus un număr, ca 2x+3), derivata ei este numărul a, pentru că b nu se schimbă. De aceea împarți la m+1 și la a. Condițiile sunt a≠0, ca să poți împărți la a, și m≠−1. Lucrezi pe un interval unde puterile au sens ca numere reale. De exemplu, puterea 1/2 înseamnă radical, iar sub radical nu poate sta un număr negativ."
         }
       ],
       "examples": [
         {
-          "question": "Calculează ∫(2x+3)² dx prin compunere.",
+          "question": "Calculează ∫(2x+3)² dx cu regula compunerii. Semnul ∫ … dx cere integrala nedefinită, adică toată familia de primitive, de aceea la final apare „+C”.",
           "steps": [
-            "Alege u=2x+3, deci u′=2.",
-            "Compensează derivata interioară: ∫u² dx=(1/2)∫u²u′ dx.",
-            "Aplică formula puterii compuse: (1/2)u³/3+C."
+            "Dai un nume scurt expresiei dinăuntru (asta e substituția) și îi afli derivata: alegi u=2x+3, deci u′=2. Derivata este 2 pentru că 3 e un număr fix (derivata lui e 0), iar 2x crește cu 2 de fiecare dată când x crește cu 1.",
+            "Formula puterii compuse cere factorul u′=2 lângă u², dar el lipsește. Îl aduci înmulțind cu 2 înăuntru și împărțind la 2 în fața integralei. Un număr fix poate fi scos în fața semnului ∫, iar 2 înmulțit cu 1/2 dă 1, deci valoarea rămâne aceeași: ∫u² dx=(1/2)∫u²u′ dx.",
+            "Acum ai forma puterii compuse cu m=2, deci mărești exponentul la 3 și împarți la 3: (1/2)u³/3+C."
           ],
-          "answer": "(2x+3)³/6+C."
+          "answer": "Pui înapoi u=2x+3 și înmulțești 1/2 cu 1/3: (2x+3)³/6+C."
         },
         {
-          "question": "Calculează aceeași integrală prin dezvoltare și compară.",
+          "question": "Calculează aceeași integrală prin dezvoltare, adică desfăcând întâi paranteza, și compară cu primul rezultat.",
           "steps": [
-            "(2x+3)²=4x²+12x+9.",
-            "Integrează termen cu termen: 4x³/3+6x²+9x+C.",
-            "Dezvoltarea lui (2x+3)³/6 dă 4x³/3+6x²+9x+27/6.",
-            "Diferența 27/6 este constantă și se absoarbe în C."
+            "Desfaci pătratul, adică înmulțești paranteza cu ea însăși și aduni toate produsele: 2x·2x=4x², de două ori 2x·3 dă 12x, iar 3·3=9. Așa obții (2x+3)²=4x²+12x+9.",
+            "Integrezi fiecare termen (fiecare bucată a sumei) separat, pentru că integrala unei sume este suma integralelor. La fiecare putere a lui x mărești exponentul cu 1 și împarți la noul exponent: 4x² dă 4x³/3, 12x dă 12x²/2=6x², iar 9 dă 9x. Rezultatul este 4x³/3+6x²+9x+C.",
+            "Ca să compari, desfaci și primul rezultat. Întâi desfaci cubul: (2x+3)³=8x³+36x²+54x+27. Apoi împarți fiecare bucată la 6 și obții 4x³/3+6x²+9x+27/6.",
+            "Cele două rezultate diferă doar prin 27/6. Diferența 27/6 este un număr fix (o constantă), așa că se adună la C. C este o constantă oarecare, care poate fi orice număr real, deci și C plus 27/6 poate fi orice număr."
           ],
-          "answer": "4x³/3+6x²+9x+C; aceeași familie de primitive."
+          "answer": "4x³/3+6x²+9x+C. Este aceeași familie de primitive ca (2x+3)³/6+C, doar scrisă altfel."
         }
       ],
       "recall": [
         {
-          "q": "Ce trebuie să cauți când integrandul conține f(g(x))?",
-          "a": "Factorul g′(x), derivata funcției interioare."
+          "q": "Ce cauți când sub integrală apare f(g(x)), o funcție așezată în altă funcție?",
+          "a": "Cauți factorul g′(x), adică derivata funcției dinăuntru."
         },
         {
           "q": "De ce apare 1/2 în ∫(2x+3)² dx?",
-          "a": "Pentru că derivata interioară este 2, iar factorul 1/2 o compensează."
+          "a": "Pentru că derivata funcției dinăuntru este 2, iar factorul 1/2 o compensează. Înmulțești cu 2 și împarți la 2, așa că valoarea rămâne aceeași."
         },
         {
-          "q": "De ce două răspunsuri diferite printr-o constantă sunt ambele corecte?",
-          "a": "Constanta este inclusă în familia arbitrară +C; derivatele celor două expresii coincid."
+          "q": "De ce două răspunsuri care diferă printr-o constantă sunt amândouă corecte?",
+          "a": "Constanta intră în +C, care poate fi orice număr. În plus, cele două expresii au aceeași derivată, deci sunt primitive ale aceleiași funcții."
         }
       ],
       "pitfalls": [
-        "Nu aplica formula compunerii fără factorul derivării interioare.",
-        "La exponenții −1 folosește formula logaritmică, nu împărțirea la m+1.",
-        "Schema abstractă din fotografie are etichete inconsistente; regula a fost normalizată și verificată prin derivare."
+        "Nu aplica regula compunerii dacă lipsește factorul u′ (derivata funcției interioare). Dacă derivezi rezultatul ca să verifici, nu mai obții expresia de sub semnul ∫.",
+        "Când exponentul este −1 (u la puterea −1 înseamnă 1/u), nu poți împărți la m+1, pentru că m+1=0. Atunci folosești formula cu logaritmul natural ln (funcția inversă a lui e^x)."
       ],
       "group": "Analiză",
-      "notes": [],
-      "shortTitle": "Funcții compuse"
+      "notes": [
+        "În fotografie, etichetele schemei generale nu se potrivesc între ele. Regula de aici folosește aceleași notații peste tot și a fost verificată prin derivare, adică derivând rezultatul ca să vezi că obții expresia de sub ∫."
+      ],
+      "shortTitle": "Integrarea funcțiilor compuse"
     },
     {
       "id": "integrale-simplificare",
-      "title": "Simplifică integrandul înainte de integrare",
+      "title": "Simplificarea integrandului: tai ce se reduce înainte să integrezi",
       "sourceIds": [
         8,
         14
       ],
-      "summary": "Când integrandul conține un factor care se simplifică, verifică mai întâi că acel factor este nenul. Apoi integrează expresia rămasă și aplică limitele.",
+      "summary": "Uneori expresia de sub semnul integralei, numită integrand, are o parte care se taie, ca la o fracție obișnuită. Tăierea este o împărțire, deci verifici întâi că acel factor (o parte înmulțită cu restul) nu este zero pe numerele unde lucrezi. Apoi integrezi ce a rămas, adică îi cauți primitiva (drumul invers față de derivare), și folosești capetele intervalului, numite limite de integrare.",
       "rules": [
         {
-          "label": "Pozitivitatea numitorului",
+          "label": "Numitorul este mereu pozitiv",
           "formula": "x^2-4x+5=(x-2)^2+1>0",
-          "explanation": "Expresia este strict pozitivă pentru orice x. În enunțul fotografiat apare un numitor fără radical; în calculul din caiet apare unul cu radical. Rezultatele se disting mai jos."
+          "explanation": "Un pătrat, adică un număr înmulțit cu el însuși, nu este niciodată negativ. Expresia \\(x^2-4x+5\\) se poate scrie \\((x-2)^2+1\\), adică un pătrat plus 1, deci este mai mare decât 0 pentru orice x. Ea stă la numitor (partea de jos a fracției), așa că numitorul nu ajunge niciodată la zero și ai voie să împarți la el. Enunțul din fotografie are acest numitor fără radical (rădăcina pătrată), iar calculul din caiet îl are cu radical. Cele două variante dau rezultate diferite, arătate separat mai jos."
         },
         {
-          "label": "Evaluarea unei integrale definite",
+          "label": "Cum calculezi o integrală definită",
           "formula": "\\int_a^b g(x)\\,dx=F(b)-F(a),\\quad F'=g",
-          "explanation": "Păstrează parantezele când scazi valoarea la limita inferioară."
+          "explanation": "O integrală definită are două capete, a și b, și dă un singur număr. Mai întâi cauți F, primitiva lui g, unde g este expresia de sub integrală. Primitiva este drumul invers față de derivare: derivata lui F (viteza lui de schimbare) este g, scris \\(F'=g\\). Dacă g este viteza, F este distanța parcursă. Apoi pui b în locul lui x în F și scazi ce dă F când pui a în locul lui x. Când scazi valoarea de la capătul de jos (limita inferioară), păstrezi parantezele, ca minusul să schimbe semnul la tot ce e înăuntru."
         },
         {
-          "label": "Factorul logaritmic",
+          "label": "Factorul cu logaritm se poate tăia",
           "formula": "\\frac{x^2-c}{x\\ln x}\\cdot x\\ln x=x^2-c\\quad (x\\ln x\\ne0)",
-          "explanation": "Pe \\([2,3]\\), avem \\(x>0\\) și \\(\\ln x>0\\), deci simplificarea este permisă."
+          "explanation": "Aici numitorul fracției este \\(x\\ln x\\), unde ln înseamnă logaritmul natural, funcția inversă a lui \\(e^x\\). Când înmulțești fracția cu chiar numitorul ei, numitorul se taie și rămâne partea de sus. Ai voie să tai doar dacă \\(x\\ln x\\ne0\\), pentru că la zero nu se poate împărți. Intervalul \\([2,3]\\) este o bucată de numere de la 2 până la 3, iar parantezele pătrate arată că și capetele sunt incluse. Aici \\(x>0\\). Și \\(\\ln x>0\\), pentru că \\(\\ln 1=0\\), iar ln crește, deci dă numere pozitive pentru x mai mare decât 1. Două numere pozitive înmulțite nu dau zero, deci simplificarea este permisă."
         }
       ],
       "examples": [
         {
-          "question": "Pentru enunțul vizibil \\(f(x)=(x-2)/(x^2-4x+5)\\), calculează \\(\\int_2^4 f(x)\\sqrt{x^2-4x+5}\\,dx\\).",
+          "question": "Enunțul care se vede în fotografie dă \\(f(x)=(x-2)/(x^2-4x+5)\\). Calculează \\(\\int_2^4 f(x)\\sqrt{x^2-4x+5}\\,dx\\), adică integrala de la 2 la 4 a lui f înmulțit cu radicalul. Semnul \\(dx\\) de la final arată doar că x este litera care se schimbă.",
           "steps": [
-            "Numitorul este \\((x-2)^2+1>0\\). Simplificarea corectă lasă \\((x-2)/\\sqrt{x^2-4x+5}\\).",
-            "Recunoaștem derivata: \\((\\sqrt{x^2-4x+5})'=(x-2)/\\sqrt{x^2-4x+5}\\).",
-            "Integrala este \\([\\sqrt{x^2-4x+5}]_2^4=\\sqrt5-1\\)."
+            "Verifici întâi numitorul. Dacă desfaci \\((x-2)^2=(x-2)(x-2)\\), obții \\(x^2-4x+4\\), iar cu 1 în plus ajungi la \\(x^2-4x+5\\). Deci numitorul este \\((x-2)^2+1>0\\) și nu ajunge niciodată la zero. Un radical înmulțit cu el însuși dă numărul de sub el, de exemplu \\(\\sqrt9\\cdot\\sqrt9=9\\). Așa că numitorul este radicalul înmulțit cu el însuși, iar radicalul cu care înmulțești se taie cu unul singur de jos. Simplificarea corectă lasă \\((x-2)/\\sqrt{x^2-4x+5}\\).",
+            "Te uiți dacă ce a rămas este derivata unei funcții cunoscute. Derivata unui radical este derivata a ce e sub el, împărțită la de două ori radicalul. Sub radical ai \\(x^2-4x+5\\), cu derivata \\(2x-4=2(x-2)\\), iar doiul de sus se taie cu doiul de jos. Așa ajungi la \\((\\sqrt{x^2-4x+5})'=(x-2)/\\sqrt{x^2-4x+5}\\). Deci radicalul este o primitivă a ce a rămas.",
+            "Calculezi primitiva la 4 și scazi valoarea ei la 2. Pui 4 în locul lui x: sub radical ai \\(16-16+5=5\\), deci radicalul dă \\(\\sqrt5\\). Pui 2: sub radical ai \\(4-8+5=1\\), iar \\(\\sqrt1=1\\). Parantezele drepte cu 2 jos și 4 sus înseamnă „valoarea la 4 minus valoarea la 2”: \\([\\sqrt{x^2-4x+5}]_2^4=\\sqrt5-1\\)."
           ],
-          "answer": "\\(\\sqrt5-1\\), pentru numitorul fără radical din enunț."
+          "answer": "\\(\\sqrt5-1\\). Acesta este rezultatul pentru enunțul din fotografie, unde numitorul nu are radical."
         },
         {
-          "question": "Ce rezultat ar da varianta cu \\(f(x)=(x-2)/\\sqrt{x^2-4x+5}\\), folosită în calculul caietului?",
+          "question": "În caiet, calculul folosește altă variantă, cu radical la numitor: \\(f(x)=(x-2)/\\sqrt{x^2-4x+5}\\). Ce rezultat ar da această variantă pentru aceeași integrală?",
           "steps": [
-            "Produsul cu radicalul devine \\(x-2\\).",
-            "\\(\\int_2^4(x-2)\\,dx=[x^2/2-2x]_2^4=0-(-2)=2\\)."
+            "Verifici întâi că ai voie să tai. Sub radical este \\((x-2)^2+1\\), care nu ajunge niciodată la zero, deci nici radicalul nu este zero. Înmulțești f cu radicalul. Radicalul de sus se taie cu cel de jos, iar din toată înmulțirea rămâne doar \\(x-2\\).",
+            "Cauți o funcție a cărei derivată este \\(x-2\\). O primitivă este \\(x^2/2-2x\\), pentru că derivata lui \\(x^2/2\\) este x, iar derivata lui \\(2x\\) este 2. Pui 4 în locul lui x: \\(16/2-8=8-8=0\\). Pui 2: \\(4/2-4=2-4=-2\\). Scazi a doua valoare din prima, cu paranteze: \\(\\int_2^4(x-2)\\,dx=[x^2/2-2x]_2^4=0-(-2)=2\\). Un minus pus în fața unui număr negativ îl face pozitiv, de aceea \\(0-(-2)\\) dă 2."
           ],
-          "answer": "\\(2\\). Această variantă explică rezolvarea din caiet, însă diferă de enunțul vizibil."
+          "answer": "\\(2\\). Așa se explică rezolvarea din caiet, dar această variantă diferă de enunțul care se vede în fotografie."
         },
         {
-          "question": "Pentru \\(f(x)=(x^2-5)/(x\\ln x)\\), calculează \\(\\int_2^3 f(x)x\\ln x\\,dx\\).",
+          "question": "Ai funcția \\(f(x)=(x^2-5)/(x\\ln x)\\). Calculează \\(\\int_2^3 f(x)x\\ln x\\,dx\\), adică integrala de la 2 la 3 a lui f înmulțit cu \\(x\\ln x\\).",
           "steps": [
-            "Pe \\([2,3]\\), \\(x\\ln x\\ne0\\). Simplificăm la \\(x^2-5\\).",
-            "O primitivă este \\(x^3/3-5x\\).",
-            "\\([x^3/3-5x]_2^3=(9-15)-(8/3-10)=4/3\\)."
+            "Verifici întâi că ai voie să tai: pe \\([2,3]\\), \\(x\\ln x\\ne0\\). Atunci \\(x\\ln x\\) de sus se taie cu cel de jos și rămâne \\(x^2-5\\).",
+            "Cauți o funcție a cărei derivată este \\(x^2-5\\). O primitivă este \\(x^3/3-5x\\), pentru că derivata lui \\(x^3/3\\) este \\(x^2\\), iar derivata lui \\(5x\\) este 5.",
+            "Calculezi primitiva la 3 și scazi valoarea ei la 2, pusă între paranteze. Pui 3 în locul lui x: \\(27/3-15=9-15\\). Pui 2: \\(8/3-10\\). Scazi, cu paranteze: \\([x^3/3-5x]_2^3=(9-15)-(8/3-10)=4/3\\). Ca să vezi de unde vine \\(4/3\\): \\(9-15=-6=-18/3\\), iar \\(8/3-10=8/3-30/3=-22/3\\), deci \\(-18/3-(-22/3)=4/3\\)."
           ],
-          "answer": "\\(4/3\\)."
+          "answer": "\\(4/3\\), adică un întreg și o treime."
         }
       ],
       "recall": [
         {
-          "q": "Ce verifici înainte să simplifici un factor din numitor?",
-          "a": "Că nu este zero pe domeniul și intervalul de integrare."
+          "q": "Ce verifici înainte să tai un factor din numitor?",
+          "a": "Verifici că acel factor nu este zero nicăieri pe domeniu (numerele pentru care formula are sens și pe care lucrezi) și pe intervalul de integrare. La zero nu se poate împărți."
         },
         {
-          "q": "Cum eviți greșeala de semn la limita inferioară?",
-          "a": "Scrii F(b)−(F(a)), cu paranteze."
+          "q": "Cum eviți o greșeală de semn când scazi valoarea de la capătul de jos (limita inferioară)?",
+          "a": "Scrii F(b)−(F(a)), cu paranteze în jurul lui F(a). Așa minusul se aplică la toată valoarea, cu toate semnele ei."
         },
         {
-          "q": "De ce nu păstrăm constanta C când evaluăm o integrală definită?",
-          "a": "În diferența \\(F(b)-F(a)\\), aceeași constantă se anulează."
+          "q": "De ce nu mai păstrezi constanta C când calculezi o integrală definită?",
+          "a": "Constanta C este un număr fix care se poate aduna la orice primitivă. În \\(F(b)-F(a)\\) ea apare în ambele valori, deci se scade din ea însăși și dispare."
         }
       ],
       "pitfalls": [
-        "S08: enunțul vizibil are numitor fără radical, dar calculul îl folosește cu radical. Cele două variante dau rezultate diferite; nu transfera rezultatul între ele.",
-        "S14: enunțul și primitiva folosesc constanta 5. Un rând intermediar schimbă cifra în 4; aici este corectat la 5.",
-        "Primul exercițiu tăiat și suprascris din S08 nu a fost reconstruit."
+        "În fotografia S08, enunțul are numitorul fără radical, iar calculul din caiet îl are cu radical. Nu muta rezultatul de la o variantă la alta, pentru că cele două dau rezultate diferite.",
+        "În fotografia S14 (exercițiul cu logaritm), enunțul și primitiva folosesc numărul 5, dar un rând din mijloc scrie 4. Aici acel 4 a fost corectat la 5. Dacă îl copiezi pe 4, calculul nu se mai potrivește cu enunțul și cu primitiva.",
+        "Nu căuta aici primul exercițiu din S08: a fost tăiat și scris peste, de aceea nu a fost reconstruit."
       ],
       "group": "Analiză",
       "notes": [
-        "S08 conține două variante incompatibile ale numitorului; am păstrat enunțul vizibil și am explicat separat varianta calculului. S14 a fost verificată din enunț și din primitiva scrisă."
+        "Fotografia S08 are două variante ale numitorului care nu se potrivesc între ele. Lecția păstrează enunțul care se vede și explică separat varianta din calcul. Fotografia S14 a fost verificată după enunț și după primitiva scrisă."
       ],
-      "shortTitle": "Simplifică integrandul înainte de integrare"
+      "shortTitle": "Simplifică înainte să integrezi"
     },
     {
       "id": "pregatire-rationala-28",
-      "title": "Integrale raționale: pregătirea algebrică",
+      "title": "Integrale raționale: cum pregătești fracția înainte de calcul",
       "sourceIds": [
         28
       ],
-      "summary": "Înainte de a integra, descompune fracția și potrivește numărătorul cu derivata numitorului. Un numitor de forma \\(x^2-a^2\\) conduce la un logaritm al unui raport.",
+      "summary": "Aici înveți să pregătești o fracție cu x înainte să-i calculezi integrala, adică toată familia de primitive (dacă derivata e „viteza de schimbare”, primitiva e distanța parcursă). Spargi fracția în bucăți mai simple și potrivești numărătorul, partea de sus, cu derivata numitorului, partea de jos. Un numitor de forma \\(x^2-a^2\\) conduce la un logaritm natural ln (funcția inversă a lui \\(e^x\\)) dintr-un raport, adică dintr-o fracție.",
       "rules": [
         {
-          "label": "Diferență de pătrate",
+          "label": "Diferență de pătrate la numitor",
           "formula": "\\int\\frac{dx}{x^2-a^2}=\\frac1{2a}\\ln\\left|\\frac{x-a}{x+a}\\right|+C",
-          "explanation": "Pentru \\(a>0\\), pe intervale care nu conțin \\(\\pm a\\)."
+          "explanation": "Când jos ai \\(x^2\\) minus pătratul unui număr \\(a\\), rezultatul este un ln dintr-un raport (o fracție), înmulțit cu \\(\\frac1{2a}\\). Raportul stă în modul (numărul fără semn), ca ln să primească un număr pozitiv. Formula merge pentru \\(a>0\\), pe intervale (bucăți de numere „de la… până la…”) care nu conțin \\(\\pm a\\), adică nici \\(a\\), nici \\(-a\\). În aceste două numere numitorul ar fi 0."
         },
         {
-          "label": "Numitor liniar",
+          "label": "Numitor liniar, de forma ax+b",
           "formula": "\\int\\frac{dx}{ax+b}=\\frac1a\\ln|ax+b|+C",
-          "explanation": "Pentru \\(a\\ne0\\), factorul \\(1/a\\) compensează derivata numitorului."
+          "explanation": "Când jos ai \\(ax+b\\), cu \\(a\\ne0\\), rezultatul este ln din \\(|ax+b|\\), înmulțit cu \\(1/a\\). De ce: când derivezi \\(\\ln|ax+b|\\), din interior iese în plus un \\(a\\), pentru că derivata lui \\(ax+b\\) este \\(a\\). Factorul \\(1/a\\) anulează acest \\(a\\), ca să rămână exact \\(\\frac1{ax+b}\\). Adaugi +C, o constantă oarecare (orice număr fix), pentru că derivata oricărui număr fix este 0."
         },
         {
-          "label": "Separarea fracției",
+          "label": "Separarea fracției în bucăți",
           "formula": "\\frac{2x+3}{x^2}=\\frac2x+\\frac3{x^2}",
-          "explanation": "Integrează separat fiecare termen; \\(\\int x^{-2}dx=-1/x+C\\)."
+          "explanation": "Când jos ai un singur termen, ca \\(x^2\\), împarți la el fiecare bucată de sus. Apoi integrezi separat fiecare termen. Dacă o bucată devine \\(2/x\\), folosești \\(\\int\\frac{dx}x=\\ln|x|+C\\); este regula numitorului liniar cu \\(a=1\\) și \\(b=0\\). Dacă o bucată devine \\(x^{-2}\\), folosești \\(\\int x^{-2}dx=-1/x+C\\), unde \\(x^{-2}\\) înseamnă \\(1/x^2\\). Poți verifica: derivata lui \\(-1/x\\) este \\(1/x^2\\)."
         },
         {
-          "label": "Împărțire algebrică",
+          "label": "Împărțire algebrică, ca la scoaterea întregilor",
           "formula": "\\frac{2x+3}{2x-5}=1+\\frac8{2x-5}",
-          "explanation": "Adaugă și scade termenul care transformă numărătorul în numitor."
+          "explanation": "Când sus și jos au același grad (cea mai mare putere a lui x), scrii numărătorul ca numitorul plus un rest. Aici vrei ca sus să apară \\(2x-5\\), așa că scrii 3 ca \\(-5+8\\), pentru că \\(-5+8=3\\): \\(2x+3=(2x-5)+8\\). Fracția devine 1 plus o fracție mai simplă, la fel cum \\(\\frac75=1+\\frac25\\)."
         }
       ],
       "examples": [
         {
-          "question": "Calculează \\(\\int dx/(x^2-10)\\).",
+          "question": "Calculează \\(\\int dx/(x^2-10)\\), adică integrala lui 1 împărțit la \\(x^2-10\\).",
           "steps": [
-            "Alege \\(a=\\sqrt{10}\\).",
-            "Aplică formula diferenței de pătrate; \\(x\\ne\\pm\\sqrt{10}\\)."
+            "Scrii 10 ca pătratul unui număr, ca să apară forma \\(x^2-a^2\\). Alege \\(a=\\sqrt{10}\\), adică rădăcina pătrată a lui 10, pentru că atunci \\(a^2=10\\).",
+            "Pui acest \\(a\\) în formula diferenței de pătrate. Lucrezi doar unde \\(x\\ne\\pm\\sqrt{10}\\), pentru că în punctele \\(\\pm\\sqrt{10}\\) numitorul devine 0."
           ],
           "answer": "\\(\\frac1{2\\sqrt{10}}\\ln|\\frac{x-\\sqrt{10}}{x+\\sqrt{10}}|+C\\)"
         },
         {
           "question": "Calculează \\(\\int dx/(x^2-8)\\).",
           "steps": [
-            "Alege \\(a=\\sqrt8\\).",
-            "Aplică formula; \\(x\\ne\\pm\\sqrt8\\)."
+            "La fel ca înainte, scrii 8 ca pătratul unui număr. Alege \\(a=\\sqrt8\\).",
+            "Pui \\(a=\\sqrt8\\) în formula diferenței de pătrate. Ții cont că \\(x\\ne\\pm\\sqrt8\\), ca numitorul să nu fie 0."
           ],
           "answer": "\\(\\frac1{2\\sqrt8}\\ln|\\frac{x-\\sqrt8}{x+\\sqrt8}|+C\\)"
         },
         {
-          "question": "Calculează \\(\\int dx/(4x^2-9)\\).",
+          "question": "Calculează \\(\\int dx/(4x^2-9)\\). Aici, în fața lui \\(x^2\\) stă 4.",
           "steps": [
-            "\\(4x^2-9=4[x^2-(3/2)^2]\\).",
-            "Scoate \\(1/4\\); apoi coeficientul este \\((1/4)(1/3)=1/12\\)."
+            "Împarți fiecare bucată la 4 și pui 4 în fața parantezei, ca lângă \\(x^2\\) să rămână 1. Din 9 rămâne 9/4, care se scrie ca pătratul lui 3/2, pentru că \\((3/2)\\cdot(3/2)=9/4\\): \\(4x^2-9=4[x^2-(3/2)^2]\\).",
+            "Scoți \\(1/4\\) în fața integralei, pentru că 4 stă jos, iar a împărți la 4 înseamnă a înmulți cu \\(1/4\\). Apoi aplici formula cu \\(a=3/2\\), care pune în față \\(\\frac1{2a}=1/3\\). Coeficientul (numărul din față) este \\((1/4)(1/3)=1/12\\). În raport înmulțești sus și jos cu 2, ca să scapi de fracția \\(3/2\\). Fracția nu se schimbă, la fel cum \\(\\frac12=\\frac24\\)."
           ],
           "answer": "\\(\\frac1{12}\\ln|\\frac{2x-3}{2x+3}|+C\\)"
         },
         {
-          "question": "Calculează \\(\\int(2x+3)/x^2\\,dx\\).",
+          "question": "Calculează \\(\\int(2x+3)/x^2\\,dx\\). Jos ai un singur termen.",
           "steps": [
-            "Scrie integrandul \\(2/x+3x^{-2}\\).",
-            "Integrează prin liniaritate, pe intervale cu \\(x\\ne0\\)."
+            "Împarți fiecare bucată de sus la \\(x^2\\), ca să ai doi termeni simpli. Din \\(2x\\) împărțit la \\(x^2\\) rămâne \\(2/x\\), pentru că un x se simplifică. Iar \\(3/x^2\\) se scrie \\(3x^{-2}\\). Integrandul (expresia de sub integrală) devine \\(2/x+3x^{-2}\\).",
+            "Integrezi fiecare termen separat și aduni rezultatele (liniaritate: integrala unei sume este suma integralelor, iar numerele din față rămân în față). Din \\(2/x\\) iese \\(2\\ln|x|\\), pentru că \\(\\int\\frac{dx}x=\\ln|x|+C\\). Din \\(3x^{-2}\\) iese \\(-3/x\\), pentru că \\(\\int x^{-2}dx=-1/x+C\\). Lucrezi pe intervale cu \\(x\\ne0\\), pentru că la 0 fracția nu are sens."
           ],
           "answer": "\\(2\\ln|x|-3/x+C\\)"
         },
         {
-          "question": "Calculează \\(\\int(2x+3)/(2x-5)\\,dx\\).",
+          "question": "Calculează \\(\\int(2x+3)/(2x-5)\\,dx\\). Sus și jos au același grad.",
           "steps": [
-            "Scrie \\(2x+3=(2x-5)+8\\).",
-            "\\(\\int[1+8/(2x-5)]dx=x+8\\cdot\\frac12\\ln|2x-5|+C\\)."
+            "Scrii numărătorul ca numitorul plus un rest, ca să poți scoate un întreg: \\(2x+3=(2x-5)+8\\).",
+            "Împarți fiecare bucată la \\(2x-5\\). Din \\(\\frac{2x-5}{2x-5}\\) rămâne 1, deci fracția devine 1 plus \\(8/(2x-5)\\). Din 1 iese x, pentru că derivata lui x este 1. Pentru a doua bucată folosești regula numitorului liniar, cu \\(a=2\\): \\(\\int[1+8/(2x-5)]dx=x+8\\cdot\\frac12\\ln|2x-5|+C\\). La final, \\(8\\cdot\\frac12=4\\)."
           ],
           "answer": "\\(x+4\\ln|2x-5|+C\\)"
         },
         {
-          "question": "Calculează \\(\\int(x+3)/(2x+7)\\,dx\\).",
+          "question": "Calculează \\(\\int(x+3)/(2x+7)\\,dx\\). Sus și jos au același grad, dar în fața lui x stau numere diferite.",
           "steps": [
-            "\\(x+3=\\frac12[(2x+7)-1]\\).",
-            "Integrează \\(\\frac12-\\frac1{2(2x+7)}\\)."
+            "Vrei ca sus să apară numitorul \\(2x+7\\). Sus, în fața lui x stă 1, iar jos stă 2. De aceea înmulțești cu 2 și împarți la 2: \\(x+3=\\frac12(2x+6)\\). Apoi scrii 6 ca \\(7-1\\): \\(x+3=\\frac12[(2x+7)-1]\\).",
+            "Împarți la \\(2x+7\\) și obții un număr minus o fracție simplă: \\(\\frac12-\\frac1{2(2x+7)}\\). Din \\(\\frac12\\) iese \\(x/2\\). Din a doua bucată iese \\(-\\frac14\\ln|2x+7|\\): regula numitorului liniar cu \\(a=2\\) mai pune un \\(\\frac12\\), iar \\(\\frac12\\cdot\\frac12=\\frac14\\)."
           ],
           "answer": "\\(x/2-\\frac14\\ln|2x+7|+C\\)"
         }
       ],
       "recall": [
         {
-          "q": "Ce factor apare la \\(\\int dx/(ax+b)\\)?",
-          "a": "\\(1/a\\), deoarece \\((ax+b)'=a\\)."
+          "q": "Ce factor apare în față la \\(\\int dx/(ax+b)\\)?",
+          "a": "Apare \\(1/a\\), pentru că derivata numitorului este \\(a\\), adică \\((ax+b)'=a\\). Când derivezi ln, acest \\(a\\) iese în plus, iar \\(1/a\\) îl anulează."
         },
         {
           "q": "Poți înlocui \\(\\ln|2x-5|\\) cu \\(\\ln|x-5|\\)?",
-          "a": "Nu. Se poate folosi \\(\\ln|x-5/2|\\), deoarece diferența este constanta \\(\\ln2\\)."
+          "a": "Nu, pentru că obții altă funcție. Poți folosi \\(\\ln|x-5/2|\\): cum \\(2x-5=2(x-5/2)\\), ai \\(\\ln|2x-5|=\\ln2+\\ln|x-5/2|\\), iar numărul fix \\(\\ln2\\) intră în C."
         },
         {
-          "q": "Ce faci când gradele numărătorului și numitorului sunt egale?",
-          "a": "Încearcă împărțirea algebrică pentru a obține o constantă plus o fracție mai simplă."
+          "q": "Ce faci când numărătorul și numitorul au același grad, adică aceeași putere maximă a lui x?",
+          "a": "Scrii numărătorul ca numitorul plus un rest, la fel cum \\(\\frac75=1+\\frac25\\). Obții un număr fix plus o fracție mai simplă, ușor de integrat."
         }
       ],
       "pitfalls": [
-        "Păstrează argumentul corect al logaritmului și modulul.",
-        "Nu uita factorul constant scos din numitor.",
-        "Formulele se aplică separat pe intervalele care evită zerourile numitorului."
+        "Păstrează exact ce stă în ln, pentru că altă expresie dă altă funcție. Păstrează și modulul, pentru că fără el ln nu are sens pentru numere negative.",
+        "Nu uita factorul constant scos din numitor, cum e 1/4 la exemplul cu 4x²−9, pentru că el înmulțește tot rezultatul.",
+        "Formulele se aplică separat pe fiecare interval care ocolește zerourile numitorului, adică numerele care fac partea de jos 0. În aceste numere fracția nu are sens."
       ],
       "notes": [
-        "Corecție față de foto 28: ultima linie din exercițiul cu \\(2x-5\\) scrie greșit \\(\\ln|x-5|\\). Rezultatul corect este cel de mai sus; un \\(2x-3\\) intermediar este de asemenea o eroare de copiere.",
-        "Exemplul cu \\((x+3)/(2x+7)\\) este completat matematic; fotografia se oprește după descompunere."
+        "Corectură față de fotografia 28: pe ultimul rând al exercițiului cu \\(2x-5\\) scrie greșit \\(\\ln|x-5|\\). Rezultatul corect este cel de mai sus, iar un \\(2x-3\\) apărut la mijlocul calculului este tot o greșeală de copiere.",
+        "Exemplul cu \\((x+3)/(2x+7)\\) a fost completat prin calcul. Fotografia se oprește după ce fracția este spartă în bucăți."
       ],
       "group": "Analiză",
-      "shortTitle": "Integrale raționale"
+      "shortTitle": "Pregătirea integralelor raționale"
     },
     {
       "id": "primitive-compuse-33",
-      "title": "Primitive compuse: recunoaște funcția interioară",
+      "title": "Primitive compuse: găsește funcția dinăuntru și derivata ei",
       "sourceIds": [
         32,
         33,
         34
       ],
-      "summary": "Integrarea funcțiilor compuse este regula lanțului inversată. Identifică \\(u(x)\\), apoi verifică prezența lui \\(u'(x)\\). Compensează un factor numeric lipsă înainte de a aplica formula.",
+      "summary": "Aici cauți primitiva (drumul invers față de derivare) a unei funcții compuse, adică a unei funcții așezate „înăuntrul” alteia. Găsești funcția interioară \\(u(x)\\) și verifici dacă lângă ea apare și derivata ei \\(u'(x)\\), adică viteza ei de schimbare. Dacă lipsește doar un număr, înmulțești cu el înăuntru și împarți la el în față, apoi aplici formula potrivită din lecție.",
       "rules": [
         {
-          "label": "Putere compusă",
+          "label": "Putere compusă (u la o putere)",
           "formula": "\\int u^m u'\\,dx=\\frac{u^{m+1}}{m+1}+C",
-          "explanation": "\\(m\\ne-1\\), pe intervale pe care puterea este definită. Pentru \\(m=1\\), rezultatul este \\(u^2/2+C\\)."
+          "explanation": "Când \\(u\\) la puterea \\(m\\) este înmulțit cu derivata lui, mărești puterea cu 1 și împarți la noua putere. Pentru \\(m=1\\), rezultatul este \\(u^2/2+C\\). Merge pentru \\(m\\ne-1\\), pentru că atunci noua putere ar fi 0 și nu poți împărți la 0. Lucrezi pe intervale (bucăți de numere „de la… până la…”) pe care puterea este definită. Adaugi \\(+C\\), o constantă oarecare (un număr care poate fi orice), pentru că derivata oricărui număr fix este 0, deci două primitive diferă doar printr-o constantă. De aceea integrala nedefinită (semnul \\(\\int\\ldots dx\\)) cuprinde toată familia de primitive."
         },
         {
-          "label": "Radical compus",
+          "label": "Radical compus (rădăcina pătrată din u)",
           "formula": "\\int\\sqrt u\\,u'\\,dx=\\frac23u\\sqrt u+C",
-          "explanation": "Formula puterii pentru \\(m=1/2\\); în interiorul domeniului \\(u>0\\)."
+          "explanation": "Radicalul (rădăcina pătrată) înseamnă puterea \\(m=1/2\\), deci folosești formula puterii. Puterea crește la \\(3/2\\), iar \\(u^{3/2}\\) înseamnă \\(u\\sqrt u\\), adică \\(u\\) înmulțit cu radicalul lui. Împărțirea la \\(3/2\\) este același lucru cu înmulțirea cu \\(2/3\\), de aici factorul \\(2/3\\) din față. Lucrezi în interiorul domeniului \\(u>0\\), adică acolo unde formula are sens."
         },
         {
-          "label": "Logaritm",
+          "label": "Logaritm (derivata împărțită la funcție)",
           "formula": "\\int\\frac{u'}{u}\\,dx=\\ln|u|+C",
-          "explanation": "\\(u\\ne0\\). Recunoaște derivata numitorului în numărător."
+          "explanation": "Când sus, la numărător, stă exact derivata expresiei de jos, de la numitor, primitiva este \\(\\ln|u|\\). Logaritmul natural \\(\\ln\\) este funcția inversă a lui \\(e^x\\), adică desface ce face \\(e^x\\). Aici \\(e\\) este un număr fix, aproximativ 2,718. Modulul \\(|u|\\) (numărul fără semn) îl lasă să meargă și pentru \\(u\\) negativ. Ai nevoie de \\(u\\ne0\\), pentru că nu poți împărți la 0."
         },
         {
-          "label": "Exponențială naturală",
+          "label": "Exponențială naturală (e la puterea u)",
           "formula": "\\int e^u u'\\,dx=e^u+C",
-          "explanation": "Funcția exponențială naturală se păstrează la integrare."
+          "explanation": "Aici \\(e\\) este un număr fix, aproximativ 2,718. După regula lanțului (la derivare înmulțești cu derivata funcției dinăuntru), derivata lui \\(e^u\\) este \\(e^u u'\\). De aceea funcția exponențială naturală rămâne neschimbată la integrare."
         },
         {
           "label": "Exponențială cu baza a",
           "formula": "\\int a^u u'\\,dx=\\frac{a^u}{\\ln a}+C",
-          "explanation": "\\(a>0\\), \\(a\\ne1\\)."
+          "explanation": "Când baza, adică numărul ridicat la putere, este alt număr \\(a\\), rezultatul este tot \\(a^u\\), dar împărțit la \\(\\ln a\\). Împarți pentru că derivata lui \\(a^u\\) aduce în plus factorul \\(\\ln a\\). Ai nevoie de \\(a>0\\), \\(a\\ne1\\), altfel \\(\\ln a\\) nu există sau este 0."
         },
         {
           "label": "Sinus",
           "formula": "\\int\\sin u\\,u'\\,dx=-\\cos u+C",
-          "explanation": "Derivata lui \\(-\\cos u\\) este \\(\\sin u\\,u'\\)."
+          "explanation": "Sinusul și cosinusul sunt funcții din trigonometrie, legate de unghiuri. Primitiva lui \\(\\sin u\\,u'\\) are minus în față: \\(-\\cos u\\). Verifici derivând: derivata lui \\(-\\cos u\\) este \\(\\sin u\\,u'\\), exact ce aveai sub integrală."
         },
         {
           "label": "Cosinus",
           "formula": "\\int\\cos u\\,u'\\,dx=\\sin u+C",
-          "explanation": "Derivata lui \\(\\sin u\\) este \\(\\cos u\\,u'\\)."
+          "explanation": "Aici nu apare niciun minus: primitiva lui \\(\\cos u\\,u'\\) este \\(\\sin u\\). Verifici derivând: derivata lui \\(\\sin u\\) este \\(\\cos u\\,u'\\)."
         },
         {
           "label": "Tangentă",
           "formula": "\\int\\tan u\\,u'\\,dx=-\\ln|\\cos u|+C",
-          "explanation": "Pe intervale cu \\(\\cos u\\ne0\\)."
+          "explanation": "Tangenta înseamnă \\(\\sin u/\\cos u\\), deci ai fracția \\(\\sin u\\,u'/\\cos u\\). Derivata lui \\(\\cos u\\) este \\(-\\sin u\\,u'\\), așa că sus stă derivata numitorului, cu semnul schimbat. De aceea, după regula logaritmului, rezultatul este un logaritm cu minus în față. Lucrezi pe intervale cu \\(\\cos u\\ne0\\), pentru că \\(\\cos u\\) stă la numitor."
         },
         {
           "label": "Cotangentă",
           "formula": "\\int\\cot u\\,u'\\,dx=\\ln|\\sin u|+C",
-          "explanation": "Pe intervale cu \\(\\sin u\\ne0\\)."
+          "explanation": "Cotangenta înseamnă \\(\\cos u/\\sin u\\), iar sus stă chiar derivata lui \\(\\sin u\\). De aceea rezultatul este un logaritm, de data aceasta fără minus. Lucrezi pe intervale cu \\(\\sin u\\ne0\\), pentru că \\(\\sin u\\) stă la numitor."
         },
         {
           "label": "Inversul pătratului sinusului",
           "formula": "\\int\\frac{u'}{\\sin^2u}\\,dx=-\\cot u+C",
-          "explanation": "Pe intervale cu \\(\\sin u\\ne0\\)."
+          "explanation": "Când \\(u'\\) este împărțit la \\(\\sin^2u\\) (sinusul înmulțit cu el însuși), primitiva este \\(-\\cot u\\). Minusul apare pentru că derivata lui \\(\\cot u\\) este \\(-u'/\\sin^2u\\). Merge pe intervale cu \\(\\sin u\\ne0\\), ca să nu împarți la 0."
         },
         {
           "label": "Inversul pătratului cosinusului",
           "formula": "\\int\\frac{u'}{\\cos^2u}\\,dx=\\tan u+C",
-          "explanation": "Pe intervale cu \\(\\cos u\\ne0\\)."
+          "explanation": "Când \\(u'\\) este împărțit la \\(\\cos^2u\\), primitiva este \\(\\tan u\\), fără minus. Motivul este că derivata lui \\(\\tan u\\) este exact \\(u'/\\cos^2u\\). Merge pe intervale cu \\(\\cos u\\ne0\\), ca să nu împarți la 0."
         },
         {
           "label": "Notația substituției",
           "formula": "du=u'(x)\\,dx",
-          "explanation": "Nu omite \\(dx\\) când scrii integrala în variabila \\(x\\)."
+          "explanation": "Substituția înseamnă că dai un nume scurt, \\(u\\), expresiei dinăuntru, ca să se vadă forma simplă. Atunci bucata \\(u'(x)\\,dx\\) se scrie pe scurt \\(du\\). Când scrii integrala în variabila \\(x\\) (litera care se schimbă), nu omite \\(dx\\). El arată după ce literă integrezi."
         }
       ],
       "examples": [
         {
-          "question": "\\(\\int(x^2+1)^9\\,2x\\,dx\\)",
+          "question": "Calculează \\(\\int(x^2+1)^9\\,2x\\,dx\\).",
           "steps": [
-            "\\(u=x^2+1\\), \\(u'=2x\\).",
-            "Aplică formula puterii cu \\(m=9\\)."
+            "Alegi ca funcție interioară expresia din paranteză și îi calculezi derivata, care apare deja ca factor: \\(u=x^2+1\\), \\(u'=2x\\).",
+            "Integrala are forma \\(u^9u'\\), deci aplici formula puterii cu \\(m=9\\): puterea crește la 10 și împarți la 10. La final pui \\(x^2+1\\) înapoi în locul lui \\(u\\)."
           ],
           "answer": "\\((x^2+1)^{10}/10+C\\)"
         },
         {
-          "question": "\\(\\int(\\ln x)/x\\,dx\\)",
+          "question": "Calculează \\(\\int(\\ln x)/x\\,dx\\).",
           "steps": [
-            "\\(u=\\ln x\\), \\(u'=1/x\\), \\(x>0\\).",
-            "Integrează \\(uu'\\)."
+            "Alegi logaritmul ca funcție interioară, pentru că derivata lui stă chiar în fracție. Logaritmul are sens doar pentru numere pozitive: \\(u=\\ln x\\), \\(u'=1/x\\), \\(x>0\\).",
+            "Împărțirea la \\(x\\) este același lucru cu înmulțirea cu \\(1/x\\), deci fracția este \\(u\\) înmulțit cu derivata lui. Integrezi \\(uu'\\) cu formula puterii pentru \\(m=1\\), apoi pui \\(\\ln x\\) înapoi în locul lui \\(u\\)."
           ],
           "answer": "\\((\\ln x)^2/2+C\\)"
         },
         {
-          "question": "\\(\\int\\sqrt{\\sin x}\\cos x\\,dx\\)",
+          "question": "Calculează \\(\\int\\sqrt{\\sin x}\\cos x\\,dx\\).",
           "steps": [
-            "\\(u=\\sin x\\), \\(u'=\\cos x\\).",
-            "Aplică formula radicalului pe intervale cu \\(\\sin x>0\\)."
+            "Sub radical stă \\(\\sin x\\), iar derivata lui apare alături: \\(u=\\sin x\\), \\(u'=\\cos x\\).",
+            "Aplici formula radicalului pe intervale cu \\(\\sin x>0\\), adică acolo unde expresia de sub radical este pozitivă. La final pui \\(\\sin x\\) înapoi în locul lui \\(u\\)."
           ],
           "answer": "\\(\\frac23\\sin x\\sqrt{\\sin x}+C\\)"
         },
         {
-          "question": "\\(\\int 2x/(x^2+1)\\,dx\\)",
+          "question": "Calculează \\(\\int 2x/(x^2+1)\\,dx\\).",
           "steps": [
-            "\\(u=x^2+1\\), \\(u'=2x\\).",
-            "\\(u>0\\) pentru orice \\(x\\in\\mathbb R\\)."
+            "Jos, la numitor, stă \\(x^2+1\\), iar sus stă exact derivata lui, deci folosești regula logaritmului: \\(u=x^2+1\\), \\(u'=2x\\).",
+            "Pentru că \\(x^2\\) nu este niciodată negativ, \\(x^2+1\\) este cel puțin 1. Deci \\(u>0\\) pentru orice \\(x\\in\\mathbb R\\) (orice număr real, adică orice număr de pe axă). De aceea poți scrie rezultatul fără modul."
           ],
           "answer": "\\(\\ln(x^2+1)+C\\)"
         },
         {
-          "question": "\\(\\int e^{x^2}2x\\,dx\\)",
+          "question": "Calculează \\(\\int e^{x^2}2x\\,dx\\).",
           "steps": [
-            "\\(u=x^2\\), \\(u'=2x\\).",
-            "Aplică formula exponențialei naturale."
+            "Sus, în exponent (puterea la care ridici \\(e\\)), stă \\(x^2\\), iar derivata lui apare ca factor: \\(u=x^2\\), \\(u'=2x\\).",
+            "Aplici formula exponențialei naturale, care lasă \\(e^u\\) neschimbat."
           ],
           "answer": "\\(e^{x^2}+C\\)"
         },
         {
-          "question": "\\(\\int2^{\\sin x}\\cos x\\,dx\\)",
+          "question": "Calculează \\(\\int2^{\\sin x}\\cos x\\,dx\\).",
           "steps": [
-            "\\(u=\\sin x\\), \\(u'=\\cos x\\).",
-            "Baza este 2, deci împărțim la \\(\\ln2\\)."
+            "În exponent stă \\(\\sin x\\), iar derivata lui apare ca factor: \\(u=\\sin x\\), \\(u'=\\cos x\\).",
+            "Folosești formula pentru o bază oarecare. Baza este 2, deci împarți la \\(\\ln2\\)."
           ],
           "answer": "\\(2^{\\sin x}/\\ln2+C\\)"
         },
         {
-          "question": "\\(\\int\\sin(x^3+3x)(3x^2+3)\\,dx\\)",
+          "question": "Calculează \\(\\int\\sin(x^3+3x)(3x^2+3)\\,dx\\).",
           "steps": [
-            "\\(u=x^3+3x\\), \\(u'=3x^2+3\\).",
-            "Aplică formula sinusului."
+            "În sinus stă \\(x^3+3x\\), iar a doua paranteză este chiar derivata lui: \\(u=x^3+3x\\), \\(u'=3x^2+3\\).",
+            "Aplici formula sinusului și păstrezi minusul din fața cosinusului."
           ],
           "answer": "\\(-\\cos(x^3+3x)+C\\)"
         },
         {
-          "question": "\\(\\int x^2\\cos(x^3)\\,dx\\)",
+          "question": "Calculează \\(\\int x^2\\cos(x^3)\\,dx\\).",
           "steps": [
-            "\\(u=x^3\\), \\(u'=3x^2\\).",
-            "Introdu factorul 3 în integrală și compensează cu \\(1/3\\)."
+            "Funcția interioară este \\(x^3\\), dar derivata ei are un 3 în față, pe care integrala nu îl are: \\(u=x^3\\), \\(u'=3x^2\\).",
+            "Introduci factorul 3 în integrală și compensezi cu \\(1/3\\) în față. Înmulțirea cu 3 și împărțirea la 3 se anulează, deci valoarea nu se schimbă."
           ],
           "answer": "\\(\\frac13\\sin(x^3)+C\\)"
         },
         {
-          "question": "\\(\\int e^x\\tan(e^x)\\,dx\\)",
+          "question": "Calculează \\(\\int e^x\\tan(e^x)\\,dx\\).",
           "steps": [
-            "\\(u=e^x\\), \\(u'=e^x\\).",
-            "Aplică formula tangentei unde \\(\\cos(e^x)\\ne0\\)."
+            "În tangentă stă \\(e^x\\), iar derivata lui este tot \\(e^x\\), care apare în față: \\(u=e^x\\), \\(u'=e^x\\).",
+            "Aplici formula tangentei, cu minus în față, acolo unde \\(\\cos(e^x)\\ne0\\)."
           ],
           "answer": "\\(-\\ln|\\cos(e^x)|+C\\)"
         },
         {
-          "question": "\\(\\int\\cot(\\sqrt x)/\\sqrt x\\,dx\\)",
+          "question": "Calculează \\(\\int\\cot(\\sqrt x)/\\sqrt x\\,dx\\).",
           "steps": [
-            "\\(u=\\sqrt x\\), \\(u'=1/(2\\sqrt x)\\).",
-            "Integrandul este \\(2u'\\cot u\\); \\(x>0\\), \\(\\sin\\sqrt x\\ne0\\)."
+            "În cotangentă stă \\(\\sqrt x\\), iar derivata lui are un 2 la numitor: \\(u=\\sqrt x\\), \\(u'=1/(2\\sqrt x)\\).",
+            "În integrală ai \\(1/\\sqrt x\\), adică dublul lui \\(u'\\), deci integrandul (expresia de sub integrală) este \\(2u'\\cot u\\). Scoți 2 în față și aplici formula cotangentei. Lucrezi cu \\(x>0\\), \\(\\sin\\sqrt x\\ne0\\), ca radicalul și cotangenta să aibă sens."
           ],
           "answer": "\\(2\\ln|\\sin\\sqrt x|+C\\)"
         },
         {
-          "question": "\\(\\int x/\\sin^2(x^2)\\,dx\\)",
+          "question": "Calculează \\(\\int x/\\sin^2(x^2)\\,dx\\).",
           "steps": [
-            "\\(u=x^2\\), \\(u'=2x\\).",
-            "Compensează cu \\(1/2\\); \\(\\sin(x^2)\\ne0\\)."
+            "Funcția interioară este \\(x^2\\), cu derivata \\(2x\\): \\(u=x^2\\), \\(u'=2x\\).",
+            "Sus ai doar \\(x\\), deci lipsește un 2. Compensezi cu \\(1/2\\) în față și aplici formula pentru \\(u'/\\sin^2u\\), care dă \\(-\\cot u\\), cu minus. Lucrezi unde \\(\\sin(x^2)\\ne0\\)."
           ],
           "answer": "\\(-\\frac12\\cot(x^2)+C\\)"
         },
         {
-          "question": "\\(\\int dx/\\cos^2(3x+1)\\)",
+          "question": "Calculează \\(\\int dx/\\cos^2(3x+1)\\).",
           "steps": [
-            "\\(u=3x+1\\), \\(u'=3\\).",
-            "Compensează cu \\(1/3\\); \\(\\cos(3x+1)\\ne0\\)."
+            "Funcția interioară este \\(3x+1\\), iar derivata ei este un număr: \\(u=3x+1\\), \\(u'=3\\).",
+            "Factorul 3 nu apare în integrală, așa că îl adaugi și compensezi cu \\(1/3\\). Lucrezi unde \\(\\cos(3x+1)\\ne0\\)."
           ],
           "answer": "\\(\\frac13\\tan(3x+1)+C\\)"
         },
         {
-          "question": "\\(\\int\\sin x\\cos x\\,dx\\)",
+          "question": "Calculează \\(\\int\\sin x\\cos x\\,dx\\).",
           "steps": [
-            "\\(u=\\sin x\\), \\(u'=\\cos x\\).",
-            "Folosește \\(\\int uu'\\,dx=u^2/2+C\\)."
+            "Alegi \\(\\sin x\\) ca funcție interioară, pentru că derivata lui apare ca factor: \\(u=\\sin x\\), \\(u'=\\cos x\\).",
+            "Ai \\(u\\) înmulțit cu derivata lui, deci folosești \\(\\int uu'\\,dx=u^2/2+C\\)."
           ],
           "answer": "\\(\\sin^2x/2+C\\)"
         },
         {
-          "question": "\\(\\int\\cos(3x-5)\\,dx\\)",
+          "question": "Calculează \\(\\int\\cos(3x-5)\\,dx\\).",
           "steps": [
-            "\\(u=3x-5\\), \\(u'=3\\).",
-            "Compensează derivata cu \\(1/3\\)."
+            "Funcția interioară este \\(3x-5\\), iar derivata ei este un număr: \\(u=3x-5\\), \\(u'=3\\).",
+            "Factorul 3 lipsește din integrală. Compensezi derivata cu \\(1/3\\), adică împarți rezultatul la 3."
           ],
           "answer": "\\(\\sin(3x-5)/3+C\\)"
         },
         {
-          "question": "\\(\\int(x+3)/(x^2+6x+8)\\,dx\\)",
+          "question": "Calculează \\(\\int(x+3)/(x^2+6x+8)\\,dx\\).",
           "steps": [
-            "\\(u=x^2+6x+8\\), \\(u'=2(x+3)\\).",
-            "Scoate \\(1/2\\) și aplică \\(u'/u\\); \\(x\\ne-4,-2\\)."
+            "Alegi numitorul ca funcție interioară. Derivata lui este de două ori numărătorul: \\(u=x^2+6x+8\\), \\(u'=2(x+3)\\).",
+            "Sus ai doar jumătate din \\(u'\\), așa că scoți \\(1/2\\) în față și aplici regula \\(u'/u\\). Lucrezi cu \\(x\\ne-4,-2\\), pentru că acolo numitorul ar fi 0."
           ],
           "answer": "\\(\\frac12\\ln|x^2+6x+8|+C\\)"
         }
       ],
       "recall": [
         {
-          "q": "Care sunt cele două elemente pe care le cauți într-o integrală compusă?",
-          "a": "Funcția interioară \\(u(x)\\) și derivata ei \\(u'(x)\\)."
+          "q": "Ce două lucruri cauți într-o integrală cu funcție compusă?",
+          "a": "Funcția dinăuntru, \\(u(x)\\), și derivata ei, \\(u'(x)\\), adică viteza ei de schimbare, care trebuie să apară și ea în integrală. Dacă le găsești pe amândouă, poți folosi formulele din lecție."
         },
         {
-          "q": "Ce faci dacă apare \\(x^2\\) lângă \\(\\cos(x^3)\\)?",
-          "a": "Derivata lui \\(x^3\\) este \\(3x^2\\), deci introduci factorul 3 și scoți \\(1/3\\)."
+          "q": "Ce faci dacă lângă \\(\\cos(x^3)\\) apare doar \\(x^2\\)?",
+          "a": "Derivata lui \\(x^3\\) este \\(3x^2\\), deci îți lipsește un 3. Introduci factorul 3 și scoți \\(1/3\\) în față, ca valoarea să rămână aceeași."
         },
         {
-          "q": "De ce \\(\\int\\cot(\\sqrt x)/\\sqrt x\\,dx\\) are un factor 2?",
-          "a": "Deoarece \\((\\sqrt x)'=1/(2\\sqrt x)\\), iar integrandul conține dublul acestei derivate."
+          "q": "De ce rezultatul lui \\(\\int\\cot(\\sqrt x)/\\sqrt x\\,dx\\) are un factor 2?",
+          "a": "Pentru că \\((\\sqrt x)'=1/(2\\sqrt x)\\), iar în integrală ai dublul acestei derivate."
         }
       ],
       "pitfalls": [
-        "Nu confunda \\(u(x)\\) cu \\(u'(x)\\).",
-        "Păstrează semnul minus la primitiva sinusului și a tangentei.",
-        "Verifică domeniul înainte de aplicarea formulelor cu radicali sau funcții trigonometrice la numitor."
+        "Nu confunda \\(u(x)\\), funcția interioară, cu \\(u'(x)\\), derivata ei, pentru că o alegere inversată te duce la o formulă greșită.",
+        "Păstrează semnul minus la primitiva sinusului și a tangentei, pentru că în ambele cazuri vine din derivata lui \\(\\cos u\\), care are minus.",
+        "Verifică domeniul înainte să aplici formulele cu radicali sau cu funcții trigonometrice (sinus, cosinus) la numitor. Acolo unele valori ale lui \\(x\\) fac formula fără sens, de exemplu dau o împărțire la 0."
       ],
       "notes": [
-        "Fotografia 33 conține 17 forme; ultimele 5 sunt grupate în lecția următoare. Exemplul tăiat din foto 34 este omis."
+        "Fotografia 33 conține 17 forme de formule; ultimele 5 sunt puse în lecția următoare. Exemplul tăiat din fotografia 34 nu apare aici."
       ],
       "group": "Analiză",
       "shortTitle": "Primitive compuse"
     },
     {
       "id": "compuneri-patratice-33",
-      "title": "Primitive compuse cu pătrate și radicali",
+      "title": "Primitive compuse cu pătrate și radicali: cinci forme recunoscute după semn",
       "sourceIds": [
         33,
         34
       ],
-      "summary": "Recunoaște semnul dintre cele două pătrate: diferența produce un logaritm, suma produce arctangentă; un radical de forma \\(\\sqrt{a^2-u^2}\\) produce arcsinus.",
+      "summary": "Aici cauți primitiva (drumul invers față de derivare: dacă derivata este viteza, primitiva este distanța parcursă) unei fracții care are jos două pătrate, legate prin plus sau minus. \\(u^2\\) este pătratul unei expresii cu x, iar \\(a^2\\) este pătratul unui număr fix. Uneori amândouă stau sub radical (rădăcina pătrată). Semnul dintre pătrate îți spune ce formulă folosești: fără radical, diferența dă un logaritm (ln, funcția inversă a lui \\(e^x\\)), iar suma dă o arctangentă (funcția inversă a lui tan). Un radical de forma \\(\\sqrt{a^2-u^2}\\) dă arcsinus, funcția inversă a lui sin, care răspunde la întrebarea „ce unghi are acest sinus?”.",
       "rules": [
         {
-          "label": "Diferență de pătrate",
+          "label": "Diferență de pătrate la numitor",
           "formula": "\\int\\frac{u'}{u^2-a^2}\\,dx=\\frac1{2a}\\ln\\left|\\frac{u-a}{u+a}\\right|+C",
-          "explanation": "\\(a>0\\), \\(u\\ne\\pm a\\)."
+          "explanation": "Aici \\(u\\) este funcția interioară (o funcție aflată „înăuntrul” alteia), iar \\(a\\) este un număr fix, de exemplu 3. Sus stă exact derivata lui \\(u\\), adică \\(u'\\), viteza ei de schimbare. Când jos ai \\(u^2\\) minus \\(a^2\\), primitiva este \\(\\frac1{2a}\\) înmulțit cu ln din raportul dintre \\(u-a\\) și \\(u+a\\). ln (logaritmul natural, inversa lui \\(e^x\\), adică funcția care face drumul înapoi) există doar pentru numere pozitive. De aceea pui raportul în modul (numărul fără semn), ca formula să meargă și când raportul e negativ. Condiția \\(u\\ne\\pm a\\), adică \\(u\\) nu este nici \\(a\\), nici \\(-a\\), ține numitorul \\(u^2-a^2\\) diferit de 0, pentru că la 0 nu poți împărți. Condiția \\(a>0\\) face ca factorul \\(\\frac1{2a}\\) să aibă sens."
         },
         {
-          "label": "Sumă de pătrate",
+          "label": "Sumă de pătrate la numitor",
           "formula": "\\int\\frac{u'}{u^2+a^2}\\,dx=\\frac1a\\arctan\\frac ua+C",
-          "explanation": "\\(a>0\\)."
+          "explanation": "Când jos ai \\(u^2\\) plus \\(a^2\\), cu \\(a>0\\), primitiva este \\(\\frac1a\\) înmulțit cu arctan din \\(u/a\\). Arctan este inversa lui tan, adică răspunde la întrebarea „ce unghi are această tangentă?”. Semnul \\(\\int\\) cu \\(dx\\) se numește integrală nedefinită și înseamnă toată familia de primitive. De aceea apare \\(+C\\), o constantă oarecare (orice număr fix), pentru că derivata oricărui număr fix este 0."
         },
         {
-          "label": "Radical cu sumă",
+          "label": "Radical cu sumă de pătrate",
           "formula": "\\int\\frac{u'}{\\sqrt{u^2+a^2}}\\,dx=\\ln\\left(u+\\sqrt{u^2+a^2}\\right)+C",
-          "explanation": "\\(a>0\\); argumentul logaritmului este pozitiv."
+          "explanation": "Când jos ai radical din \\(u^2\\) plus \\(a^2\\), cu \\(a>0\\), primitiva este ln din \\(u\\) plus același radical. Aici nu scrii modul, pentru că numărul de sub ln este mereu pozitiv. Sub radical ai \\(u^2\\) plus ceva pozitiv, deci radicalul este mai mare decât \\(|u|\\). Așa, chiar dacă \\(u\\) este negativ, \\(u\\) plus radicalul iese tot pozitiv."
         },
         {
-          "label": "Radical cu diferență",
+          "label": "Radical cu diferență, u² minus a²",
           "formula": "\\int\\frac{u'}{\\sqrt{u^2-a^2}}\\,dx=\\ln\\left|u+\\sqrt{u^2-a^2}\\right|+C",
-          "explanation": "\\(a>0\\), \\(|u|>a\\)."
+          "explanation": "Când sub radical ai \\(u^2\\) minus \\(a^2\\), primitiva este tot un ln din \\(u\\) plus radicalul. De data aceasta scrii modul, pentru că, dacă \\(u\\) este negativ, suma poate ieși negativă. Formula cere \\(a>0\\) și \\(|u|>a\\), adică \\(u\\) fără semn să fie mai mare decât \\(a\\). Altfel, sub radical ar ieși 0 sau un număr negativ. Dintr-un număr negativ nu poți scoate radical, iar 0 la numitor ar însemna împărțire la 0."
         },
         {
-          "label": "Radical de tip cerc",
+          "label": "Radical de tip cerc, a² minus u²",
           "formula": "\\int\\frac{u'}{\\sqrt{a^2-u^2}}\\,dx=\\arcsin\\frac ua+C",
-          "explanation": "\\(a>0\\), \\(|u|<a\\)."
+          "explanation": "Când sub radical ai \\(a^2\\) minus \\(u^2\\), cu \\(a^2\\) (pătratul numărului fix) scris primul, primitiva este arcsin din \\(u/a\\). Îi spui „de tip cerc” pentru că graficul lui \\(\\sqrt{a^2-u^2}\\) este o jumătate de cerc cu raza \\(a\\). Arcsin este inversa lui sin, adică răspunde la întrebarea „ce unghi are acest sinus?”. Formula cere \\(a>0\\) și \\(|u|<a\\), ca sub radical să rămână un număr pozitiv."
         }
       ],
       "examples": [
         {
-          "question": "\\(\\int dx/[x((\\ln x)^2-9)]\\)",
+          "question": "Calculează \\(\\int dx/[x((\\ln x)^2-9)]\\).",
           "steps": [
-            "\\(u=\\ln x\\), \\(u'=1/x\\), \\(a=3\\).",
-            "Aplică formula diferenței de pătrate; \\(x>0\\), \\(x\\ne e^{\\pm3}\\)."
+            "Alegi \\(\\ln x\\) ca funcție interioară, pentru că derivata lui este \\(1/x\\). Acel \\(x\\) de jos din fracție înseamnă exact o înmulțire cu \\(1/x\\), deci derivata apare deja. Apoi observi că 9 este 3 la pătrat: \\(u=\\ln x\\), \\(u'=1/x\\), \\(a=3\\).",
+            "Jos ai \\(u^2\\) minus \\(a^2\\), deci aplici formula diferenței de pătrate. Domeniul (numerele pentru care formula are sens) este \\(x>0\\), ca să existe \\(\\ln x\\). În plus, \\(x\\ne e^{\\pm3}\\), adică \\(x\\) nu este nici \\(e^3\\), nici \\(e^{-3}\\). Acolo \\(\\ln x\\) ar fi 3 sau \\(-3\\), iar numitorul ar deveni 0."
           ],
-          "answer": "\\(\\frac16\\ln|\\frac{\\ln x-3}{\\ln x+3}|+C\\)"
+          "answer": "\\(\\frac16\\ln|\\frac{\\ln x-3}{\\ln x+3}|+C\\), unde \\(\\frac16\\) vine din \\(\\frac1{2a}=\\frac1{2\\cdot3}\\)."
         },
         {
-          "question": "\\(\\int3x^2/[(x^3)^2+7^2]\\,dx\\)",
+          "question": "Calculează \\(\\int3x^2/[(x^3)^2+7^2]\\,dx\\).",
           "steps": [
-            "\\(u=x^3\\), \\(u'=3x^2\\), \\(a=7\\).",
-            "Aplică formula sumei de pătrate."
+            "Derivata lui \\(x^3\\) este \\(3x^2\\), exact ce ai sus, deci \\(x^3\\) este funcția interioară: \\(u=x^3\\), \\(u'=3x^2\\), \\(a=7\\).",
+            "Jos ai \\(u^2\\) plus \\(a^2\\), deci aplici formula sumei de pătrate."
           ],
-          "answer": "\\(\\frac17\\arctan(x^3/7)+C\\)"
+          "answer": "\\(\\frac17\\arctan(x^3/7)+C\\), unde \\(\\frac17\\) vine din \\(\\frac1a\\)."
         },
         {
-          "question": "\\(\\int e^x/\\sqrt{e^{2x}+5}\\,dx\\)",
+          "question": "Calculează \\(\\int e^x/\\sqrt{e^{2x}+5}\\,dx\\).",
           "steps": [
-            "\\(u=e^x\\), \\(u'=e^x\\), \\(a=\\sqrt5\\).",
-            "Recunoaște radicalul cu sumă; formula este valabilă pentru orice \\(x\\in\\mathbb R\\)."
+            "Scrii fiecare parte de sub radical ca pătrat: \\(e^{2x}\\) este pătratul lui \\(e^x\\), pentru că \\(e^x\\cdot e^x=e^{2x}\\), iar 5 este pătratul lui \\(\\sqrt5\\). Derivata lui \\(e^x\\) este tot \\(e^x\\), care stă sus: \\(u=e^x\\), \\(u'=e^x\\), \\(a=\\sqrt5\\).",
+            "Jos ai radical din \\(u^2\\) plus \\(a^2\\), deci recunoști radicalul cu sumă. Sub radical e mereu un număr pozitiv, pentru că \\(e^{2x}\\) este mereu pozitiv și îi mai adaugi 5. Așa formula este valabilă pentru orice \\(x\\in\\mathbb R\\), adică pentru orice număr real."
           ],
-          "answer": "\\(\\ln(e^x+\\sqrt{e^{2x}+5})+C\\)"
+          "answer": "\\(\\ln(e^x+\\sqrt{e^{2x}+5})+C\\). Pui \\(e^x\\) în locul lui \\(u\\) și \\(\\sqrt5\\) în locul lui \\(a\\), iar sub radical \\(a^2\\) devine înapoi 5."
         },
         {
-          "question": "\\(\\int2x/\\sqrt{x^4-1}\\,dx\\)",
+          "question": "Calculează \\(\\int2x/\\sqrt{x^4-1}\\,dx\\).",
           "steps": [
-            "\\(u=x^2\\), \\(u'=2x\\), \\(a=1\\).",
-            "Recunoaște radicalul cu diferență; \\(|x|>1\\)."
+            "Scrii \\(x^4\\) ca pătratul lui \\(x^2\\), iar 1 ca 1 la pătrat. Derivata lui \\(x^2\\) este \\(2x\\), exact ce ai sus: \\(u=x^2\\), \\(u'=2x\\), \\(a=1\\).",
+            "Sub radical ai \\(u^2\\) minus \\(a^2\\), deci recunoști radicalul cu diferență. Aici \\(|u|>a\\) înseamnă \\(x^2>1\\). Un număr are pătratul mai mare decât 1 exact când, fără semn, e mai mare decât 1. Așa condiția \\(|u|>a\\) devine aici \\(|x|>1\\)."
           ],
-          "answer": "\\(\\ln|x^2+\\sqrt{x^4-1}|+C\\)"
+          "answer": "\\(\\ln|x^2+\\sqrt{x^4-1}|+C\\). Pui \\(x^2\\) în locul lui \\(u\\) și 1 în locul lui \\(a\\), deci sub radical \\(u^2-a^2\\) devine \\(x^4-1\\)."
         },
         {
-          "question": "\\(\\int x^3/\\sqrt{1-x^8}\\,dx\\)",
+          "question": "Calculează \\(\\int x^3/\\sqrt{1-x^8}\\,dx\\).",
           "steps": [
-            "\\(u=x^4\\), \\(u'=4x^3\\), \\(a=1\\).",
-            "Compensează cu \\(1/4\\); domeniul interior este \\(|x|<1\\)."
+            "Scrii \\(x^8\\) ca pătratul lui \\(x^4\\) și alegi \\(x^4\\) ca funcție interioară. Derivata lui este \\(4x^3\\), iar sus ai doar \\(x^3\\): \\(u=x^4\\), \\(u'=4x^3\\), \\(a=1\\).",
+            "Ai radicalul de tip cerc, dar sus lipsește un 4. Înmulțești sus cu 4 și pui \\(1/4\\) în față. Valoarea rămâne aceeași, pentru că \\(4\\cdot\\frac14=1\\), iar înmulțirea cu 1 nu schimbă nimic. Domeniul este \\(|x|<1\\), adică \\(x\\) fără semn mai mic decât 1, pentru că doar acolo \\(1-x^8\\) este pozitiv."
           ],
-          "answer": "\\(\\frac14\\arcsin(x^4)+C\\)"
+          "answer": "\\(\\frac14\\arcsin(x^4)+C\\). Pui \\(x^4\\) în locul lui \\(u\\) și 1 în locul lui \\(a\\). Cum \\(x^4/1=x^4\\), împărțirea la 1 nu se mai scrie."
         }
       ],
       "recall": [
         {
-          "q": "Ce funcție apare pentru \\(u'/(u^2+a^2)\\)?",
-          "a": "\\(\\frac1a\\arctan(u/a)+C\\)."
+          "q": "Ce funcție obții când integrezi \\(u'/(u^2+a^2)\\), adică o sumă de pătrate fără radical?",
+          "a": "Obții arctangenta, funcția care îți dă înapoi un unghi, înmulțită cu \\(\\frac1a\\): \\(\\frac1a\\arctan(u/a)+C\\)."
         },
         {
           "q": "Ce deosebește \\(\\sqrt{u^2-a^2}\\) de \\(\\sqrt{a^2-u^2}\\)?",
-          "a": "Prima formă cere \\(|u|>a\\) și produce logaritm; a doua cere \\(|u|<a\\) și produce arcsinus."
+          "a": "Prima formă cere ca \\(u\\) fără semn să fie mai mare decât \\(a\\) (\\(|u|>a\\)) și dă un logaritm. A doua cere ca \\(u\\) fără semn să fie mai mic decât \\(a\\) (\\(|u|<a\\)) și dă arcsinus, adică un unghi."
         },
         {
-          "q": "Ce substituție recunoști în \\(x^3/\\sqrt{1-x^8}\\)?",
-          "a": "\\(u=x^4\\), deci rezultatul are factorul \\(1/4\\)."
+          "q": "Ce substituție (ce nume scurt \\(u\\) dai expresiei dinăuntru) recunoști în \\(x^3/\\sqrt{1-x^8}\\)?",
+          "a": "Numești \\(u=x^4\\), pentru că \\(x^8\\) este pătratul lui. Derivata lui este \\(4x^3\\), iar sus ai doar \\(x^3\\), deci rezultatul are factorul \\(1/4\\)."
         }
       ],
       "pitfalls": [
-        "Nu schimba semnul dintre pătrate; acesta decide formula.",
-        "Nu uita coeficientul \\(1/a\\) la arctangentă.",
-        "Pentru radical la numitor, inegalitatea domeniului este strictă."
+        "Păstrează cu grijă semnul dintre pătrate, pentru că, împreună cu radicalul, el decide care dintre cele cinci formule se aplică.",
+        "Nu uita numărul \\(1/a\\) din fața arctangentei, pentru că fără el derivata rezultatului nu mai dă fracția de la care ai pornit.",
+        "Când radicalul stă la numitor, condiția de domeniu are semn strict (\\(>\\) sau \\(<\\), fără egal), pentru că un numitor egal cu 0 nu are sens."
       ],
       "notes": [
-        "Cifra 4 din ultimul exemplu a fost verificată prin inspecție mărită: rezultatul este \\((1/4)\\arcsin(x^4)\\). Foto 34 omite \\(C\\) într-un exemplu; aici este inclus."
+        "Cifra 4 din ultimul exemplu a fost verificată pe fotografie, cu imaginea mărită: rezultatul este \\((1/4)\\arcsin(x^4)\\). Pe fotografia 34, la un exemplu lipsește \\(C\\); aici este inclus."
       ],
       "group": "Analiză",
-      "shortTitle": "Primitive compuse cu pătrate și radicali"
+      "shortTitle": "Primitive cu pătrate și radicali"
     },
     {
       "id": "studiu-primitiva-32",
-      "title": "Studiul unei primitive: semn, variație, inflexiune",
+      "title": "Studiul unei primitive: unde urcă, unde coboară și cum se curbează graficul",
       "sourceIds": [
         29,
         30,
         32
       ],
-      "summary": "Pentru \\(f(x)=\\ln x/\\sqrt x\\), orice primitivă este \\(G(x)=2\\sqrt x(\\ln x-2)+C\\). Studiul lui \\(G\\) se citește din semnul lui \\(G'=f\\) și al lui \\(G''=f'\\).",
+      "summary": "Aici studiezi primitivele lui \\(f(x)=\\ln x/\\sqrt x\\): funcțiile a căror derivată (viteza de schimbare) este f, adică drumul invers față de derivare. Orice primitivă are forma \\(G(x)=2\\sqrt x(\\ln x-2)+C\\), unde C este un număr fix oarecare, „punctul de pornire” pe care nu îl știi. Unde urcă sau coboară graficul citești din semnul lui \\(G'=f\\) (derivata lui G), iar cum se curbează, din semnul lui \\(G''=f'\\) (derivata derivatei).",
       "rules": [
         {
           "label": "Verificarea primitivei",
           "formula": "F(x)=2\\sqrt x(\\ln x-2),\\qquad F'(x)=\\frac{\\ln x}{\\sqrt x}",
-          "explanation": "Domeniul este \\((0,\\infty)\\). Derivează produsul și simplifică."
+          "explanation": "Lucrezi pe domeniul \\((0,\\infty)\\), adică pe numerele pentru care formula are sens. Sunt toate numerele mai mari decât 0, fără capăt la dreapta (\\(\\infty\\) înseamnă infinit). Paranteza rotundă arată că 0 este exclus. Logaritmul natural \\(\\ln x\\) este funcția inversă a lui \\(e^x\\), unde e este un număr fix, cam 2,718. El răspunde la întrebarea „la ce putere ridici e ca să obții x?”. Orice putere a lui e dă un număr pozitiv, de aceea \\(\\ln x\\) există doar pentru x pozitiv. La \\(\\sqrt x\\) (rădăcina pătrată) nu poți împărți când x este 0, pentru că \\(\\sqrt0=0\\), iar la 0 nu se împarte. Formula de verificat este \\(F(x)=2\\sqrt x(\\ln x-2)\\), primitiva fără constantă. Ea este un produs, adică o înmulțire între \\(2\\sqrt x\\) și \\(\\ln x-2\\). Ca să o verifici, derivezi produsul și simplifici până ajungi la \\(\\frac{\\ln x}{\\sqrt x}\\)."
         },
         {
-          "label": "Toate primitivele",
+          "label": "Toate primitivele: F plus o constantă",
           "formula": "G=F+C,\\qquad G'=f",
-          "explanation": "Constanta modifică poziția verticală a graficului, dar nu variația."
+          "explanation": "F este primitiva fără constantă de mai sus. Toate primitivele se obțin adunând la F un număr fix C, „punctul de pornire” pe care nu îl știi. Pe oricare dintre ele o notezi cu G, adică \\(G=F+C\\). Derivata oricărui număr fix este 0, deci G are aceeași derivată ca F, adică f. Constanta C mută graficul în sus sau în jos, dar nu schimbă unde crește și unde scade."
         },
         {
-          "label": "Variație",
+          "label": "Variația: unde crește și unde scade",
           "formula": "\\operatorname{sgn}G'(x)=\\operatorname{sgn}\\ln x",
-          "explanation": "\\(G\\) scade pe \\((0,1]\\) și crește pe \\([1,\\infty)\\). Minimul este \\(G(1)=C-4\\)."
+          "explanation": "Derivata lui G este \\(G'=f=\\ln x/\\sqrt x\\). Semnul ei (sgn), adică plus sau minus, este același cu semnul lui \\(\\ln x\\). Asta pentru că \\(\\sqrt x\\) de la numitor, partea de jos a fracției, este mereu pozitiv. Iar \\(\\ln x\\) este negativ între 0 și 1, este 0 în 1 și pozitiv după 1. Când viteza (derivata) este negativă, graficul coboară. Când este pozitivă, graficul urcă. De aceea \\(G\\) scade pe \\((0,1]\\) și crește pe \\([1,\\infty)\\), iar paranteza pătrată arată că 1 este inclus. Graficul coboară până la 1 și apoi urcă, ca fundul unei văi, deci în 1 are cea mai mică valoare, minimul. Pui \\(x=1\\) în formula lui G, cu \\(\\sqrt1=1\\) și \\(\\ln1=0\\): \\(G(1)=2\\cdot1\\cdot(0-2)+C\\). Deci minimul este \\(G(1)=C-4\\)."
         },
         {
-          "label": "Derivata a doua",
+          "label": "Derivata a doua: cum se curbează graficul",
           "formula": "G''(x)=\\frac{2-\\ln x}{2x\\sqrt x}",
-          "explanation": "Este pozitivă pentru \\(0<x<e^2\\), nulă la \\(e^2\\) și negativă pentru \\(x>e^2\\)."
+          "explanation": "Derivata a doua este derivata derivatei: \\(G''=f'=(2-\\ln x)/(2x\\sqrt x)\\). Ea arată în ce parte se curbează graficul. Unde este pozitivă, graficul se curbează ca un castron cu gura în sus. Unde este negativă, se curbează ca un castron întors. Numitorul \\(2x\\sqrt x\\) este pozitiv, deci semnul vine din \\(2-\\ln x\\). Cum \\(\\ln e^2=2\\) și \\(\\ln x\\) crește odată cu x, paranteza \\(2-\\ln x\\) trece prin 0 exact la \\(e^2\\). Deci derivata a doua este pozitivă pentru \\(0<x<e^2\\), nulă (egală cu 0) la \\(e^2\\) și negativă pentru \\(x>e^2\\). Aici e este numărul fix de cam 2,718, deci \\(e^2\\) este cam 7,39."
         },
         {
-          "label": "Punctul de inflexiune",
+          "label": "Punctul de inflexiune: unde se schimbă curbura",
           "formula": "A=(e^2,C)",
-          "explanation": "\\(F(e^2)=0\\), deci \\(G(e^2)=C\\). Schimbarea semnului lui \\(G''\\) confirmă inflexiunea."
+          "explanation": "Punctul de inflexiune este punctul în care graficul își schimbă felul de a se curba, de la castron cu gura în sus la castron întors. Ca să afli înălțimea lui, pui \\(x=e^2\\) în F. Paranteza devine \\(\\ln e^2-2=2-2=0\\), deci \\(F(e^2)=0\\) și \\(G(e^2)=C\\) (adică 0+C). Faptul că \\(G''\\) își schimbă semnul în \\(e^2\\) confirmă că acolo graficul are chiar un punct de inflexiune."
         }
       ],
       "examples": [
         {
-          "question": "Arată că \\(F(x)=2\\sqrt x(\\ln x-2)\\) este o primitivă a lui \\(f(x)=\\ln x/\\sqrt x\\).",
+          "question": "Arată că \\(F(x)=2\\sqrt x(\\ln x-2)\\) este o primitivă a lui \\(f(x)=\\ln x/\\sqrt x\\), adică arată că derivata lui F este f.",
           "steps": [
-            "\\(F'=(\\ln x-2)/\\sqrt x+2\\sqrt x/x\\).",
-            "\\(2\\sqrt x/x=2/\\sqrt x\\), astfel că termenii \\(-2\\) și \\(+2\\) se reduc."
+            "Derivezi produsul cu regula produsului: derivata primei bucăți înmulțită cu a doua bucată, plus prima bucată înmulțită cu derivata celei de-a doua. Derivata lui \\(2\\sqrt x\\) este \\(1/\\sqrt x\\). Derivata lui \\(\\ln x-2\\) este \\(1/x\\), pentru că \\(-2\\) este un număr fix, iar derivata lui este 0. Pui totul în regulă, deci: \\(F'=(\\ln x-2)/\\sqrt x+2\\sqrt x/x\\).",
+            "Simplifici al doilea termen, adică a doua bucată a sumei. Cum \\(x=\\sqrt x\\cdot\\sqrt x\\), împarți sus și jos la \\(\\sqrt x\\): \\(2\\sqrt x/x=2/\\sqrt x\\). Acum cele două fracții au același numitor \\(\\sqrt x\\), așa că aduni părțile de sus: \\(F'=(\\ln x-2+2)/\\sqrt x\\). Termenii \\(-2\\) și \\(+2\\) se reduc, adică se anulează unul pe altul."
           ],
-          "answer": "\\(F'(x)=\\ln x/\\sqrt x=f(x)\\), pentru \\(x>0\\)."
+          "answer": "Derivata lui F este chiar f, deci F este o primitivă: \\(F'(x)=\\ln x/\\sqrt x=f(x)\\), pentru \\(x>0\\)."
         },
         {
-          "question": "Arată că orice primitivă \\(G\\) crește pe \\([1,\\infty)\\).",
+          "question": "Arată că orice primitivă \\(G\\) crește pe \\([1,\\infty)\\), adică de la 1 inclusiv în sus.",
           "steps": [
-            "\\(G'(x)=f(x)=\\ln x/\\sqrt x\\).",
-            "\\(\\sqrt x>0\\); \\(\\ln x>0\\) pentru \\(x>1\\) și \\(\\ln1=0\\)."
+            "Scrii derivata lui G. Ea este chiar f, pentru că așa se definește primitiva: \\(G'(x)=f(x)=\\ln x/\\sqrt x\\).",
+            "Te uiți la semnul fiecărei bucăți din fracție: \\(\\sqrt x>0\\); \\(\\ln x>0\\) pentru \\(x>1\\) și \\(\\ln1=0\\). Deci derivata este pozitivă după 1 și se anulează doar în 1."
           ],
-          "answer": "\\(G\\) este strict crescătoare pe \\([1,\\infty)\\)."
+          "answer": "\\(G\\) este strict crescătoare pe \\([1,\\infty)\\), adică valorile ei urcă mereu pe această bucată, fără să stea pe loc. Derivata, adică viteza, este pozitivă după 1, deci graficul urcă. Viteza este 0 doar în punctul 1, o singură clipă, iar asta nu oprește urcarea pe nicio bucată."
         },
         {
-          "question": "Determină punctul de inflexiune al unei primitive \\(G\\).",
+          "question": "Determină punctul de inflexiune al unei primitive \\(G\\), adică punctul în care graficul își schimbă felul de a se curba.",
           "steps": [
-            "\\(G''=f'=(2-\\ln x)/(2x\\sqrt x)\\).",
-            "\\(G''=0\\iff x=e^2\\), iar semnul se schimbă din plus în minus.",
-            "\\(G(e^2)=2e(2-2)+C=C\\)."
+            "Derivezi încă o dată ca să obții derivata a doua, adică derivata lui f. Cum f este o fracție, folosești regula câtului (formula pentru derivata unei fracții), apoi simplifici: \\(G''=f'=(2-\\ln x)/(2x\\sqrt x)\\).",
+            "Cauți unde derivata a doua este 0. O fracție este 0 când partea de sus este 0: \\(2-\\ln x=0\\), adică \\(\\ln x=2\\), deci \\(x=e^2\\). Săgeata dublă se citește „exact atunci când”: \\(G''=0\\iff x=e^2\\). Apoi verifici semnul de o parte și de alta: se schimbă din plus în minus.",
+            "Înlocuiești \\(x=e^2\\) în formula lui G, folosind \\(\\sqrt{e^2}=e\\) și \\(\\ln e^2=2\\): \\(G(e^2)=2e(2-2)+C=C\\)."
           ],
-          "answer": "Punctul de inflexiune este \\(A(e^2,C)\\); pentru \\(F\\), este \\(A(e^2,0)\\)."
+          "answer": "Punctul de inflexiune este \\(A(e^2,C)\\). Primul număr din paranteză spune unde este punctul pe axa x, iar al doilea cât de sus este. Pentru \\(F\\), unde constanta este 0, punctul este \\(A(e^2,0)\\)."
         },
         {
-          "question": "Calculează \\(f(1/e)\\) și \\(f(e)\\).",
+          "question": "Calculează \\(f(1/e)\\) și \\(f(e)\\), adică valorile lui f în aceste două numere.",
           "steps": [
-            "\\(\\ln(1/e)=-1\\), \\(\\sqrt{1/e}=1/\\sqrt e\\).",
-            "\\(\\ln e=1\\)."
+            "Pentru \\(x=1/e\\), calculezi separat logaritmul și radicalul. Scrii \\(1/e=e^{-1}\\), pentru că puterea −1 înseamnă „1 împărțit la”. Cum ln răspunde la întrebarea „la ce putere ridici e?”, obții: \\(\\ln(1/e)=-1\\), \\(\\sqrt{1/e}=1/\\sqrt e\\). Apoi împarți −1 la \\(1/\\sqrt e\\), adică înmulțești cu \\(\\sqrt e\\).",
+            "Pentru \\(x=e\\), numărătorul devine simplu, pentru că ln este funcția inversă a lui \\(e^x\\) și \\(e=e^1\\): \\(\\ln e=1\\). Rămâne 1 împărțit la \\(\\sqrt e\\)."
           ],
-          "answer": "\\(f(1/e)=-\\sqrt e\\), \\(f(e)=1/\\sqrt e\\)."
+          "answer": "\\(f(1/e)=-\\sqrt e\\), \\(f(e)=1/\\sqrt e\\). Prima valoare este negativă și a doua pozitivă, la fel ca semnul lui \\(\\ln x\\) înainte și după 1."
         }
       ],
       "recall": [
         {
-          "q": "Ce derivată folosești pentru monotonia unei primitive \\(G\\) a lui \\(f\\)?",
-          "a": "\\(G'=f\\); citești semnul lui \\(f\\)."
+          "q": "Ce derivată folosești ca să afli monotonia unei primitive \\(G\\) a lui \\(f\\), adică unde crește și unde scade?",
+          "a": "Folosești \\(G'=f\\) și citești semnul lui \\(f\\). Unde f este pozitivă, G crește, iar unde f este negativă, G scade."
         },
         {
-          "q": "Ce derivată folosești pentru inflexiune?",
-          "a": "\\(G''=f'\\); trebuie verificată schimbarea semnului."
+          "q": "Ce derivată folosești ca să găsești punctul de inflexiune?",
+          "a": "Folosești derivata a doua, \\(G''=f'\\), adică derivata lui f. Verifici și că semnul ei se schimbă în acel punct, pentru că doar atunci graficul își schimbă felul de a se curba."
         },
         {
-          "q": "Constanta \\(C\\) schimbă abscisa punctului de inflexiune?",
-          "a": "Nu. Abscisa rămâne \\(e^2\\), iar ordonata devine \\(C\\)."
+          "q": "Constanta \\(C\\) schimbă abscisa punctului de inflexiune, adică poziția lui pe axa x?",
+          "a": "Nu. Abscisa rămâne \\(e^2\\), iar ordonata, adică înălțimea punctului, devine \\(C\\)."
         }
       ],
       "pitfalls": [
-        "\\(x=0\\) nu aparține domeniului; nu este o soluție admisă.",
-        "\\(G''(x_0)=0\\) singur nu garantează inflexiunea: verifică schimbarea semnului.",
-        "Nu pierde constanta \\(C\\) când calculezi coordonatele unui punct de pe graficul lui \\(G\\)."
+        "\\(x=0\\) nu aparține domeniului, pentru că acolo \\(\\ln x\\) nu are sens și nu poți împărți la \\(\\sqrt x\\). De aceea nu este o soluție admisă.",
+        "Faptul că derivata a doua este 0 într-un anumit punct \\(x_0\\) (0-ul mic de jos înseamnă doar „un anumit punct”), adică \\(G''(x_0)=0\\), nu garantează singur inflexiunea. Verifici și schimbarea semnului, pentru că graficul își schimbă curbura doar când semnul se schimbă.",
+        "Nu pierde constanta \\(C\\) când calculezi coordonatele unui punct de pe graficul lui \\(G\\), pentru că fiecare primitivă are graficul la altă înălțime."
       ],
       "notes": [
-        "Corecție față de foto 30: concluzia \\(A(e^2,0)\\) este corectă pentru \\(F\\), dar pentru o primitivă arbitrară \\(G=F+C\\) ordonata este \\(C\\)."
+        "Corecție față de fotografia 30: acolo apare concluzia \\(A(e^2,0)\\), care este corectă pentru \\(F\\). Pentru o primitivă oarecare \\(G=F+C\\), ordonata (înălțimea punctului) este \\(C\\)."
       ],
       "group": "Analiză",
       "shortTitle": "Studiul unei primitive"
     },
     {
       "id": "integrare-parti-31",
-      "title": "Integrarea prin părți: alegere, repetare, ciclu",
+      "title": "Integrarea prin părți: cum integrezi un produs de funcții",
       "sourceIds": [
         31,
         35,
         38
       ],
-      "summary": "Pornește de la derivata produsului. Alege partea pe care o derivezi astfel încât integrala rămasă să fie mai simplă. Uneori aplici formula de două ori; dacă integrala inițială reapare, o notezi și o izolezi algebric.",
+      "summary": "Integrarea prin părți te ajută să găsești o primitivă pentru un produs de două funcții, adică să faci drumul invers față de derivare. Derivezi un factor (îi afli „viteza de schimbare”), îl integrezi pe celălalt (îi cauți primitiva) și alegi așa încât integrala rămasă să fie mai simplă. Dacă integrala de la început reapare după una sau două aplicări, îi dai un nume și o afli ca pe o necunoscută dintr-o ecuație.",
       "rules": [
         {
-          "label": "Formula prin părți",
+          "label": "Formula de integrare prin părți",
           "formula": "\\int f' g\\,dx=fg-\\int fg'\\,dx",
-          "explanation": "Pentru funcții de clasă \\(C^1\\) pe interval; echivalent cu \\(\\int u\\,dv=uv-\\int v\\,du\\)."
+          "explanation": "Aici \\(f'\\) este derivata lui f, adică „viteza ei de schimbare”, iar semnul ∫ înseamnă integrala nedefinită, toată familia de primitive. Formula vine din regula după care derivezi un produs, \\((fg)'=f'g+fg'\\), citită invers. Ea „mută” derivata de pe f pe g: rămâne produsul fg minus o integrală nouă. Merge pentru funcții de clasă \\(C^1\\) (funcții derivabile a căror derivată este continuă) pe un interval. Un interval este o bucată de numere „de la… până la…”. O poți scrie la fel de bine ca \\(\\int u\\,dv=uv-\\int v\\,du\\). Aici u este factorul pe care îl derivezi, iar dv este factorul pe care îl integrezi, împreună cu dx. du este derivata lui u înmulțită cu dx, iar v este primitiva factorului din dv."
         },
         {
-          "label": "Polinom și exponențială",
+          "label": "Polinom înmulțit cu exponențială",
           "formula": "\\int x^2e^x\\,dx=x^2e^x-2\\int xe^x\\,dx",
-          "explanation": "Derivează polinomul; gradul scade la fiecare aplicare."
+          "explanation": "Când un polinom (o sumă de puteri ale lui x, aici \\(x^2\\)) este înmulțit cu \\(e^x\\), derivezi polinomul și integrezi \\(e^x\\). \\(e^x\\) este funcția exponențială: numărul e, aproximativ 2,718, ridicat la puterea x. Integrala lui rămâne tot \\(e^x\\), pentru că derivata lui \\(e^x\\) este chiar \\(e^x\\). La fiecare aplicare gradul (cea mai mare putere a lui x) scade cu 1, așa că integrala se simplifică pas cu pas."
         },
         {
-          "label": "Logaritm singur",
+          "label": "Logaritmul singur, văzut ca produs cu 1",
           "formula": "\\int\\ln x\\,dx=\\int1\\cdot\\ln x\\,dx",
-          "explanation": "Derivează \\(\\ln x\\) și integrează 1; \\(x>0\\)."
+          "explanation": "Când \\(\\ln x\\) (logaritmul natural, funcția inversă a lui \\(e^x\\)) stă singur, îl privești ca pe un produs cu 1. Derivezi \\(\\ln x\\) și integrezi 1. Alegi așa pentru că nu știi direct o primitivă pentru \\(\\ln x\\), dar derivata lui, \\(1/x\\), este simplă. Lucrezi pentru \\(x>0\\), unde \\(\\ln x\\) are sens."
         },
         {
-          "label": "Integrala reapare",
+          "label": "Integrala de la început reapare",
           "formula": "I=B-I\\quad\\Longrightarrow\\quad I=\\frac B2+C",
-          "explanation": "Mută integrala inițială în aceeași parte și izoleaz-o; constanta finală rămâne arbitrară."
+          "explanation": "Uneori integrala de la început, I, apare din nou în partea dreaptă a semnului egal. Atunci o tratezi ca pe o necunoscută dintr-o ecuație. O muți în stânga, lângă I-ul de acolo, și obții 2I, adică de două ori I. Împarți la 2 și afli I. La final adaugi constanta C, un număr fix oarecare, pentru că derivata oricărui număr fix este 0."
         }
       ],
       "examples": [
         {
-          "question": "\\(\\int x\\ln x\\,dx\\)",
+          "question": "Calculează \\(\\int x\\ln x\\,dx\\).",
           "steps": [
-            "\\(u=\\ln x\\), \\(dv=x\\,dx\\), deci \\(du=dx/x\\), \\(v=x^2/2\\).",
-            "\\(I=(x^2/2)\\ln x-\\int x/2\\,dx\\), pentru \\(x>0\\)."
+            "Derivezi logaritmul, pentru că prin derivare devine mai simplu: derivata lui \\(\\ln x\\) este \\(1/x\\). Integrezi x, a cărui primitivă este \\(x^2/2\\): \\(u=\\ln x\\), \\(dv=x\\,dx\\), deci \\(du=dx/x\\), \\(v=x^2/2\\).",
+            "Pui totul în formula \\(uv-\\int v\\,du\\), iar x se simplifică în integrala nouă: \\(I=(x^2/2)\\ln x-\\int x/2\\,dx\\), pentru \\(x>0\\)."
           ],
-          "answer": "\\((x^2/2)\\ln x-x^2/4+C\\)"
+          "answer": "Integrala rămasă dă \\(x^2/4\\), deci rezultatul este \\((x^2/2)\\ln x-x^2/4+C\\)."
         },
         {
-          "question": "\\(\\int x\\sin x\\,dx\\)",
+          "question": "Calculează \\(\\int x\\sin x\\,dx\\).",
           "steps": [
-            "\\(u=x\\), \\(dv=\\sin x\\,dx\\), deci \\(du=dx\\), \\(v=-\\cos x\\).",
-            "\\(I=-x\\cos x+\\int\\cos x\\,dx\\)."
+            "Derivezi x, care devine 1, și integrezi \\(\\sin x\\) (sinusul, o funcție din trigonometrie care urcă și coboară ca un val): \\(u=x\\), \\(dv=\\sin x\\,dx\\), deci \\(du=dx\\), \\(v=-\\cos x\\). Primitiva lui \\(\\sin x\\) este \\(-\\cos x\\) (cosinusul, luat cu minus), pentru că derivata lui \\(-\\cos x\\) este \\(\\sin x\\).",
+            "Pui în formulă; cele două minusuri dau plus în fața integralei noi: \\(I=-x\\cos x+\\int\\cos x\\,dx\\)."
           ],
-          "answer": "\\(-x\\cos x+\\sin x+C\\)"
+          "answer": "Integrala lui \\(\\cos x\\) este \\(\\sin x\\), deci rezultatul este \\(-x\\cos x+\\sin x+C\\)."
         },
         {
-          "question": "\\(\\int(\\ln x)/x\\,dx\\), prin părți",
+          "question": "Calculează \\(\\int(\\ln x)/x\\,dx\\), prin părți.",
           "steps": [
-            "Notează \\(I\\), alege \\(u=\\ln x\\), \\(dv=dx/x\\).",
-            "\\(I=(\\ln x)^2-I\\), deci \\(2I=(\\ln x)^2\\)."
+            "Numești integrala \\(I\\), ca s-o recunoști dacă reapare, și alegi \\(u=\\ln x\\), \\(dv=dx/x\\).",
+            "Derivata lui \\(\\ln x\\) este \\(1/x\\), iar primitiva lui \\(1/x\\) este tot \\(\\ln x\\), deci uv este \\((\\ln x)^2\\). Integrala nouă, \\(\\int v\\,du\\), este chiar I, cu minus în față, așa că o aduci în stânga: \\(I=(\\ln x)^2-I\\), deci \\(2I=(\\ln x)^2\\)."
           ],
-          "answer": "\\((\\ln x)^2/2+C\\); substituția \\(u=\\ln x\\) este mai scurtă."
+          "answer": "Împarți la 2 și obții \\((\\ln x)^2/2+C\\). Prin substituția \\(u=\\ln x\\) (dai un nume scurt expresiei dinăuntru) ajungi aici mai repede."
         },
         {
-          "question": "\\(\\int xe^x\\,dx\\)",
+          "question": "Calculează \\(\\int xe^x\\,dx\\).",
           "steps": [
-            "\\(u=x\\), \\(dv=e^x\\,dx\\).",
-            "\\(I=xe^x-\\int e^x\\,dx\\)."
+            "Derivezi x, care devine 1, și integrezi \\(e^x\\), care rămâne \\(e^x\\): \\(u=x\\), \\(dv=e^x\\,dx\\).",
+            "Pui în formulă și rămâne o integrală foarte ușoară: \\(I=xe^x-\\int e^x\\,dx\\)."
           ],
-          "answer": "\\(e^x(x-1)+C\\)"
+          "answer": "Integrala lui \\(e^x\\) este \\(e^x\\); scoți \\(e^x\\) în fața parantezei și obții \\(e^x(x-1)+C\\)."
         },
         {
-          "question": "\\(\\int x^2e^x\\,dx\\)",
+          "question": "Calculează \\(\\int x^2e^x\\,dx\\).",
           "steps": [
-            "Derivează \\(x^2\\) și integrează \\(e^x\\): \\(I=x^2e^x-2\\int xe^x\\,dx\\).",
-            "Folosește \\(\\int xe^x\\,dx=e^x(x-1)+C\\)."
+            "Derivezi \\(x^2\\), care devine \\(2x\\), și integrezi \\(e^x\\), ca puterea lui x să scadă. Numărul 2 îl scoți în fața integralei: \\(I=x^2e^x-2\\int xe^x\\,dx\\).",
+            "Integrala rămasă ai calculat-o deja în exemplul de mai sus, așa că o refolosești: \\(\\int xe^x\\,dx=e^x(x-1)+C\\)."
           ],
-          "answer": "\\(e^x(x^2-2x+2)+C\\)"
+          "answer": "Înlocuiești și scoți \\(e^x\\) în fața parantezei: \\(e^x(x^2-2x+2)+C\\)."
         },
         {
-          "question": "\\(\\int\\ln x\\,dx\\)",
+          "question": "Calculează \\(\\int\\ln x\\,dx\\).",
           "steps": [
-            "Scrie \\(1\\cdot\\ln x\\); alege \\(u=\\ln x\\), \\(dv=dx\\).",
-            "\\(I=x\\ln x-\\int1\\,dx\\), pentru \\(x>0\\)."
+            "Ca să ai doi factori, privești logaritmul ca pe un produs cu 1: scrii \\(1\\cdot\\ln x\\) și alegi \\(u=\\ln x\\), \\(dv=dx\\).",
+            "Derivata lui \\(\\ln x\\) este \\(1/x\\), iar integrala lui 1 este x, deci x se simplifică: \\(I=x\\ln x-\\int1\\,dx\\), pentru \\(x>0\\)."
           ],
-          "answer": "\\(x(\\ln x-1)+C\\)"
+          "answer": "Integrala lui 1 este x; scoți x în fața parantezei și obții \\(x(\\ln x-1)+C\\)."
         },
         {
-          "question": "\\(\\int\\arctan x\\,dx\\)",
+          "question": "Calculează \\(\\int\\arctan x\\,dx\\).",
           "steps": [
-            "\\(u=\\arctan x\\), \\(dv=dx\\).",
-            "\\(I=x\\arctan x-\\int x/(x^2+1)\\,dx\\).",
-            "Ultima integrală este \\(\\frac12\\ln(x^2+1)\\)."
+            "Pornești de la \\(\\arctan x\\), funcția inversă a lui tan (tangenta, încă o funcție din trigonometrie, ca sin și cos). Ea răspunde la întrebarea „ce unghi are această tangentă?”. Pentru că stă singură, o derivezi pe ea și integrezi 1: \\(u=\\arctan x\\), \\(dv=dx\\).",
+            "Derivata lui \\(\\arctan x\\) este \\(1/(x^2+1)\\), iar v este x; pui în formulă: \\(I=x\\arctan x-\\int x/(x^2+1)\\,dx\\).",
+            "Sus, în fracție, ai x, adică jumătate din \\(2x\\), iar \\(2x\\) este derivata părții de jos. Derivata lui \\(\\ln(x^2+1)\\) este \\(2x/(x^2+1)\\), deci un logaritm se potrivește aici. De aceea ultima integrală este \\(\\frac12\\ln(x^2+1)\\)."
           ],
-          "answer": "\\(x\\arctan x-\\frac12\\ln(x^2+1)+C\\)"
+          "answer": "Scazi acest logaritm din \\(x\\arctan x\\) și obții \\(x\\arctan x-\\frac12\\ln(x^2+1)+C\\)."
         },
         {
-          "question": "\\(\\int\\sin2x\\,dx\\), ca integrală care reapare",
+          "question": "Calculează \\(\\int\\sin2x\\,dx\\), ca integrală care reapare.",
           "steps": [
-            "\\(A=2\\int\\sin x\\cos x\\,dx\\).",
-            "Prin părți: \\(A=2\\sin^2x-A\\).",
-            "\\(2A=2\\sin^2x\\)."
+            "Desfaci \\(\\sin2x\\) în \\(2\\sin x\\cos x\\) și numești integrala A: \\(A=2\\int\\sin x\\cos x\\,dx\\).",
+            "Aplici formula prin părți cu \\(u=\\sin x\\) și \\(dv=\\cos x\\,dx\\). Merge pentru că \\(\\cos x\\) este derivata lui \\(\\sin x\\), deci și du, și v ies din \\(\\sin x\\). Integrala nouă este tot A, cu minus: \\(A=2\\sin^2x-A\\).",
+            "Aduni A în ambele părți, ca necunoscuta să stea doar în stânga: \\(2A=2\\sin^2x\\)."
           ],
-          "answer": "\\(\\sin^2x+C\\), echivalent cu \\(-\\frac12\\cos2x+C\\)."
+          "answer": "Împarți la 2 și obții \\(\\sin^2x+C\\), echivalent cu \\(-\\frac12\\cos2x+C\\). Cele două diferă doar printr-un număr fix, care intră în C."
         },
         {
-          "question": "\\(\\int e^x\\sin x\\,dx\\)",
+          "question": "Calculează \\(\\int e^x\\sin x\\,dx\\).",
           "steps": [
-            "\\(I=e^x\\sin x-A\\), cu \\(A=\\int e^x\\cos x\\,dx\\).",
-            "Încă o aplicare: \\(A=e^x\\cos x+I\\).",
-            "\\(I=e^x(\\sin x-\\cos x)-I\\); izolează \\(I\\)."
+            "Integrezi \\(e^x\\) și derivezi \\(\\sin x\\); integrala nouă o numești A: \\(I=e^x\\sin x-A\\), cu \\(A=\\int e^x\\cos x\\,dx\\).",
+            "Aplici formula încă o dată pe A, tot integrând \\(e^x\\). Acum derivezi \\(\\cos x\\), care devine \\(-\\sin x\\), iar cele două minusuri dau plus: \\(A=e^x\\cos x+I\\).",
+            "Înlocuiești A în prima relație. Minusul din fața lui A schimbă semnul ambilor termeni, deci I reapare cu minus: \\(I=e^x(\\sin x-\\cos x)-I\\). Apoi izolezi \\(I\\), adică îl aduci singur într-o parte."
           ],
-          "answer": "\\(\\frac12e^x(\\sin x-\\cos x)+C\\)"
+          "answer": "Din \\(2I=e^x(\\sin x-\\cos x)\\) împarți la 2 și obții \\(\\frac12e^x(\\sin x-\\cos x)+C\\)."
         },
         {
           "question": "Tema din fotografie: \\(\\int\\cos^2x\\,dx\\)",
           "steps": [
-            "Folosește \\(\\cos^2x=(1+\\cos2x)/2\\).",
-            "Integrează cei doi termeni."
+            "Aici nu folosești integrarea prin părți. Scapi de pătrat cu o formulă de trigonometrie, pentru că pe \\(\\cos2x\\) îl integrezi ușor, iar pe \\(\\cos^2x\\) nu: folosești \\(\\cos^2x=(1+\\cos2x)/2\\).",
+            "Integrezi pe rând cei doi termeni ai sumei, \\(1/2\\) și \\(\\cos2x/2\\)."
           ],
-          "answer": "\\(x/2+\\sin2x/4+C\\)"
+          "answer": "Integrala lui \\(1/2\\) este \\(x/2\\). Primitiva lui \\(\\cos2x\\) este \\(\\sin2x/2\\), pentru că derivata lui \\(\\sin2x\\) este \\(2\\cos2x\\). Împărțind încă o dată la 2, integrala lui \\(\\cos2x/2\\) este \\(\\sin2x/4\\). Deci rezultatul este \\(x/2+\\sin2x/4+C\\)."
         }
       ],
       "recall": [
         {
-          "q": "În \\(\\int x\\sin x\\,dx\\), ce parte derivezi?",
-          "a": "Derivezi \\(x\\) și integrezi \\(\\sin x\\), pentru a obține apoi doar \\(\\int\\cos x\\,dx\\)."
+          "q": "În \\(\\int x\\sin x\\,dx\\), ce factor derivezi?",
+          "a": "Derivezi \\(x\\), care devine 1, și integrezi \\(\\sin x\\). Așa rămâne doar \\(\\int\\cos x\\,dx\\), care este ușoară."
         },
         {
           "q": "Cum începi \\(\\int\\ln x\\,dx\\)?",
-          "a": "Scrii \\(1\\cdot\\ln x\\), integrezi 1 și derivezi \\(\\ln x\\)."
+          "a": "Scrii \\(1\\cdot\\ln x\\), ca să ai un produs. Apoi integrezi 1 și derivezi \\(\\ln x\\)."
         },
         {
-          "q": "Ce faci când \\(I\\) reapare în dreapta cu semn minus?",
-          "a": "Aduni \\(I\\) în ambele părți și izolezi \\(2I\\)."
+          "q": "Ce faci când integrala de la început, \\(I\\), reapare în dreapta cu semn minus?",
+          "a": "Aduni \\(I\\) în ambele părți și rămâi cu \\(2I\\) singur într-o parte. Apoi împarți la 2 ca să afli \\(I\\)."
         }
       ],
       "pitfalls": [
-        "Formula are semn minus între produs și integrala nouă.",
-        "O alegere posibilă poate complica integrala; pentru \\(x\\sin x\\), nu începe prin integrarea lui \\(x\\).",
-        "La integrale ciclice, păstrează semnele când înlocuiești integrala auxiliară."
+        "Formula are semn minus între produs și integrala nouă, iar dacă îl pierzi, toate semnele de după ies greșit.",
+        "O alegere greșită face integrala mai grea. La \\(x\\sin x\\) nu începe prin a integra \\(x\\), pentru că puterea lui x ar crește, de la x la \\(x^2/2\\), în loc să scadă.",
+        "La integralele ciclice, cele în care integrala de la început reapare, ai grijă la semne când înlocuiești integrala ajutătoare (cum este A în exemplul cu \\(e^x\\sin x\\)). Un singur minus pierdut strică ecuația din care afli rezultatul."
       ],
       "notes": [
-        "Tema cu \\(\\cos^2x\\) este rezolvată ca completare; fotografia doar o enunță.",
-        "Relațiile din foto 38 dau și \\(\\int e^x\\cos x\\,dx=\\frac12e^x(\\sin x+\\cos x)+C\\)."
+        "Tema cu \\(\\cos^2x\\) este rezolvată aici ca adăugire; fotografia arată doar enunțul.",
+        "Din relațiile din fotografia 38 obții și \\(\\int e^x\\cos x\\,dx=\\frac12e^x(\\sin x+\\cos x)+C\\)."
       ],
       "group": "Analiză",
       "shortTitle": "Integrarea prin părți"
     },
     {
       "id": "radicali-prin-parti-36",
-      "title": "Integrale cu radicali: rescrie și izolează",
+      "title": "Integrale cu radicali: rescrii, apoi afli integrala ca pe o necunoscută",
       "sourceIds": [
         36,
         37,
         39
       ],
-      "summary": "La \\(\\int\\sqrt{x^2+a^2}\\,dx\\) sau \\(\\int\\sqrt{a^2-x^2}\\,dx\\), integrarea prin părți produce integrala inițială. Rescrierea numărătorului permite izolarea ei.",
+      "summary": "Lecția arată cum calculezi integrala nedefinită a unui radical (rădăcina pătrată), de exemplu \\(\\int\\sqrt{x^2+a^2}\\,dx\\) sau \\(\\int\\sqrt{a^2-x^2}\\,dx\\). Integrala nedefinită, scrisă cu semnul \\(\\int\\) și dx la final, este toată familia de primitive: F este primitiva lui f dacă derivata lui F (viteza ei de schimbare) este f, iar „+C” ține locul unui număr fix pe care nu îl știi. Recunoști aceste integrale după un indiciu: integrarea prin părți (formula pentru produse, adică pentru înmulțiri) te aduce înapoi la integrala de la început. Apare o fracție, iar după ce rescrii numărătorul ei (partea de sus a fracției), afli integrala ca pe o necunoscută dintr-o ecuație.",
       "rules": [
         {
-          "label": "Radical cu sumă",
+          "label": "Radical cu sumă (x² + a² sub radical)",
           "formula": "\\int\\sqrt{x^2+a^2}\\,dx=\\frac12\\left[x\\sqrt{x^2+a^2}+a^2\\ln(x+\\sqrt{x^2+a^2})\\right]+C",
-          "explanation": "\\(a>0\\), \\(x\\in\\mathbb R\\). Argumentul logaritmului este pozitiv."
+          "explanation": "Aici a este un număr fix, ales dinainte, de exemplu 2 când sub radical ai x²+4. Formula este valabilă pentru \\(a>0\\) și pentru orice \\(x\\in\\mathbb R\\), adică pentru toate numerele reale de pe axă. Ea conține ln, logaritmul natural, care este funcția inversă a lui e^x, adică funcția care desface ce face e^x. Logaritmul merge doar pentru numere pozitive. Argumentul lui, adică ce stă în paranteza lui ln, este mereu pozitiv, pentru că radicalul este mai mare decât x luat fără semn."
         },
         {
-          "label": "Radical de tip cerc",
+          "label": "Radical de tip cerc (a² − x² sub radical)",
           "formula": "\\int\\sqrt{a^2-x^2}\\,dx=\\frac12\\left[x\\sqrt{a^2-x^2}+a^2\\arcsin(x/a)\\right]+C",
-          "explanation": "\\(a>0\\), pe interiorul \\(|x|<a\\)."
+          "explanation": "Formula este valabilă pentru \\(a>0\\), pe interiorul \\(|x|<a\\). |x| înseamnă x fără semn, deci x stă strict între −a și a, iar capetele nu intră. Pentru x în afara acestei bucăți, sub radical ar ieși un număr negativ, care nu are rădăcină pătrată. Se numește „de tip cerc” pentru că graficul lui √(a²−x²) este jumătatea de sus a unui cerc cu raza a. Funcția arcsin este inversa lui sin și răspunde la întrebarea „ce unghi are acest sinus?”."
         },
         {
-          "label": "Numărător derivat",
+          "label": "Numărător derivat: toată fracția este derivata radicalului",
           "formula": "\\int\\frac{x}{\\sqrt{x^2+a^2}}\\,dx=\\sqrt{x^2+a^2}+C",
-          "explanation": "\\((\\sqrt{x^2+a^2})'=x/\\sqrt{x^2+a^2}\\)."
+          "explanation": "Semnul ' de după paranteză înseamnă „derivata lui”. Derivata radicalului este chiar funcția de sub integrală: \\((\\sqrt{x^2+a^2})'=x/\\sqrt{x^2+a^2}\\). Integrarea este drumul invers față de derivare, de aceea integrala te duce înapoi direct la radical. Recunoști cazul după x singur sus și radicalul jos."
         }
       ],
       "examples": [
         {
-          "question": "\\(J=\\int\\sqrt{x^2+4}\\,dx\\)",
+          "question": "Calculează \\(J=\\int\\sqrt{x^2+4}\\,dx\\). Este radicalul cu sumă, cu a=2, pentru că 4 = 2².",
           "steps": [
-            "Prin părți: \\(J=x\\sqrt{x^2+4}-\\int x^2/\\sqrt{x^2+4}\\,dx\\).",
-            "Scrie \\(x^2=(x^2+4)-4\\): \\(J=x\\sqrt{x^2+4}-J+4\\int dx/\\sqrt{x^2+4}\\).",
-            "Ultima integrală este \\(\\ln(x+\\sqrt{x^2+4})\\); izolează \\(2J\\)."
+            "Folosești integrarea prin părți, formula pentru înmulțiri. Ca să ai o înmulțire, privești radicalul ca înmulțit cu 1, care nu schimbă nimic. Radicalul îl derivezi și dă \\(x/\\sqrt{x^2+4}\\), ca în a treia regulă. Pe 1 îl integrezi și devine x. Formula pune în față x înmulțit cu radicalul, apoi scade integrala lui x înmulțit cu această derivată: \\(J=x\\sqrt{x^2+4}-\\int x^2/\\sqrt{x^2+4}\\,dx\\).",
+            "Ca să apară din nou radicalul, scrii x² ca „x²+4 minus 4”: \\(x^2=(x^2+4)-4\\). Fracția se sparge în două. Prima bucată, \\((x^2+4)/\\sqrt{x^2+4}\\), este chiar \\(\\sqrt{x^2+4}\\), pentru că un număr împărțit la rădăcina lui dă tot rădăcina (9 împărțit la 3 dă 3). Deci integrala ei este J. Minusul din față trece pe ambele bucăți, iar minus cu minus dă plus la 4. Obții \\(J=x\\sqrt{x^2+4}-J+4\\int dx/\\sqrt{x^2+4}\\). Scrierea \\(\\int dx/\\sqrt{x^2+4}\\) înseamnă integrala lui \\(1/\\sqrt{x^2+4}\\).",
+            "Ultima integrală este o formulă cunoscută din lecția despre primitive cu pătrate și radicali: \\(\\ln(x+\\sqrt{x^2+4})\\). Acum J apare în ambele părți ale egalului, ca o necunoscută dintr-o ecuație. Aduni J în ambele părți, ca la o balanță pe care o ții echilibrată. În dreapta −J dispare, iar în stânga J+J dă \\(2J\\). Apoi împarți la 2, ca să rămână un singur J."
           ],
-          "answer": "\\(\\frac12[x\\sqrt{x^2+4}+4\\ln(x+\\sqrt{x^2+4})]+C\\)"
+          "answer": "Rezultatul este \\(\\frac12[x\\sqrt{x^2+4}+4\\ln(x+\\sqrt{x^2+4})]+C\\), adică prima formulă cu a=2."
         },
         {
-          "question": "\\(J=\\int\\sqrt{9-x^2}\\,dx\\)",
+          "question": "Calculează \\(J=\\int\\sqrt{9-x^2}\\,dx\\). Este radicalul de tip cerc, cu a=3, pentru că 9 = 3².",
           "steps": [
-            "Prin părți: \\(J=x\\sqrt{9-x^2}+\\int x^2/\\sqrt{9-x^2}\\,dx\\).",
-            "Scrie \\(x^2=9-(9-x^2)\\): \\(J=x\\sqrt{9-x^2}+9\\arcsin(x/3)-J\\).",
-            "Izolează \\(2J\\), pentru \\(|x|<3\\)."
+            "Folosești din nou integrarea prin părți, la fel ca înainte. Derivata acestui radical este \\(-x/\\sqrt{9-x^2}\\), adică are acum un semn minus în față. Formula prin părți are deja un minus, iar minus cu minus dă plus: \\(J=x\\sqrt{9-x^2}+\\int x^2/\\sqrt{9-x^2}\\,dx\\).",
+            "Ca să apară din nou radicalul, scrii x² ca „9 minus (9−x²)”: \\(x^2=9-(9-x^2)\\). Fracția se sparge în două. Prima bucată este 9 înmulțit cu \\(\\int dx/\\sqrt{9-x^2}\\). Această integrală dă \\(\\arcsin(x/3)\\), după formula de tip cerc din lecția despre primitive cu pătrate și radicali. A doua bucată, \\((9-x^2)/\\sqrt{9-x^2}\\), este chiar radicalul, deci integrala ei este J, cu semnul minus. Obții \\(J=x\\sqrt{9-x^2}+9\\arcsin(x/3)-J\\).",
+            "J apare iar în ambele părți ale egalului. Muți −J în stânga, obții \\(2J\\) și împarți la 2. Totul este valabil pentru \\(|x|<3\\), adică pentru x strict între −3 și 3."
           ],
-          "answer": "\\(\\frac12[x\\sqrt{9-x^2}+9\\arcsin(x/3)]+C\\)"
+          "answer": "Rezultatul este \\(\\frac12[x\\sqrt{9-x^2}+9\\arcsin(x/3)]+C\\), adică a doua formulă cu a=3."
         },
         {
-          "question": "\\(\\int(x+2)/\\sqrt{x^2+2}\\,dx\\)",
+          "question": "Calculează \\(\\int(x+2)/\\sqrt{x^2+2}\\,dx\\). Sus ai o sumă, deci poți sparge fracția în două.",
           "steps": [
-            "Separă \\(x/\\sqrt{x^2+2}\\) și \\(2/\\sqrt{x^2+2}\\).",
-            "Prima integrală este \\(\\sqrt{x^2+2}\\); a doua este \\(2\\ln(x+\\sqrt{x^2+2})\\)."
+            "Spargi fracția în două, câte una pentru fiecare termen de sus: \\(x/\\sqrt{x^2+2}\\) și \\(2/\\sqrt{x^2+2}\\). Integrala unei sume este suma integralelor, deci le iei pe rând.",
+            "Prima fracție este chiar derivata radicalului, ca în a treia regulă cu a²=2, deci integrala este \\(\\sqrt{x^2+2}\\). A doua este 2 înmulțit cu \\(\\int dx/\\sqrt{x^2+2}\\). Aceasta este aceeași formulă cu ln din primul exemplu, acum cu 2 în loc de 4, deci dă \\(2\\ln(x+\\sqrt{x^2+2})\\)."
           ],
-          "answer": "\\(\\sqrt{x^2+2}+2\\ln(x+\\sqrt{x^2+2})+C\\)"
+          "answer": "Aduni cele două bucăți și pui „+C” o singură dată: \\(\\sqrt{x^2+2}+2\\ln(x+\\sqrt{x^2+2})+C\\)."
         }
       ],
       "recall": [
         {
-          "q": "Cum rescrii \\(x^2\\) când numitorul este \\(\\sqrt{x^2+4}\\)?",
-          "a": "\\(x^2=(x^2+4)-4\\)."
+          "q": "Cum scrii altfel \\(x^2\\) când la numitor (partea de jos a fracției) stă \\(\\sqrt{x^2+4}\\)?",
+          "a": "\\(x^2=(x^2+4)-4\\). Aduni și scazi 4, ca să apară exact ce stă sub radical."
         },
         {
-          "q": "Cum rescrii \\(x^2\\) când numitorul este \\(\\sqrt{9-x^2}\\)?",
-          "a": "\\(x^2=9-(9-x^2)\\)."
+          "q": "Cum scrii altfel \\(x^2\\) când la numitor stă \\(\\sqrt{9-x^2}\\)?",
+          "a": "\\(x^2=9-(9-x^2)\\). Așa apare exact ce stă sub radical, iar bucata cu 9 se integrează cu arcsin."
         },
         {
-          "q": "Cât este \\(\\frac12\\int u'/\\sqrt u\\,dx\\)?",
-          "a": "\\(\\sqrt u+C\\), deoarece primitiva lui \\(u'/\\sqrt u\\) este \\(2\\sqrt u\\)."
+          "q": "Cât este \\(\\frac12\\int u'/\\sqrt u\\,dx\\), unde u este expresia de sub radical și u′ derivata ei?",
+          "a": "\\(\\sqrt u+C\\). Derivata lui \\(2\\sqrt u\\) este \\(u'/\\sqrt u\\), deci integrala aduce un 2, iar ½ înmulțit cu 2 dă 1."
         }
       ],
       "pitfalls": [
-        "Păstrează semnul minus din derivata lui \\(\\sqrt{a^2-x^2}\\).",
-        "Nu păstra factorul \\(1/2\\) după ce ai integrat \\(u^{-1/2}\\); el se înmulțește cu 2.",
-        "La radicalul de tip cerc, formula se derivează pe interiorul domeniului."
+        "Păstrează semnul minus din derivata lui \\(\\sqrt{a^2-x^2}\\). El transformă minusul din integrarea prin părți în plus, iar dacă îl pierzi, tot calculul iese greșit.",
+        "Când sus ai doar jumătate din derivata lui u, apare un \\(1/2\\) în față. Nu-l lăsa în rezultat: integrala lui \\(u^{-1/2}\\) (adică 1/√u) aduce un 2, iar ½ înmulțit cu 2 dă 1.",
+        "La radicalul de tip cerc, formula se poate deriva (verifica prin derivare) doar pe interiorul domeniului (numerele pentru care formula are sens și pe care lucrezi), adică pentru x strict între −a și a. La capete radicalul este 0, iar derivata lui ar cere o împărțire la 0, deci nu există."
       ],
       "notes": [
-        "Corecție față de foto 37: radicalul final este \\(\\sqrt{x^2+2}\\), fără factor \\(1/2\\).",
-        "Foto 39 are un semn plus greșit într-o separare intermediară; pentru \\(9-x^2\\) separarea corectă este diferență. Rezultatul final din continuarea foto 37 este corect.",
-        "Foto 36 prezintă două metode echivalente; exemplul folosește varianta directă. Cifra din \\(x^2+4\\) a fost verificată după mărire."
+        "Corectură față de fotografia 37: radicalul din rezultatul final este \\(\\sqrt{x^2+2}\\), fără factorul \\(1/2\\).",
+        "În fotografia 39, la un pas intermediar în care fracția se sparge în două, apare greșit un semn plus. Pentru \\(9-x^2\\), despărțirea corectă este o diferență, adică cu minus. Rezultatul final, din continuarea fotografiei 37, este corect.",
+        "Fotografia 36 arată două metode care duc la același rezultat, iar exemplul de aici o folosește pe cea directă. Cifra din \\(x^2+4\\) a fost verificată mărind fotografia."
       ],
       "group": "Analiză",
       "shortTitle": "Integrale cu radicali"
     },
     {
       "id": "raport-asimptota-40",
-      "title": "Derivata unui raport și asimptota oblică",
+      "title": "Derivata unui raport și asimptota oblică: viteza unei fracții și dreapta de lângă grafic",
       "sourceIds": [
         40
       ],
-      "summary": "Pentru \\(f(x)=(x^3-4x)/(x^2+5)\\), derivata se factorizează ușor, iar împărțirea algebrică arată că graficul se apropie de dreapta \\(y=x\\).",
+      "summary": "Aici lucrezi cu funcția \\(f(x)=(x^3-4x)/(x^2+5)\\), adică o regulă care primește un număr x și dă înapoi alt număr, scrisă ca fracție. Derivata („viteza de schimbare”) se factorizează ușor (se scrie ca înmulțire de paranteze) și arată unde crește și unde scade funcția. Împărțind ca la numere, vezi că graficul (desenul funcției) se apropie oricât de mult de dreapta înclinată \\(y=x\\) când x crește foarte mult: aceasta e asimptota oblică.",
       "rules": [
         {
-          "label": "Derivata raportului",
+          "label": "Derivata raportului (a unei fracții)",
           "formula": "\\left(\\frac uv\\right)'=\\frac{u' v-uv'}{v^2}",
-          "explanation": "Numitorul \\(v\\) trebuie să fie nenul; aici \\(x^2+5>0\\)."
+          "explanation": "Un raport este o fracție: \\(u\\) sus, la numărător, și \\(v\\) jos, la numitor. Apostroful înseamnă „derivata lui”: \\(u'\\) este derivata lui \\(u\\), iar \\(v'\\) este derivata lui \\(v\\). Derivata raportului are sus \\(u'v-uv'\\) și jos numitorul \\(v\\) la pătrat. Numitorul \\(v\\) trebuie să fie nenul, adică diferit de 0, pentru că nu poți împărți la 0. Aici \\(x^2+5>0\\) pentru orice x. Motivul: \\(x^2\\) (x înmulțit cu el însuși) nu e niciodată negativ, deci \\(x^2+5\\) este cel puțin 5. Deci formula merge peste tot."
         },
         {
-          "label": "Derivata factorizată",
+          "label": "Derivata factorizată (scrisă ca înmulțire)",
           "formula": "f'(x)=\\frac{(x^2-1)(x^2+20)}{(x^2+5)^2}",
-          "explanation": "Numărătorul dezvoltat este \\(x^4+19x^2-20\\). Semnul derivatei este semnul lui \\(x^2-1\\)."
+          "explanation": "Dacă desfaci parantezele, numărătorul (partea de sus) este \\(x^4+19x^2-20\\). Scris ca înmulțire, el dă formula de mai sus. Factorii sunt bucățile care se înmulțesc între ele. Semnul derivatei (plus sau minus) îți spune unde crește și unde scade funcția. El este semnul lui \\(x^2-1\\), pentru că ceilalți factori sunt mereu pozitivi. \\(x^2\\) nu e niciodată negativ, deci \\(x^2+20\\) este cel puțin 20, iar \\((x^2+5)^2\\) este pătratul unui număr pozitiv."
         },
         {
-          "label": "Asimptotă oblică",
+          "label": "Asimptotă oblică (dreapta de care graficul se apropie oricât de mult)",
           "formula": "m=\\lim_{x\\to\\infty}\\frac{f(x)}x,\\qquad n=\\lim_{x\\to\\infty}[f(x)-mx]",
-          "explanation": "Dacă limitele sunt finite și \\(m\\ne0\\), asimptota este \\(y=mx+n\\)."
+          "explanation": "Calculezi două limite, adică valorile de care se apropie expresiile când x se duce spre infinit. Pentru \\(m\\) împarți \\(f(x)\\) la x, iar pentru \\(n\\) scazi \\(mx\\) din \\(f(x)\\). \\(m\\) îți dă înclinarea dreptei, iar \\(n\\) îți spune cât de sus sau de jos stă ea. Dacă ambele limite sunt finite (numere obișnuite, nu infinit) și \\(m\\ne0\\), asimptota este \\(y=mx+n\\). Ceri \\(m\\ne0\\) pentru că, la \\(m=0\\), dreapta ar fi orizontală (culcată), nu înclinată."
         },
         {
-          "label": "Împărțirea funcției",
+          "label": "Împărțirea funcției (ca la numere)",
           "formula": "f(x)=x-\\frac{9x}{x^2+5}",
-          "explanation": "Diferența \\(f(x)-x\\) tinde la 0; aceasta verifică asimptota \\(y=x\\)."
+          "explanation": "Împarți \\(x^3-4x\\) la \\(x^2+5\\) ca la numere. Obții câtul (rezultatul împărțirii) \\(x\\) și restul \\(-9x\\), la fel cum 14 împărțit la 5 dă 2 rest 4. Deci \\(f(x)\\) este \\(x\\), din care se scade fracția \\(\\frac{9x}{x^2+5}\\). Diferența \\(f(x)-x\\) tinde la 0, adică se apropie oricât de mult de 0 pe măsură ce x crește. Motivul: jos, \\(x^2\\) crește mult mai repede decât 9x de sus. Asta verifică asimptota \\(y=x\\)."
         }
       ],
       "examples": [
         {
-          "question": "Calculează derivata lui \\(f(x)=(x^3-4x)/(x^2+5)\\).",
+          "question": "Calculează derivata (viteza de schimbare) a funcției \\(f(x)=(x^3-4x)/(x^2+5)\\).",
           "steps": [
-            "\\(u'=3x^2-4\\), \\(v'=2x\\).",
-            "\\(f'=[(3x^2-4)(x^2+5)-(x^3-4x)2x]/(x^2+5)^2\\).",
-            "Dezvoltă: \\(x^4+19x^2-20=(x^2-1)(x^2+20)\\)."
+            "Notezi partea de sus \\(u=x^3-4x\\) și partea de jos \\(v=x^2+5\\). Apoi derivezi fiecare bucată. Regula pentru puteri: exponentul (numărul mic de sus) coboară în față și scade cu 1, deci \\(x^3\\) devine \\(3x^2\\), iar \\(x^2\\) devine \\(2x\\). Un x singur devine 1, deci \\(4x\\) devine 4. Un număr singur, ca 5, devine 0, pentru că un număr fix nu se schimbă. Așa obții \\(u'=3x^2-4\\) și \\(v'=2x\\).",
+            "Pui totul în formula raportului, cu \\(u'v-uv'\\) sus și \\(v^2\\) jos: \\(f'=[(3x^2-4)(x^2+5)-(x^3-4x)2x]/(x^2+5)^2\\).",
+            "Desfaci parantezele de sus: \\((3x^2-4)(x^2+5)=3x^4+11x^2-20\\) și \\((x^3-4x)2x=2x^4-8x^2\\). Scazi al doilea rezultat din primul și aduni termenii asemănători, adică bucățile cu aceeași putere a lui x: \\(3x^4-2x^4=x^4\\) și \\(11x^2+8x^2=19x^2\\). Obții \\(x^4+19x^2-20\\). Ca să-l scrii ca înmulțire, cauți două numere care înmulțite dau −20 și adunate dau 19: ele sunt −1 și 20. Rezultatul: \\(x^4+19x^2-20=(x^2-1)(x^2+20)\\)."
           ],
-          "answer": "\\(f'(x)=(x^2-1)(x^2+20)/(x^2+5)^2\\)"
+          "answer": "Derivata este \\(f'(x)=(x^2-1)(x^2+20)/(x^2+5)^2\\)."
         },
         {
-          "question": "Arată că \\(y=x\\) este asimptotă oblică la \\(+\\infty\\).",
+          "question": "Arată că dreapta \\(y=x\\) este asimptotă oblică la \\(+\\infty\\), adică graficul se apropie oricât de mult de ea când x crește foarte mult.",
           "steps": [
-            "\\(m=\\lim f(x)/x=\\lim(x^2-4)/(x^2+5)=1\\).",
-            "\\(n=\\lim[f(x)-x]=\\lim[-9x/(x^2+5)]=0\\)."
+            "Afli înclinarea \\(m\\): împarți \\(f(x)\\) la x și vezi de ce număr se apropie rezultatul. Sus, \\(x^3-4x\\) împărțit la x dă \\(x^2-4\\). Pentru x foarte mare, −4 și +5 aproape nu mai contează, deci rămâne \\(x^2\\) împărțit la \\(x^2\\), adică 1. Scris cu „lim” (prescurtarea de la limită): \\(m=\\lim f(x)/x=\\lim(x^2-4)/(x^2+5)=1\\).",
+            "Afli \\(n\\): scazi x din funcție și vezi ce rămâne. Scazi x pentru că \\(m=1\\), deci \\(mx\\) este chiar x. Ca să scazi, scrii x ca fracție cu același numitor: \\(x=(x^3+5x)/(x^2+5)\\). Sus rămâne \\(x^3-4x-x^3-5x=-9x\\). Partea de jos crește mult mai repede decât cea de sus, deci fracția se apropie de 0: \\(n=\\lim[f(x)-x]=\\lim[-9x/(x^2+5)]=0\\)."
           ],
-          "answer": "Asimptota este \\(y=1\\cdot x+0=x\\)."
+          "answer": "Pui \\(m=1\\) și \\(n=0\\) în \\(y=mx+n\\), deci asimptota este \\(y=1\\cdot x+0=x\\)."
         },
         {
-          "question": "Citește variația din derivata factorizată.",
+          "question": "Citește variația (unde crește și unde scade funcția) din derivata factorizată.",
           "steps": [
-            "\\(x^2+20>0\\) și \\((x^2+5)^2>0\\).",
-            "\\(f'>0\\) pentru \\(|x|>1\\), \\(f'<0\\) pentru \\(|x|<1\\).",
-            "\\(f(-1)=1/2\\), \\(f(1)=-1/2\\)."
+            "Te uiți întâi la factorii care sunt mereu pozitivi, pentru că ei nu schimbă semnul: \\(x^2+20>0\\) și \\((x^2+5)^2>0\\).",
+            "Deci semnul lui \\(f'\\) vine doar de la \\(x^2-1\\). Folosești modulul \\(|x|\\), adică numărul fără semn, pentru că x și −x dau același \\(x^2\\). \\(x^2-1\\) e pozitiv când \\(x^2\\) trece de 1, adică atunci când x e mai departe de 0 decât 1. De exemplu, 2 ori 2 fac 4, care trece de 1, dar 0,5 ori 0,5 fac 0,25, care nu trece. Deci \\(f'>0\\) pentru \\(|x|>1\\), \\(f'<0\\) pentru \\(|x|<1\\). Derivata e ca o viteză: unde e pozitivă, funcția crește, iar unde e negativă, funcția scade.",
+            "Calculezi valoarea funcției în punctele unde derivata își schimbă semnul, adică pui pe rând −1 și 1 în locul lui x. Pentru −1: sus \\((-1)^3-4\\cdot(-1)=-1+4=3\\), jos \\((-1)^2+5=6\\), deci \\(f(-1)=3/6=1/2\\). Pentru 1: sus \\(1-4=-3\\), jos \\(1+5=6\\), deci \\(f(1)=-3/6=-1/2\\)."
           ],
-          "answer": "Creștere pe \\((-\\infty,-1]\\) și \\([1,\\infty)\\); descreștere pe \\([-1,1]\\). Maxim local \\((-1,1/2)\\), minim local \\((1,-1/2)\\)."
+          "answer": "Funcția crește pe intervalele (bucățile de numere) \\((-\\infty,-1]\\) și \\([1,\\infty)\\) și scade pe \\([-1,1]\\). Paranteza pătrată [ înseamnă că numărul de la capăt e inclus, iar cea rotundă ( că e exclus. Are un maxim local (cel mai înalt punct din zona lui) în punctul \\((-1,1/2)\\) de pe grafic, adică la \\(x=-1\\), unde funcția valorează 1/2. E maxim pentru că funcția urcă până la −1 și apoi coboară. Are un minim local (cel mai jos punct din zona lui) în punctul \\((1,-1/2)\\), adică la \\(x=1\\), unde funcția valorează −1/2, pentru că acolo coboară și apoi urcă."
         }
       ],
       "recall": [
         {
-          "q": "Este suficient să obții \\(m=1\\) pentru a afirma că asimptota este \\(y=x\\)?",
-          "a": "Nu. Trebuie verificat și \\(n=\\lim[f(x)-x]=0\\)."
+          "q": "Ajunge să găsești \\(m=1\\) ca să spui că asimptota este \\(y=x\\)?",
+          "a": "Nu. Mai trebuie să verifici și \\(n=\\lim[f(x)-x]=0\\), pentru că \\(m\\) dă doar înclinarea, iar \\(n\\) arată cât de sus sau de jos stă dreapta."
         },
         {
           "q": "De ce semnul lui \\(f'\\) este semnul lui \\(x^2-1\\)?",
-          "a": "Ceilalți doi factori, \\(x^2+20\\) și \\((x^2+5)^2\\), sunt pozitivi."
+          "a": "Pentru că ceilalți doi factori, \\(x^2+20\\) și \\((x^2+5)^2\\), sunt mereu pozitivi. Înmulțirea cu un număr pozitiv nu schimbă semnul."
         },
         {
-          "q": "Cum verifici rapid o asimptotă \\(y=x\\)?",
-          "a": "Calculezi \\(f(x)-x\\) și arăți că tinde la 0."
+          "q": "Cum verifici repede o asimptotă \\(y=x\\)?",
+          "a": "Calculezi \\(f(x)-x\\) și arăți că tinde la 0, adică distanța dintre grafic și dreaptă se apropie oricât de mult de 0."
         }
       ],
       "pitfalls": [
-        "La derivata raportului, numitorul este la pătrat.",
-        "Nu uita al doilea termen din numărător: \\(-uv'\\).",
-        "O asimptotă oblică cere verificarea ambelor coeficiente \\(m\\) și \\(n\\)."
+        "La derivata raportului, numitorul (partea de jos) este la pătrat, iar dacă îl lași simplu, toată derivata iese greșită.",
+        "Nu uita al doilea termen din numărător: \\(-uv'\\), pentru că fără el derivata iese greșită și semnul ei te poate păcăli.",
+        "La asimptota oblică verifici ambii coeficienți, \\(m\\) și \\(n\\), pentru că doar împreună îți dau dreapta întreagă."
       ],
       "notes": [
-        "Calculul lui \\(n\\) este completat; fotografia se oprește după \\(m=1\\). Variația este o consecință a derivatei verificate.",
-        "Cifrele 4 și 5 sunt asemănătoare în scris; inspecția mărită și dezvoltarea algebrică confirmă modelul \\((x^3-4x)/(x^2+5)\\)."
+        "Fotografia se oprește după \\(m=1\\), așa că lecția completează calculul lui \\(n\\). Variația (unde crește și unde scade funcția) vine din derivata verificată.",
+        "În scrisul de mână, cifrele 4 și 5 seamănă. Fotografia mărită și calculul refăcut confirmă amândouă funcția \\((x^3-4x)/(x^2+5)\\)."
       ],
       "group": "Analiză",
-      "shortTitle": "Derivata unui raport și asimptota oblică"
+      "shortTitle": "Derivata raportului, asimptota oblică"
     }
   ],
   "questions": [
     {
       "group": "Algebră",
-      "topic": "Legi de compoziție",
-      "q": "Ce trebuie verificat înainte de proprietățile unei legi pe M?",
+      "topic": "Reguli de combinat numere",
+      "q": "Ce verifici prima dată la o lege pe mulțimea M (o regulă care combină două elemente din M)?",
       "options": [
-        "Închiderea: rezultatul aparține lui M",
+        "Închiderea: rezultatul rămâne tot în M",
         "Existența unui element absorbant",
         "Numai comutativitatea",
         "Numai existența inversei"
       ],
       "answer": 0,
-      "explanation": "O lege internă trebuie să asocieze oricărei perechi din M un rezultat din M. Domeniul contează înaintea tuturor proprietăților."
+      "explanation": "O lege internă ia oricare două elemente din M și trebuie să dea înapoi un rezultat tot din M. Dacă rezultatul poate ieși din M, regula nu mai este o lege pe M. Atunci celelalte proprietăți nu mai au sens, așa că verifici întâi închiderea."
     },
     {
       "group": "Algebră",
-      "topic": "Tabla unei legi",
-      "q": "Ce proprietate se vede din simetria tablei față de diagonala principală?",
+      "topic": "Tabelul cu rezultate",
+      "q": "Tabla legii (tabelul cu toate rezultatele) este simetrică față de diagonala principală, cea care merge din colțul stânga-sus în colțul dreapta-jos. Ce proprietate vezi din asta?",
       "options": [
         "Asociativitatea",
         "Comutativitatea",
@@ -2294,24 +2297,24 @@ window.STUDY = {
         "Distributivitatea"
       ],
       "answer": 1,
-      "explanation": "Simetria înseamnă că rezultatul de pe rândul x și coloana y coincide cu cel de pe rândul y și coloana x: \\(x*y=y*x\\)."
+      "explanation": "Simetria înseamnă că rândul x cu coloana y dă același rezultat ca rândul y cu coloana x: \\(x*y=y*x\\). Asta înseamnă comutativitate, adică ordinea nu contează. Asociativitatea privește trei elemente deodată și nu se vede din această simetrie."
     },
     {
       "group": "Algebră",
-      "topic": "Structuri algebrice",
-      "q": "Ce condiții definesc un monoid?",
+      "topic": "Monoizi și grupuri",
+      "q": "Ce condiții trebuie să îndeplinească o mulțime cu o lege ca să fie monoid?",
       "options": [
         "Lege internă asociativă și element neutru",
-        "Lege internă comutativă și absorbant",
+        "Lege internă comutativă și element absorbant",
         "Numai element neutru",
         "Lege internă asociativă și toate inversele, fără neutru"
       ],
       "answer": 0,
-      "explanation": "Un monoid este o mulțime cu o lege internă asociativă și un element neutru. Inversele nu sunt cerute pentru toate elementele."
+      "explanation": "Un monoid este o mulțime cu o lege internă asociativă (parantezele nu contează). În plus, are un element neutru (elementul care nu schimbă nimic). Nu se cere ca fiecare element să aibă invers (o pereche care, combinată cu el, dă neutrul). Inversul devine obligatoriu abia la grup."
     },
     {
       "group": "Algebră",
-      "topic": "Structuri algebrice",
+      "topic": "Monoizi și grupuri",
       "q": "Un grup abelian este un grup în care…",
       "options": [
         "elementul neutru este 0",
@@ -2320,12 +2323,12 @@ window.STUDY = {
         "legea este înmulțirea obișnuită"
       ],
       "answer": 1,
-      "explanation": "„Abelian” adaugă comutativitatea la axiomele de grup. Neutrul și operația depind de lege."
+      "explanation": "Cuvântul „abelian” adaugă la condițiile de grup o singură cerință: comutativitatea, adică ordinea nu contează. Legea poate fi orice regulă, iar elementul neutru depinde de ea. Deci neutrul nu trebuie să fie 0, iar legea nu trebuie să fie înmulțirea obișnuită."
     },
     {
       "group": "Algebră",
-      "topic": "Înmulțire translatată",
-      "q": "Pentru \\(x*y=(x-4)(y-4)+4\\), care este elementul neutru?",
+      "topic": "Înmulțire „mutată”",
+      "q": "Legea este \\(x*y=(x-4)(y-4)+4\\). Care este elementul neutru, adică cel care nu schimbă nimic?",
       "options": [
         "4",
         "0",
@@ -2333,12 +2336,12 @@ window.STUDY = {
         "1"
       ],
       "answer": 2,
-      "explanation": "Ecuația \\(x*e=x\\) devine \\((x-4)(e-4)=x-4\\). Pentru toate x rezultă \\(e-4=1\\), deci \\(e=5\\)."
+      "explanation": "Cauți numărul e pentru care \\(x*e=x\\), oricare ar fi x. Scrii legea pentru x și e, apoi scazi 4 din ambele părți: \\((x-4)(e-4)=x-4\\). Ca să meargă pentru orice x, trebuie \\(e-4=1\\), pentru că doar înmulțirea cu 1 lasă orice număr la fel. Deci \\(e=5\\)."
     },
     {
       "group": "Algebră",
-      "topic": "Înmulțire translatată",
-      "q": "În aceeași lege, cât este \\(7*4\\)?",
+      "topic": "Înmulțire „mutată”",
+      "q": "Cu aceeași lege, cât face \\(7*4\\)?",
       "options": [
         "7",
         "4",
@@ -2346,12 +2349,12 @@ window.STUDY = {
         "11"
       ],
       "answer": 1,
-      "explanation": "Avem \\(7*4=(7-4)(4-4)+4=4\\). Elementul 4 este absorbant, nu neutru."
+      "explanation": "Pui 7 în locul lui x și 4 în locul lui y: \\(7*4=(7-4)(4-4)+4=4\\), pentru că a doua paranteză dă 0. Elementul 4 este absorbant: „înghite” tot, iar orice combini cu el dă 4. Răspunsul 7 ar fi corect doar dacă 4 ar fi neutrul, dar neutrul acestei legi este 5."
     },
     {
       "group": "Algebră",
-      "topic": "Înmulțire translatată",
-      "q": "În \\(([4,\\infty),*)\\) cu \\(x*y=(x-4)(y-4)+4\\), ce împiedică structura să fie grup?",
+      "topic": "Înmulțire „mutată”",
+      "q": "Ce împiedică \\(([4,\\infty),*)\\), adică numerele de la 4 în sus cu legea \\(x*y=(x-4)(y-4)+4\\), să fie grup?",
       "options": [
         "Nu există neutru",
         "Nu este asociativă",
@@ -2359,12 +2362,12 @@ window.STUDY = {
         "Nu este comutativă"
       ],
       "answer": 2,
-      "explanation": "Pentru orice y, \\(4*y=4\\), niciodată 5. Legea este asociativă, comutativă și are neutrul 5, dar 4 nu este inversabil."
+      "explanation": "Oricare y ai lua, \\(4*y=4\\), deci rezultatul nu ajunge niciodată la neutrul 5. Așadar 4 nu are pereche (invers) în mulțime. Celelalte condiții sunt îndeplinite: legea este asociativă, comutativă și are neutrul 5."
     },
     {
       "group": "Algebră",
-      "topic": "Grup translatat",
-      "q": "Pentru \\(x*y=(x+3)(y+3)-3\\), elementul neutru este…",
+      "topic": "Neutrul unei legi mutate",
+      "q": "Pentru legea \\(x*y=(x+3)(y+3)-3\\), care este elementul neutru (cel care nu schimbă nimic, așa cum 0 nu schimbă nimic la adunare)?",
       "options": [
         "−3",
         "−2",
@@ -2372,12 +2375,12 @@ window.STUDY = {
         "1"
       ],
       "answer": 1,
-      "explanation": "Transformarea \\(T(x)=x+3\\) trimite neutrul în 1, astfel \\(e+3=1\\), deci \\(e=-2\\)."
+      "explanation": "Dacă muți fiecare număr cu 3, prin \\(T(x)=x+3\\), legea devine o înmulțire obișnuită, iar neutrul înmulțirii este 1. Deci neutrul mutat trebuie să ajungă în 1: \\(e+3=1\\), de unde \\(e=-2\\). Varianta 1 este neutrul de după mutare. Ca să ajungi la neutrul legii date, faci mutarea invers și scazi 3: \\(1-3=-2\\)."
     },
     {
       "group": "Algebră",
-      "topic": "Grup translatat",
-      "q": "În grupul pe \\((-3,\\infty)\\), inversul lui \\(x=1\\) este…",
+      "topic": "Inversul în grupul mutat",
+      "q": "Lucrezi în grupul pe \\((-3,\\infty)\\), adică pe numerele mai mari decât −3, unde fiecare număr are o pereche. Care este inversul lui \\(x=1\\), adică perechea care, combinată cu el, dă neutrul?",
       "options": [
         "−1",
         "−3",
@@ -2385,12 +2388,12 @@ window.STUDY = {
         "1/4"
       ],
       "answer": 2,
-      "explanation": "Inversul este \\(x^{-1}_*=-3+1/(x+3)\\). Pentru x=1 obținem \\(-3+1/4=-11/4\\), care este >−3."
+      "explanation": "Afli inversul în trei pași: aduni 3, iei perechea de la înmulțire, apoi scazi 3. Așa ajungi la formula \\(x^{-1}_*=-3+1/(x+3)\\). Pentru x=1 obții \\(-3+1/4=-11/4\\), care este mai mare decât −3, deci rămâne în grup. Varianta 1/4 este doar pasul din mijloc, înainte să scazi 3."
     },
     {
       "group": "Algebră",
-      "topic": "Unități pe întregi",
-      "q": "Pentru \\(x*y=(x+3)(y+3)-3\\) pe Z, care sunt unitățile?",
+      "topic": "Unități pe numere întregi",
+      "q": "Pentru \\(x*y=(x+3)(y+3)-3\\) pe Z (numerele întregi), care sunt unitățile, adică elementele care au invers tot în Z?",
       "options": [
         "{−4,−2}",
         "{−3,−2}",
@@ -2398,12 +2401,12 @@ window.STUDY = {
         "Toate numerele întregi"
       ],
       "answer": 0,
-      "explanation": "Inversa rămâne întreagă numai când \\(x+3=\\pm1\\), deci \\(x=-4\\) sau \\(x=-2\\)."
+      "explanation": "Inversul lui x conține fracția 1/(x+3), adică 1 împărțit la x+3. Ea dă un număr întreg numai când împarți la 1 sau la −1, deci \\(x+3=\\pm1\\). De aici \\(x=-4\\) sau \\(x=-2\\). Pe −3 nu îl poți lua: el „înghite” tot, adică orice combini cu el dă −3. Rezultatul nu ajunge niciodată la neutrul −2, deci −3 nu are pereche."
     },
     {
       "group": "Algebră",
-      "topic": "Lege rațională",
-      "q": "Pentru \\(x*y=(x+y)/(1+xy)\\) pe \\((-1,1)\\), care este inversul lui x?",
+      "topic": "Lege cu fracție",
+      "q": "Pentru \\(x*y=(x+y)/(1+xy)\\) pe \\((-1,1)\\), adică pe numerele dintre −1 și 1, care este inversul („perechea”) lui x?",
       "options": [
         "1/x",
         "−x",
@@ -2411,12 +2414,12 @@ window.STUDY = {
         "x"
       ],
       "answer": 1,
-      "explanation": "Neutrul este 0, iar \\(x*(-x)=0/(1-x^2)=0\\). Numitorul este pozitiv deoarece \\(|x|<1\\)."
+      "explanation": "Neutrul acestei legi este 0, pentru că \\(x*0=x/1=x\\). Dacă pui −x în locul lui y, obții \\(x*(-x)=0/(1-x^2)=0\\). Jos ai \\(1-x^2\\), care este pozitiv deoarece \\(|x|<1\\), adică x stă între −1 și 1. Așa știi că nu împarți la 0. Varianta 1/x este inversul de la înmulțire și oricum ar ieși din intervalul (−1,1)."
     },
     {
       "group": "Algebră",
-      "topic": "Lege rațională",
-      "q": "Ce identitate ajută la demonstrarea închiderii în \\((-1,1)\\)?",
+      "topic": "Închidere în interval",
+      "q": "Vrei să arăți închiderea în \\((-1,1)\\), adică faptul că rezultatul legii rămâne tot în interval. Ce identitate (egalitate adevărată pentru orice x și y din interval) te ajută?",
       "options": [
         "\\(1-(x*y)^2=\\frac{(1-x^2)(1-y^2)}{(1+xy)^2}\\)",
         "\\(1-(x*y)^2=0\\)",
@@ -2424,12 +2427,12 @@ window.STUDY = {
         "\\(x*y=xy\\)"
       ],
       "answer": 0,
-      "explanation": "Dreapta este strict pozitivă pentru x,y în (−1,1), deci \\(|x*y|<1\\). Verificăm separat că numitorul nu se anulează."
+      "explanation": "Partea dreaptă este mai mare decât 0 pentru x,y în (−1,1): sus ai două numere pozitive, jos un pătrat. Deci \\(1-(x*y)^2>0\\), adică pătratul rezultatului este mai mic decât 1. De aici rezultă \\(|x*y|<1\\), deci rezultatul rămâne în interval. Verifici separat că numitorul nu se anulează, adică nu devine 0."
     },
     {
       "group": "Algebră",
-      "topic": "Familii de matrice",
-      "q": "Pentru \\(A(a,b)=\\begin{pmatrix}a&2b\\\\b&a\\end{pmatrix}\\) cu \\(a^2-2b^2=1\\), inversa este…",
+      "topic": "Inversa unei matrice",
+      "q": "Pentru matricea (tabelul de numere) \\(A(a,b)=\\begin{pmatrix}a&2b\\\\b&a\\end{pmatrix}\\) cu \\(a^2-2b^2=1\\), care este inversa, adică „perechea” ei la înmulțire?",
       "options": [
         "A(−a,b)",
         "A(a,−b)",
@@ -2437,12 +2440,12 @@ window.STUDY = {
         "A(0,1)"
       ],
       "answer": 1,
-      "explanation": "Determinantul este 1. Formula inversei dă \\(A(a,b)^{-1}=A(a,-b)\\), care păstrează condiția \\(a^2-2b^2=1\\)."
+      "explanation": "Determinantul (un singur număr calculat din matrice) este \\(a\\cdot a-2b\\cdot b=a^2-2b^2\\), adică 1. Formula inversei împarte la el, deci aici împărțirea nu schimbă nimic. Apoi formula schimbă între ele numerele de pe diagonală (linia de la stânga sus la dreapta jos; aici ambele sunt a, deci nu se vede nicio schimbare) și schimbă semnul numerelor din afara diagonalei, așa că obții \\(A(a,b)^{-1}=A(a,-b)\\). Rezultatul păstrează condiția \\(a^2-2b^2=1\\), fiindcă schimbarea semnului lui b nu îi schimbă pătratul."
     },
     {
       "group": "Algebră",
-      "topic": "Ecuație de tip BAC",
-      "q": "Pentru \\(x*y=\\frac23(x-3)(y-3)+3\\), soluțiile ecuației \\(x*\\frac{3x}{2}=5x\\) sunt…",
+      "topic": "Ecuație ca la BAC",
+      "q": "Pentru \\(x*y=\\frac23(x-3)(y-3)+3\\), care sunt soluțiile ecuației \\(x*\\frac{3x}{2}=5x\\) (numerele care, puse în locul lui x, fac egalitatea adevărată)?",
       "options": [
         "1 și 9",
         "0 și 3",
@@ -2450,12 +2453,12 @@ window.STUDY = {
         "3 și 5"
       ],
       "answer": 0,
-      "explanation": "Membrul stâng devine \\((x-3)(x-2)+3=x^2-5x+9\\). Ecuația este \\(x^2-10x+9=0\\), deci x=1 sau x=9."
+      "explanation": "Pui 3x/2 în locul lui y. Atunci \\(\\frac{3x}{2}-3=\\frac32(x-2)\\), iar 2/3 înmulțit cu 3/2 dă 1, deci fracțiile dispar. Partea din stânga devine \\((x-3)(x-2)+3=x^2-5x+9\\). Egalezi cu 5x și muți totul în stânga: \\(x^2-10x+9=0\\), deci x=1 sau x=9. Poți verifica punând 1 în locul lui x: \\(1-10+9=0\\). La fel pentru 9: \\(81-90+9=0\\)."
     },
     {
       "group": "Analiză",
-      "topic": "Primitive",
-      "q": "Ce înseamnă că F este o primitivă a lui f pe un interval I?",
+      "topic": "Ce este o primitivă",
+      "q": "Ce înseamnă că F este o primitivă a lui f pe un interval I (o bucată de numere „de la… până la…”)?",
       "options": [
         "F=f′",
         "F′=f pe I",
@@ -2463,25 +2466,25 @@ window.STUDY = {
         "F(0)=0"
       ],
       "answer": 1,
-      "explanation": "Definiția este \\(F\\) derivabilă pe I și \\(F'(x)=f(x)\\) pentru orice x din I."
+      "explanation": "Primitiva este drumul invers față de derivare: dacă f e viteza, F e poziția (locul în care ai ajuns). Definiția cere ca \\(F\\) să fie derivabilă pe I, adică să aibă derivată în fiecare punct din I. Apoi cere ca \\(F'(x)=f(x)\\) pentru orice x din I. Prima variantă amestecă rolurile, pentru că acolo f ar fi primitiva lui F."
     },
     {
       "group": "Analiză",
-      "topic": "Primitive",
-      "q": "Două primitive ale aceleiași funcții pe un interval diferă prin…",
+      "topic": "Diferența dintre primitive",
+      "q": "Două primitive ale aceleiași funcții, pe același interval, diferă una de alta prin…",
       "options": [
-        "o funcție liniară arbitrară",
-        "o constantă",
+        "o funcție liniară oarecare",
+        "o constantă (un număr fix)",
         "x²",
-        "un factor multiplicativ arbitrar"
+        "un factor oarecare cu care se înmulțește"
       ],
       "answer": 1,
-      "explanation": "Derivata diferenței este zero. Pe un interval, diferența este constantă. Pe componente diferite ale unui domeniu, constantele pot fi diferite."
+      "explanation": "Cele două primitive au aceeași derivată, deci derivata diferenței lor este zero. O funcție a cărei viteză de schimbare este zero nu se schimbă deloc. Așa că, pe un interval, diferența este o constantă, adică un număr fix. Dacă domeniul (numerele pentru care funcția are sens) are mai multe bucăți separate, constanta poate fi alta pe fiecare bucată."
     },
     {
       "group": "Analiză",
-      "topic": "Formule de bază",
-      "q": "Care este \\(\\int x^{-1}\\,dx\\)?",
+      "topic": "Integrala lui 1/x",
+      "q": "Cât face \\(\\int x^{-1}\\,dx\\), adică integrala lui 1 împărțit la x?",
       "options": [
         "\\(x^0+C\\)",
         "\\(\\ln|x|+C\\)",
@@ -2489,12 +2492,12 @@ window.STUDY = {
         "\\(1+C\\)"
       ],
       "answer": 1,
-      "explanation": "Cazul exponentului −1 este excepția formulei puterii. Rezultatul este logaritmul, pe intervale care nu conțin 0."
+      "explanation": "La puteri, de obicei crești exponentul (numărul mic de sus) cu 1 și împarți la noul exponent. Pentru −1 ai ajunge să împarți la 0. De aceea exponentul −1 este excepția. Rezultatul este logaritmul natural \\(\\ln|x|+C\\), pe intervale care nu conțin 0, pentru că derivata lui \\(\\ln|x|\\) este exact \\(1/x\\). Varianta \\(-x^{-2}+C\\) este derivata lui \\(x^{-1}\\), adică drumul invers."
     },
     {
       "group": "Analiză",
-      "topic": "Regula lanțului",
-      "q": "Care este \\(\\int \\frac{2}{2x+3}\\,dx\\)?",
+      "topic": "Logaritm și regula lanțului",
+      "q": "Cât face \\(\\int \\frac{2}{2x+3}\\,dx\\)?",
       "options": [
         "\\(2\\ln|2x+3|+C\\)",
         "\\(\\ln|x+3|+C\\)",
@@ -2502,12 +2505,12 @@ window.STUDY = {
         "\\(\\frac12\\ln|2x+3|+C\\)"
       ],
       "answer": 2,
-      "explanation": "Numărătorul este derivata numitorului. Derivata lui \\(\\ln|2x+3|\\) este \\(2/(2x+3)\\)."
+      "explanation": "Numărătorul (partea de sus a fracției) este exact derivata numitorului (partea de jos), pentru că derivata lui \\(2x+3\\) este 2. Regula lanțului spune că la derivare înmulțești și cu derivata expresiei dinăuntru. De aceea derivata lui \\(\\ln|2x+3|\\) este exact \\(2/(2x+3)\\), deci nu mai trebuie niciun număr în față. Varianta cu \\(\\frac12\\) în față ar fi bună doar dacă sus ar sta 1 în loc de 2."
     },
     {
       "group": "Analiză",
-      "topic": "Regula lanțului",
-      "q": "Care este \\(\\int x\\sqrt{x^2+2}\\,dx\\)?",
+      "topic": "Substituție cu radical",
+      "q": "Cât face \\(\\int x\\sqrt{x^2+2}\\,dx\\)?",
       "options": [
         "\\(\\frac13(x^2+2)^{3/2}+C\\)",
         "\\(\\frac23(x^2+2)^{3/2}+C\\)",
@@ -2515,12 +2518,12 @@ window.STUDY = {
         "\\(x\\sqrt{x^2+2}+C\\)"
       ],
       "answer": 0,
-      "explanation": "Punem \\(u=x^2+2\\), \\(du=2x\\,dx\\). Astfel \\((1/2)\\int u^{1/2}du=(1/3)u^{3/2}+C\\)."
+      "explanation": "Dai un nume scurt expresiei de sub radical, \\(u=x^2+2\\). Derivata lui u este \\(2x\\), deci \\(du=2x\\,dx\\), iar \\(x\\,dx\\) este jumătate din \\(du\\). Radicalul înseamnă puterea \\(1/2\\), așa că integrala devine \\((1/2)\\int u^{1/2}du=(1/3)u^{3/2}+C\\). Ai crescut puterea la \\(3/2\\) și ai împărțit la \\(3/2\\), iar \\((1/2)\\cdot(2/3)=1/3\\). Varianta cu \\(\\frac23\\) apare dacă uiți factorul \\(1/2\\) din față."
     },
     {
       "group": "Analiză",
-      "topic": "Regula lanțului",
-      "q": "Care este \\(\\int \\frac{x^3}{\\sqrt{1-x^8}}\\,dx\\)?",
+      "topic": "Substituție cu arcsin",
+      "q": "Cât face \\(\\int \\frac{x^3}{\\sqrt{1-x^8}}\\,dx\\)?",
       "options": [
         "\\(\\arcsin(x^4)+C\\)",
         "\\(\\frac14\\arcsin(x^4)+C\\)",
@@ -2528,12 +2531,12 @@ window.STUDY = {
         "\\(\\frac14\\arctan(x^4)+C\\)"
       ],
       "answer": 1,
-      "explanation": "Cu \\(u=x^4\\), \\(du=4x^3dx\\), integrala devine \\((1/4)\\int du/\\sqrt{1-u^2}\\). Formula se folosește pe intervale din (−1,1)."
+      "explanation": "Observi că \\(x^8\\) este \\((x^4)^2\\), deci dai numele scurt \\(u=x^4\\), iar \\(du=4x^3dx\\). Integrala devine \\((1/4)\\int du/\\sqrt{1-u^2}\\), deci rezultatul are \\(\\frac14\\) în față. Forma rămasă se integrează cu arcsin, funcția care îți spune ce unghi are un anumit sinus. Formula se folosește pe intervale din (−1,1), unde expresia de sub radical este pozitivă."
     },
     {
       "group": "Analiză",
       "topic": "Integrare prin părți",
-      "q": "Formula corectă a integrării prin părți este…",
+      "q": "Integrarea prin părți este formula pe care o folosești la produse, adică la înmulțiri între două funcții. Care este forma ei corectă?",
       "options": [
         "\\(\\int u\\,dv=uv+\\int v\\,du\\)",
         "\\(\\int u\\,dv=uv-\\int v\\,du\\)",
@@ -2541,12 +2544,12 @@ window.STUDY = {
         "\\(\\int u\\,dv=\\int u\\,du\\)"
       ],
       "answer": 1,
-      "explanation": "Formula se obține din derivata produsului \\((uv)'=u'v+uv'\\). Semnul din fața integralei rămase este minus."
+      "explanation": "Formula vine din regula de derivare a unui produs, \\((uv)'=u'v+uv'\\). Când integrezi ambele părți și muți un termen (o bucată din sumă) în partea cealaltă, el trece cu semn schimbat. De aceea, în fața integralei rămase stă minus. Varianta cu plus are semnul greșit."
     },
     {
       "group": "Analiză",
       "topic": "Integrare prin părți",
-      "q": "Care este \\(\\int\\ln x\\,dx\\), pentru x>0?",
+      "q": "Cât este \\(\\int\\ln x\\,dx\\), pentru x>0?",
       "options": [
         "\\(x\\ln x-x+C\\)",
         "\\(x\\ln x+C\\)",
@@ -2554,12 +2557,12 @@ window.STUDY = {
         "\\((\\ln x)^2/2+C\\)"
       ],
       "answer": 0,
-      "explanation": "Alegem \\(u=\\ln x\\), \\(dv=dx\\). Obținem \\(x\\ln x-\\int1dx=x\\ln x-x+C\\)."
+      "explanation": "Folosești integrarea prin părți, formula pentru produse. Ea „mută” derivata de pe un factor pe celălalt. Aici privești \\(\\ln x\\) ca pe \\(\\ln x\\) înmulțit cu 1. Alegi \\(u=\\ln x\\) și \\(dv=dx\\), pentru că pe \\(\\ln x\\) îl derivezi ușor, dar nu știi să-l integrezi direct. Obții \\(x\\ln x-\\int1dx=x\\ln x-x+C\\). Varianta \\(x\\ln x+C\\) e tentantă, dar uită integrala care se scade."
     },
     {
       "group": "Analiză",
-      "topic": "Integrare prin părți",
-      "q": "Care este \\(\\int e^x\\cos x\\,dx\\)?",
+      "topic": "Integrare prin părți repetată",
+      "q": "Cât este \\(\\int e^x\\cos x\\,dx\\)?",
       "options": [
         "\\(e^x\\cos x+C\\)",
         "\\(\\frac{e^x}{2}(\\sin x+\\cos x)+C\\)",
@@ -2567,12 +2570,12 @@ window.STUDY = {
         "\\(\\frac{e^x}{2}(\\sin x-\\cos x)+C\\)"
       ],
       "answer": 1,
-      "explanation": "După două aplicări ale metodei reapare integrala inițială. O aducem în stânga și împărțim la 2. Derivarea verifică rezultatul."
+      "explanation": "Aplici integrarea prin părți de două ori, iar la final reapare chiar integrala de la care ai pornit. O muți în stânga semnului egal, unde apare acum de două ori, și împarți la 2. Dacă derivezi rezultatul, obții din nou \\(e^x\\cos x\\), pe când varianta cu \\(\\sin x-\\cos x\\) dă \\(e^x\\sin x\\)."
     },
     {
       "group": "Analiză",
-      "topic": "Studiu de funcție",
-      "q": "Pentru \\(f(x)=\\ln x/\\sqrt x\\), unde se află maximul?",
+      "topic": "Maximul unei funcții",
+      "q": "Pentru \\(f(x)=\\ln x/\\sqrt x\\), în ce punct are funcția valoarea cea mai mare (maximul)?",
       "options": [
         "x=1",
         "x=e",
@@ -2580,12 +2583,12 @@ window.STUDY = {
         "x=e⁴"
       ],
       "answer": 2,
-      "explanation": "Avem \\(f'(x)=(2-\\ln x)/(2x^{3/2})\\). Semnul trece din plus în minus la x=e²."
+      "explanation": "Derivata îți arată unde crește și unde scade funcția: \\(f'(x)=(2-\\ln x)/(2x^{3/2})\\). Numitorul e mereu pozitiv, deci semnul vine din \\(2-\\ln x\\). Acesta e pozitiv până la x=e², unde ln x=2, și negativ după. Deci f urcă până la x=e² și apoi coboară. La x=e derivata e încă pozitivă, așa că funcția mai crește."
     },
     {
       "group": "Analiză",
-      "topic": "Studiul unei primitive",
-      "q": "Dacă \\(G'(x)=\\ln x/\\sqrt x\\), unde are G minim?",
+      "topic": "Minim citit din derivată",
+      "q": "Știi că derivata lui G (viteza cu care se schimbă G) este \\(G'(x)=\\ln x/\\sqrt x\\). În ce punct are G valoarea cea mai mică (minimul)?",
       "options": [
         "x=1",
         "x=e",
@@ -2593,12 +2596,12 @@ window.STUDY = {
         "x=0"
       ],
       "answer": 0,
-      "explanation": "G′ este negativă pe (0,1) și pozitivă pe (1,∞). G are minim la x=1, indiferent de constanta aditivă."
+      "explanation": "Semnul derivatei îți arată direcția: G′ este negativă pe (0,1) și pozitivă pe (1,∞). Asta pentru că ln x e negativ sub 1 și pozitiv peste 1, iar √x e mereu pozitiv. Deci G coboară până la x=1 și apoi urcă, oricare ar fi constanta C adunată, care doar mută graficul în sus sau în jos. Capcana este x=e²: acolo G′ e cea mai mare, adică G crește cel mai repede."
     },
     {
       "group": "Analiză",
-      "topic": "Studiul unei primitive",
-      "q": "Pentru \\(G(x)=2\\sqrt x(\\ln x-2)+C\\), punctul de inflexiune este…",
+      "topic": "Punctul de inflexiune",
+      "q": "Pentru \\(G(x)=2\\sqrt x(\\ln x-2)+C\\), punctul de inflexiune (locul unde graficul își schimbă felul de a se curba) este…",
       "options": [
         "(e²,0) pentru orice C",
         "(e²,C)",
@@ -2606,12 +2609,12 @@ window.STUDY = {
         "(e,0)"
       ],
       "answer": 1,
-      "explanation": "G″=f′ își schimbă semnul la e². Evaluând G(e²), obținem C; ordonata 0 corespunde numai alegerii C=0."
+      "explanation": "A doua derivată (derivata derivatei) este G″=f′, unde f(x)=ln x/√x este chiar G′. Ea își schimbă semnul la e², deci acolo graficul își schimbă felul de a se curba. Când înlocuiești x cu e² în G, paranteza devine 0, pentru că ln e²=2, și rămâne G(e²)=C. Înălțimea 0 (ordonata 0) apare numai dacă alegi C=0, de aceea varianta „(e²,0) pentru orice C” este greșită."
     },
     {
       "group": "Analiză",
-      "topic": "Integrale cu radicali",
-      "q": "Care este \\(\\int \\frac{x}{\\sqrt{x^2+2}}\\,dx\\)?",
+      "topic": "Integrală cu radical",
+      "q": "Cât este \\(\\int \\frac{x}{\\sqrt{x^2+2}}\\,dx\\)?",
       "options": [
         "\\(\\frac12\\sqrt{x^2+2}+C\\)",
         "\\(\\sqrt{x^2+2}+C\\)",
@@ -2619,12 +2622,12 @@ window.STUDY = {
         "\\((x^2+2)^{3/2}+C\\)"
       ],
       "answer": 1,
-      "explanation": "Derivata radicalului este \\(2x/(2\\sqrt{x^2+2})=x/\\sqrt{x^2+2}\\). Nu rămâne un factor 1/2."
+      "explanation": "Derivezi răspunsul ca să verifici: derivata radicalului este \\(2x/(2\\sqrt{x^2+2})=x/\\sqrt{x^2+2}\\). Numărul 2 de sus vine din derivata lui \\(x^2+2\\), adică \\(2x\\). Cel de jos vine din derivata radicalului. Cei doi se simplifică, așa că nu rămâne un factor 1/2. Varianta cu 1/2 în față ar da la derivare doar jumătate din funcția de sub integrală."
     },
     {
       "group": "Analiză",
-      "topic": "Asimptotă oblică",
-      "q": "Pentru \\(f(x)=(x^3-4x)/(x^2+5)\\), asimptota oblică este…",
+      "topic": "Asimptota oblică",
+      "q": "Pentru \\(f(x)=(x^3-4x)/(x^2+5)\\), asimptota oblică (dreapta înclinată de care graficul se apropie tot mai mult când x crește foarte mult) este…",
       "options": [
         "y=0",
         "y=x−9",
@@ -2632,7 +2635,7 @@ window.STUDY = {
         "y=−x"
       ],
       "answer": 2,
-      "explanation": "Împărțirea dă \\(f(x)=x-9x/(x^2+5)\\). Diferența față de x tinde la 0 la ±∞."
+      "explanation": "Împarți numărătorul la numitor, ca la împărțirea cu rest, și obții \\(f(x)=x-9x/(x^2+5)\\). Bucata \\(9x/(x^2+5)\\) se apropie de 0 când x devine foarte mare, pozitiv sau negativ (tinde la 0 la ±∞). Asta se întâmplă pentru că jos \\(x^2\\) crește mult mai repede decât \\(9x\\) sus. Deci graficul se apropie oricât de mult de dreapta y=x. Varianta y=x−9 apare dacă citești greșit acel −9x ca pe un simplu −9."
     }
   ]
 };
